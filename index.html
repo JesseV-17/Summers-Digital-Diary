@@ -25,15 +25,18 @@
 
         <!-- Regular Entries Tab -->
         <div id="regular-tab" class="tab-content active">
-            <div class="entry-form">
-                <h2>Write a New Entry</h2>
-                <input type="text" id="regular-title" placeholder="Entry title..." class="entry-title">
-                <textarea id="regular-content" placeholder="What's on your mind?" rows="6"></textarea>
-                <button onclick="addEntry('regular')" class="btn-primary">Save Entry</button>
-            </div>
-            <div class="entries-list">
-                <h2>Your Entries</h2>
-                <div id="regular-entries"></div>
+            <div class="diary-layout">
+                <div class="entries-sidebar">
+                    <h2>📅 Entries</h2>
+                    <div id="regular-entries-list"></div>
+                </div>
+                <div class="entry-display">
+                    <div id="regular-entry-content" class="entry-content-view">
+                        <div class="no-selection">
+                            Select an entry to read
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -70,15 +73,18 @@
                     <h2>🔓 Unlocked</h2>
                     <button onclick="lockEntries()" class="btn-secondary">Lock Again</button>
                 </div>
-                <div class="entry-form">
-                    <h2>Write a Private Entry</h2>
-                    <input type="text" id="locked-title" placeholder="Entry title..." class="entry-title">
-                    <textarea id="locked-content-text" placeholder="Your private thoughts..." rows="6"></textarea>
-                    <button onclick="addEntry('locked')" class="btn-primary">Save Private Entry</button>
-                </div>
-                <div class="entries-list">
-                    <h2>Your Private Entries</h2>
-                    <div id="locked-entries"></div>
+                <div class="diary-layout">
+                    <div class="entries-sidebar">
+                        <h2>📅 Private Entries</h2>
+                        <div id="locked-entries-list"></div>
+                    </div>
+                    <div class="entry-display">
+                        <div id="locked-entry-content" class="entry-content-view">
+                            <div class="no-selection">
+                                Select a private entry to read
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
