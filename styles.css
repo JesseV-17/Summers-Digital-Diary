@@ -133,33 +133,43 @@ header h1 {
             rgba(139, 115, 85, 0.1) 30px,
             rgba(139, 115, 85, 0.1) 31px
         );
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .entries-sidebar h2 {
     color: #5d4e37;
     margin-bottom: 20px;
+    margin-top: 0;
     font-size: 1.3em;
     position: sticky;
     top: 0;
     background: #ebe1d1;
-    padding-bottom: 10px;
-    z-index: 10;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 20;
     font-family: Georgia, serif;
     font-style: italic;
+    box-shadow: 0 2px 4px rgba(139, 115, 85, 0.1);
 }
 
 .section-group {
     margin-bottom: 30px;
 }
 
+.section-group:first-child {
+    margin-top: 0;
+}
+
 .section-group h2 {
     position: relative;
     font-size: 1.2em;
     margin-bottom: 15px;
+    padding-top: 8px;
     padding-bottom: 8px;
     border-bottom: 2px dashed #8b7355;
+    background: #ebe1d1;
+    z-index: 5;
 }
 
 .entries-section {
