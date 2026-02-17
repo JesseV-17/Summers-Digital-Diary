@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer's Digital Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Summer's Digital Diary</h1>
+            <p class="subtitle">Your personal space for thoughts and memories</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-button active" data-tab="regular">
+                📝 Regular Entries
+            </button>
+            <button class="tab-button" data-tab="locked">
+                🔒 Locked Entries
+            </button>
+        </div>
+
+        <!-- Regular Entries Tab -->
+        <div id="regular-tab" class="tab-content active">
+            <div class="entry-form">
+                <h2>Write a New Entry</h2>
+                <input type="text" id="regular-title" placeholder="Entry title..." class="entry-title">
+                <textarea id="regular-content" placeholder="What's on your mind?" rows="6"></textarea>
+                <button onclick="addEntry('regular')" class="btn-primary">Save Entry</button>
+            </div>
+            <div class="entries-list">
+                <h2>Your Entries</h2>
+                <div id="regular-entries"></div>
+            </div>
+        </div>
+
+        <!-- Locked Entries Tab -->
+        <div id="locked-tab" class="tab-content">
+            <!-- Passcode Entry Screen -->
+            <div id="passcode-screen" class="passcode-screen">
+                <div class="passcode-box">
+                    <h2>🔐 Enter Passcode</h2>
+                    <p>This section contains private entries</p>
+                    <input type="password" id="passcode-input" placeholder="Enter passcode" maxlength="6">
+                    <button onclick="checkPasscode()" class="btn-primary">Unlock</button>
+                    <p class="passcode-hint">Default passcode: 1234</p>
+                    <button onclick="showChangePasscode()" class="btn-secondary">Change Passcode</button>
+                </div>
+            </div>
+
+            <!-- Change Passcode Screen -->
+            <div id="change-passcode-screen" class="passcode-screen" style="display: none;">
+                <div class="passcode-box">
+                    <h2>🔑 Change Passcode</h2>
+                    <input type="password" id="old-passcode" placeholder="Current passcode" maxlength="6">
+                    <input type="password" id="new-passcode" placeholder="New passcode (4-6 digits)" maxlength="6">
+                    <input type="password" id="confirm-passcode" placeholder="Confirm new passcode" maxlength="6">
+                    <button onclick="changePasscode()" class="btn-primary">Update Passcode</button>
+                    <button onclick="cancelChangePasscode()" class="btn-secondary">Cancel</button>
+                    <div id="passcode-message" class="message"></div>
+                </div>
+            </div>
+
+            <!-- Locked Entries Content -->
+            <div id="locked-content" class="locked-content" style="display: none;">
+                <div class="locked-header">
+                    <h2>🔓 Unlocked</h2>
+                    <button onclick="lockEntries()" class="btn-secondary">Lock Again</button>
+                </div>
+                <div class="entry-form">
+                    <h2>Write a Private Entry</h2>
+                    <input type="text" id="locked-title" placeholder="Entry title..." class="entry-title">
+                    <textarea id="locked-content-text" placeholder="Your private thoughts..." rows="6"></textarea>
+                    <button onclick="addEntry('locked')" class="btn-primary">Save Private Entry</button>
+                </div>
+                <div class="entries-list">
+                    <h2>Your Private Entries</h2>
+                    <div id="locked-entries"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
