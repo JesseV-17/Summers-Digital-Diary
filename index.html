@@ -42,52 +42,34 @@
 
         <!-- Locked Entries Tab -->
         <div id="locked-tab" class="tab-content">
-            <!-- Passcode Entry Screen -->
-            <div id="passcode-screen" class="passcode-screen">
-                <div class="passcode-box">
-                    <h2>🔐 Enter Passcode</h2>
-                    <p>This section contains private entries</p>
-                    <input type="password" id="passcode-input" placeholder="Enter passcode" maxlength="6">
-                    <button onclick="checkPasscode()" class="btn-primary">Unlock</button>
-                    <p class="passcode-hint">Default passcode: 1234</p>
-                    <button onclick="showChangePasscode()" class="btn-secondary">Change Passcode</button>
+            <div class="diary-layout">
+                <div class="entries-sidebar">
+                    <h2>📅 Private Entries</h2>
+                    <div id="locked-entries-list"></div>
                 </div>
-            </div>
-
-            <!-- Change Passcode Screen -->
-            <div id="change-passcode-screen" class="passcode-screen" style="display: none;">
-                <div class="passcode-box">
-                    <h2>🔑 Change Passcode</h2>
-                    <input type="password" id="old-passcode" placeholder="Current passcode" maxlength="6">
-                    <input type="password" id="new-passcode" placeholder="New passcode (4-6 digits)" maxlength="6">
-                    <input type="password" id="confirm-passcode" placeholder="Confirm new passcode" maxlength="6">
-                    <button onclick="changePasscode()" class="btn-primary">Update Passcode</button>
-                    <button onclick="cancelChangePasscode()" class="btn-secondary">Cancel</button>
-                    <div id="passcode-message" class="message"></div>
-                </div>
-            </div>
-
-            <!-- Locked Entries Content -->
-            <div id="locked-content" class="locked-content" style="display: none;">
-                <div class="locked-header">
-                    <h2>🔓 Unlocked</h2>
-                    <button onclick="lockEntries()" class="btn-secondary">Lock Again</button>
-                </div>
-                <div class="diary-layout">
-                    <div class="entries-sidebar">
-                        <h2>📅 Private Entries</h2>
-                        <div id="locked-entries-list"></div>
-                    </div>
-                    <div class="entry-display">
-                        <div id="locked-entry-content" class="entry-content-view">
-                            <div class="no-selection">
-                                Select a private entry to read
-                            </div>
+                <div class="entry-display">
+                    <div id="locked-entry-content" class="entry-content-view">
+                        <div class="no-selection">
+                            Select a private entry to read
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    
+    <!-- Passcode Modal -->
+    <div id="passcode-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>🔐 Enter Passcode</h2>
+            <p id="modal-entry-title"></p>
+            <input type="password" id="modal-passcode-input" placeholder="Enter passcode" maxlength="6">
+            <div class="modal-buttons">
+                <button onclick="unlockEntry()" class="btn-primary">Unlock</button>
+                <button onclick="closeModal()" class="btn-secondary">Cancel</button>
+            </div>
+            <p class="passcode-hint" id="passcode-hint"></p>
+        </div>
+    </div>
     </div>
 
     <script src="script.js"></script>

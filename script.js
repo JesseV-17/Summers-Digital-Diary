@@ -87,6 +87,7 @@ const lockedEntries = [
         id: 101,
         title: "Dreams and Doubts",
         date: "June 5, 2026",
+        passcode: "1111",
         content: `Sometimes I wonder if I'm on the right path. Everyone seems so sure of their direction, but I feel like I'm still figuring things out. Is that okay?
 
 I have so many dreams - some big, some small. But there's this fear that holds me back. What if I fail? What if I'm not good enough? These thoughts keep me up at night.
@@ -97,6 +98,7 @@ But then I remind myself that it's okay not to have all the answers. Growth happ
         id: 102,
         title: "The Conversation I Avoided",
         date: "June 18, 2026",
+        passcode: "2222",
         content: `There's a conversation I need to have, but I keep putting it off. You know the kind - the one where you have to be vulnerable and honest, and you're not sure how the other person will react.
 
 I rehearse what I want to say in my head, but when the moment comes, I chicken out. I change the subject, make a joke, anything to avoid the discomfort.
@@ -107,6 +109,7 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
         id: 103,
         title: "Secret Crushes and Butterflies",
         date: "June 25, 2026",
+        passcode: "3333",
         content: `Okay, so there's someone. Someone who makes me smile without even trying. Someone whose texts make my heart do that silly flutter thing.
 
 We're just friends, at least that's what I keep telling myself. But there are these moments - when our eyes meet across a room, when our hands accidentally brush - that make me wonder if maybe there's something more.
@@ -117,6 +120,7 @@ I don't know if I should say anything or just enjoy the butterflies. What if I r
         id: 104,
         title: "Difficult Family Dinner",
         date: "July 2, 2026",
+        passcode: "4444",
         content: `Family dinner tonight was... tense. Old conflicts resurfaced, the usual expectations were mentioned, and I felt myself shrinking back into the role everyone expects me to play.
 
 Why is it so hard to be myself around the people who should know me best? I love my family, but sometimes I feel like they don't really see me - they see who they want me to be.
@@ -127,6 +131,7 @@ I left feeling exhausted and a bit sad. But I'm trying to remember that their ex
         id: 105,
         title: "The Thing I'm Ashamed Of",
         date: "July 9, 2026",
+        passcode: "5555",
         content: `I did something I'm not proud of. I won't go into details, but it's been eating at me. I acted out of insecurity, jealousy maybe, and I hurt someone in the process.
 
 The guilt is heavy. I've been trying to justify it, make excuses, but deep down I know I was wrong. I need to apologize, to make it right, but I'm scared.
@@ -137,6 +142,7 @@ This is my reminder that I'm human, flawed, still learning. The best I can do is
         id: 106,
         title: "Late Night Anxiety",
         date: "July 16, 2026",
+        passcode: "6666",
         content: `It's 2 AM and my mind won't shut off. All the worries, all the what-ifs, they're swirling around like a storm. My chest feels tight and my breathing is shallow.
 
 I hate these nights. When the world is quiet and my thoughts are so loud. I worry about things I can't control, imagine worst-case scenarios, question every decision I've made.
@@ -147,6 +153,7 @@ I'm trying the breathing exercises. In for four, hold for four, out for four. Sl
         id: 107,
         title: "The Dream I Haven't Told Anyone",
         date: "July 23, 2026",
+        passcode: "7777",
         content: `I have this dream. It's wild and impractical and probably impossible, but it's mine. I haven't told anyone because I'm afraid they'll laugh or tell me all the reasons it won't work.
 
 But when I think about it, really imagine it, I feel alive. Excited. Like maybe life could be an adventure instead of just going through the motions.
@@ -154,6 +161,12 @@ But when I think about it, really imagine it, I feel alive. Excited. Like maybe 
 What if I actually tried? What if I stopped playing it safe and took a chance? The thought terrifies me and thrills me at the same time. Maybe that's how you know it's worth pursuing.`
     }
 ];
+
+// Track unlocked entries
+let unlockedEntries = new Set();
+
+// Track which entry is being unlocked
+let currentUnlockingEntry = null;
 
 // Track selected entries
 let selectedRegularEntry = null;
@@ -163,16 +176,8 @@ let selectedLockedEntry = null;
 document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     loadEntriesList('regular');
-    // Don't load locked entries until unlocked
+    loadEntriesList('locked');
 });
-
-// Default passcode
-const DEFAULT_PASSCODE = '1234';
-
-// Get stored passcode or use default
-function getStoredPasscode() {
-    return localStorage.getItem('diaryPasscode') || DEFAULT_PASSCODE;
-}
 
 // Tab functionality
 function initializeTabs() {
@@ -206,11 +211,6 @@ function switchTab(tabName) {
     if (activeTab) {
         activeTab.classList.add('active');
     }
-
-    // If switching to locked tab, ensure it's locked
-    if (tabName === 'locked') {
-        lockEntries();
-    }
 }
 
 // Load entries list in sidebar
@@ -220,13 +220,18 @@ function loadEntriesList(type) {
 
     if (!container) return;
 
-    container.innerHTML = entries.map(entry => `
-        <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
-            <h3>${escapeHtml(entry.title)}</h3>
-            <div class="entry-list-date">${entry.date}</div>
-            <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
-        </div>
-    `).join('');
+    container.innerHTML = entries.map(entry => {
+        const isLocked = type === 'locked' && !unlockedEntries.has(entry.id);
+        const lockClass = type === 'locked' ? (isLocked ? 'entry-locked' : 'entry-unlocked') : '';
+        
+        return `
+            <div class="entry-list-item ${lockClass}" onclick="selectEntry('${type}', ${entry.id})">
+                <h3>${escapeHtml(entry.title)}</h3>
+                <div class="entry-list-date">${entry.date}</div>
+                <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+            </div>
+        `;
+    }).join('');
 
     // Auto-select first entry
     if (entries.length > 0) {
@@ -240,6 +245,14 @@ function selectEntry(type, entryId) {
     const entry = entries.find(e => e.id === entryId);
     
     if (!entry) return;
+
+    // Check if entry is locked
+    if (type === 'locked' && !unlockedEntries.has(entryId)) {
+        // Show passcode modal
+        currentUnlockingEntry = entry;
+        showPasscodeModal(entry);
+        return;
+    }
 
     // Update selected entry tracker
     if (type === 'regular') {
@@ -269,96 +282,56 @@ function selectEntry(type, entryId) {
     `;
 }
 
-// Passcode functionality
-function checkPasscode() {
-    const input = document.getElementById('passcode-input');
-    const enteredPasscode = input.value;
-    const storedPasscode = getStoredPasscode();
+// Modal functions for individual entry locking
+function showPasscodeModal(entry) {
+    const modal = document.getElementById('passcode-modal');
+    const titleElement = document.getElementById('modal-entry-title');
+    const hintElement = document.getElementById('passcode-hint');
+    
+    titleElement.textContent = `"${entry.title}"`;
+    hintElement.textContent = `Hint: Passcode is ${entry.passcode}`;
+    
+    modal.style.display = 'flex';
+    
+    // Focus on input
+    setTimeout(() => {
+        document.getElementById('modal-passcode-input').focus();
+    }, 100);
+}
 
-    if (enteredPasscode === storedPasscode) {
-        // Unlock content
-        document.getElementById('passcode-screen').style.display = 'none';
-        document.getElementById('locked-content').style.display = 'block';
-        input.value = '';
+function closeModal() {
+    const modal = document.getElementById('passcode-modal');
+    modal.style.display = 'none';
+    document.getElementById('modal-passcode-input').value = '';
+    currentUnlockingEntry = null;
+}
+
+function unlockEntry() {
+    const input = document.getElementById('modal-passcode-input');
+    const enteredPasscode = input.value;
+    
+    if (!currentUnlockingEntry) {
+        closeModal();
+        return;
+    }
+    
+    if (enteredPasscode === currentUnlockingEntry.passcode) {
+        // Unlock the entry
+        unlockedEntries.add(currentUnlockingEntry.id);
         
-        // Load locked entries
+        // Close modal
+        closeModal();
+        
+        // Reload the locked entries list to update lock icons
         loadEntriesList('locked');
+        
+        // Select the newly unlocked entry
+        selectEntry('locked', currentUnlockingEntry.id);
     } else {
         alert('Incorrect passcode!');
         input.value = '';
         input.focus();
     }
-}
-
-// Lock entries
-function lockEntries() {
-    document.getElementById('passcode-screen').style.display = 'flex';
-    document.getElementById('locked-content').style.display = 'none';
-    document.getElementById('change-passcode-screen').style.display = 'none';
-}
-
-// Show change passcode screen
-function showChangePasscode() {
-    document.getElementById('passcode-screen').style.display = 'none';
-    document.getElementById('change-passcode-screen').style.display = 'flex';
-}
-
-// Cancel change passcode
-function cancelChangePasscode() {
-    document.getElementById('change-passcode-screen').style.display = 'none';
-    document.getElementById('passcode-screen').style.display = 'flex';
-    clearPasscodeInputs();
-}
-
-// Change passcode
-function changePasscode() {
-    const oldPasscode = document.getElementById('old-passcode').value;
-    const newPasscode = document.getElementById('new-passcode').value;
-    const confirmPasscode = document.getElementById('confirm-passcode').value;
-    const messageDiv = document.getElementById('passcode-message');
-
-    // Validate old passcode
-    if (oldPasscode !== getStoredPasscode()) {
-        showMessage(messageDiv, 'Current passcode is incorrect!', 'error');
-        return;
-    }
-
-    // Validate new passcode
-    if (newPasscode.length < 4 || newPasscode.length > 6) {
-        showMessage(messageDiv, 'New passcode must be 4-6 digits!', 'error');
-        return;
-    }
-
-    // Validate confirmation
-    if (newPasscode !== confirmPasscode) {
-        showMessage(messageDiv, 'Passcodes do not match!', 'error');
-        return;
-    }
-
-    // Save new passcode
-    localStorage.setItem('diaryPasscode', newPasscode);
-    showMessage(messageDiv, 'Passcode changed successfully!', 'success');
-
-    // Reset after 2 seconds
-    setTimeout(() => {
-        clearPasscodeInputs();
-        cancelChangePasscode();
-    }, 2000);
-}
-
-// Clear passcode inputs
-function clearPasscodeInputs() {
-    document.getElementById('old-passcode').value = '';
-    document.getElementById('new-passcode').value = '';
-    document.getElementById('confirm-passcode').value = '';
-    document.getElementById('passcode-message').innerHTML = '';
-    document.getElementById('passcode-message').className = 'message';
-}
-
-// Show message
-function showMessage(element, text, type) {
-    element.textContent = text;
-    element.className = 'message ' + type;
 }
 
 // Escape HTML to prevent XSS
@@ -368,13 +341,23 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-// Allow Enter key to submit passcode
+// Allow Enter key to submit passcode in modal
 document.addEventListener('DOMContentLoaded', function() {
-    const passcodeInput = document.getElementById('passcode-input');
-    if (passcodeInput) {
-        passcodeInput.addEventListener('keypress', function(e) {
+    const modalInput = document.getElementById('modal-passcode-input');
+    if (modalInput) {
+        modalInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                checkPasscode();
+                unlockEntry();
+            }
+        });
+    }
+    
+    // Close modal when clicking outside
+    const modal = document.getElementById('passcode-modal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
             }
         });
     }

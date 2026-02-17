@@ -11,11 +11,12 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 - Beautiful reading experience with smooth transitions
 
 ### 🔒 Locked Entries
-- **Passcode-protected section** for deeply personal thoughts
+- **Individual passcode protection** - Each private entry has its own unique passcode
 - **7 private entries** about dreams, feelings, and secrets
-- Default passcode: `1234`
-- Change passcode at any time
-- Automatic locking when switching tabs
+- **Lock icons** showing locked 🔒 and unlocked 🔓 status
+- Click a locked entry to enter its specific passcode
+- Once unlocked, entries remain accessible until page refresh
+- Each entry's passcode is shown as a hint for this demo
 
 ## 🚀 Getting Started
 
@@ -30,16 +31,18 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 
 3. **Accessing Locked Entries**
    - Click on the "🔒 Locked Entries" tab
-   - Enter the passcode (default: `1234`)
-   - Browse private entries in the sidebar
-   - Click to read sensitive, personal thoughts
-
-4. **Changing Your Passcode**
-   - Go to the Locked Entries tab
-   - Click "Change Passcode"
-   - Enter current passcode
-   - Enter and confirm new passcode (4-6 digits)
-   - Click "Update Passcode"
+   - Browse locked entries in the sidebar (marked with 🔒 icon)
+   - Click any locked entry you want to read
+   - Enter the specific passcode for that entry
+   - View unlocked entries (marked with 🔓 icon)
+   - Each entry has its own unique passcode:
+     - Entry 1: `1111`
+     - Entry 2: `2222`
+     - Entry 3: `3333`
+     - Entry 4: `4444`
+     - Entry 5: `5555`
+     - Entry 6: `6666`
+     - Entry 7: `7777`
 
 ## 📚 Entry Highlights
 
@@ -72,10 +75,16 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 
 ## 🔐 Security Note
 
-This is a client-side application using browser local storage for the passcode. While the locked section requires a passcode, the entries themselves are pre-written and stored in the code. For maximum security:
-- Use a strong passcode
-- Don't share your device
-- Consider this for personal use on trusted devices
+This is a client-side demo application. Each locked entry has an individual passcode for demonstration purposes:
+- Entries remain unlocked during the session
+- Refreshing the page re-locks all entries
+- Passcodes are shown in hints for demo purposes
+- Entries themselves are pre-written and stored in the code
+
+For personal use:
+- Consider this for demonstration and storytelling
+- Not recommended for actual sensitive information
+- Use on trusted devices only
 
 ## 📱 Browser Compatibility
 
