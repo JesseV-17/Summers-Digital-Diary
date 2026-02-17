@@ -44,8 +44,16 @@
         <div id="locked-tab" class="tab-content">
             <div class="diary-layout">
                 <div class="entries-sidebar">
-                    <h2>📅 Private Entries</h2>
-                    <div id="locked-entries-list"></div>
+                    <div class="section-group">
+                        <h2>🔓 Unlocked Entries</h2>
+                        <div id="unlocked-entries-list" class="entries-section">
+                            <div class="empty-state-small">No unlocked entries yet</div>
+                        </div>
+                    </div>
+                    <div class="section-group">
+                        <h2>🔒 Locked Entries</h2>
+                        <div id="locked-entries-list" class="entries-section"></div>
+                    </div>
                 </div>
                 <div class="entry-display">
                     <div id="locked-entry-content" class="entry-content-view">

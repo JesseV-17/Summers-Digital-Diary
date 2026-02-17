@@ -13,9 +13,10 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 ### 🔒 Locked Entries
 - **Individual passcode protection** - Each private entry has its own unique passcode
 - **7 private entries** about dreams, feelings, and secrets
-- **Lock icons** showing locked 🔒 and unlocked 🔓 status
+- **Separate sections** - Locked entries 🔒 and Unlocked entries 🔓 in different areas
 - Click a locked entry to enter its specific passcode
-- Once unlocked, entries remain accessible until page refresh
+- **Auto-moves to unlocked section** - Successfully unlocked entries automatically move to the "Unlocked Entries" section
+- Unlocked entries remain accessible until page refresh
 - Each entry's passcode is shown as a hint for this demo
 
 ## 🚀 Getting Started
@@ -31,10 +32,12 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 
 3. **Accessing Locked Entries**
    - Click on the "🔒 Locked Entries" tab
-   - Browse locked entries in the sidebar (marked with 🔒 icon)
-   - Click any locked entry you want to read
+   - The sidebar shows two sections:
+     - **🔓 Unlocked Entries** - Entries you've successfully unlocked
+     - **🔒 Locked Entries** - Entries still requiring passcodes
+   - Click any locked entry to see a passcode prompt
    - Enter the specific passcode for that entry
-   - View unlocked entries (marked with 🔓 icon)
+   - Successfully unlocked entries automatically move to the "Unlocked Entries" section
    - Each entry has its own unique passcode:
      - Entry 1: `1111`
      - Entry 2: `2222`

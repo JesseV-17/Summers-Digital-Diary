@@ -220,22 +220,82 @@ function loadEntriesList(type) {
 
     if (!container) return;
 
-    container.innerHTML = entries.map(entry => {
-        const isLocked = type === 'locked' && !unlockedEntries.has(entry.id);
-        const lockClass = type === 'locked' ? (isLocked ? 'entry-locked' : 'entry-unlocked') : '';
-        
-        return `
-            <div class="entry-list-item ${lockClass}" onclick="selectEntry('${type}', ${entry.id})">
-                <h3>${escapeHtml(entry.title)}</h3>
-                <div class="entry-list-date">${entry.date}</div>
-                <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
-            </div>
-        `;
-    }).join('');
+    if (type === 'regular') {
+        // Regular entries - load normally
+        container.innerHTML = entries.map((entry, index) => {
+            return `
+                <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
+                    <h3>${index + 1}. ${escapeHtml(entry.title)}</h3>
+                    <div class="entry-list-date">${entry.date}</div>
+                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+                </div>
+            `;
+        }).join('');
 
-    // Auto-select first entry
-    if (entries.length > 0) {
-        selectEntry(type, entries[0].id);
+        // Auto-select first entry
+        if (entries.length > 0) {
+            selectEntry(type, entries[0].id);
+        }
+    } else {
+        // Locked entries - separate into locked and unlocked
+        loadLockedEntriesSections();
+    }
+}
+
+// Load locked entries into separate sections
+function loadLockedEntriesSections() {
+    const lockedContainer = document.getElementById('locked-entries-list');
+    const unlockedContainer = document.getElementById('unlocked-entries-list');
+    
+    if (!lockedContainer || !unlockedContainer) return;
+    
+    const locked = [];
+    const unlocked = [];
+    
+    // Separate entries while preserving their original index
+    lockedEntries.forEach((entry, index) => {
+        if (unlockedEntries.has(entry.id)) {
+            unlocked.push({ ...entry, originalIndex: index });
+        } else {
+            locked.push({ ...entry, originalIndex: index });
+        }
+    });
+    
+    // Render locked entries
+    if (locked.length === 0) {
+        lockedContainer.innerHTML = '<div class="empty-state-small">All entries unlocked!</div>';
+    } else {
+        lockedContainer.innerHTML = locked.map(entry => {
+            return `
+                <div class="entry-list-item entry-locked" onclick="selectEntry('locked', ${entry.id})">
+                    <h3>${entry.originalIndex + 1}. ${escapeHtml(entry.title)}</h3>
+                    <div class="entry-list-date">${entry.date}</div>
+                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+                </div>
+            `;
+        }).join('');
+    }
+    
+    // Render unlocked entries
+    if (unlocked.length === 0) {
+        unlockedContainer.innerHTML = '<div class="empty-state-small">No unlocked entries yet</div>';
+    } else {
+        unlockedContainer.innerHTML = unlocked.map(entry => {
+            return `
+                <div class="entry-list-item entry-unlocked" onclick="selectEntry('locked', ${entry.id})">
+                    <h3>${entry.originalIndex + 1}. ${escapeHtml(entry.title)}</h3>
+                    <div class="entry-list-date">${entry.date}</div>
+                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+                </div>
+            `;
+        }).join('');
+    }
+    
+    // Auto-select first unlocked or locked entry
+    if (unlocked.length > 0) {
+        selectEntry('locked', unlocked[0].id);
+    } else if (locked.length > 0) {
+        selectEntry('locked', locked[0].id);
     }
 }
 
@@ -261,15 +321,29 @@ function selectEntry(type, entryId) {
         selectedLockedEntry = entryId;
     }
 
-    // Update active state in sidebar
-    const listItems = document.querySelectorAll(`#${type}-entries-list .entry-list-item`);
-    listItems.forEach((item, index) => {
-        if (entries[index].id === entryId) {
-            item.classList.add('active');
-        } else {
+    // Update active state in sidebar for both locked and unlocked sections
+    if (type === 'locked') {
+        const allListItems = document.querySelectorAll('#locked-entries-list .entry-list-item, #unlocked-entries-list .entry-list-item');
+        allListItems.forEach(item => {
             item.classList.remove('active');
-        }
-    });
+        });
+        
+        // Find and activate the clicked entry
+        allListItems.forEach(item => {
+            if (item.getAttribute('onclick')?.includes(`${entryId}`)) {
+                item.classList.add('active');
+            }
+        });
+    } else {
+        const listItems = document.querySelectorAll(`#${type}-entries-list .entry-list-item`);
+        listItems.forEach((item, index) => {
+            if (entries[index].id === entryId) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
 
     // Display full entry content
     const contentContainer = document.getElementById(type + '-entry-content');
@@ -322,8 +396,8 @@ function unlockEntry() {
         // Close modal
         closeModal();
         
-        // Reload the locked entries list to update lock icons
-        loadEntriesList('locked');
+        // Reload the locked entries sections (this moves the entry to unlocked section)
+        loadLockedEntriesSections();
         
         // Select the newly unlocked entry
         selectEntry('locked', currentUnlockingEntry.id);
