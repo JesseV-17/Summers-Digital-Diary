@@ -195,7 +195,7 @@ header h1 {
 
 .entry-display {
     flex: 1;
-    overflow-y: auto;
+    overflow: hidden;
     background: #f9f3e9;
     background-image: 
         repeating-linear-gradient(
@@ -204,9 +204,7 @@ header h1 {
             rgba(139, 115, 85, 0.15) 28px,
             rgba(139, 115, 85, 0.15) 29px
         );
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+    position: relative;
 }
 
 /* Entry List Items */
@@ -428,18 +426,22 @@ header h1 {
 
 /* Entry Content View */
 .entry-content-view {
-    width: 100%;
-    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    min-height: 0;
 }
 
 .no-selection {
     text-align: center;
     color: #8b7355;
     font-size: 2.5em;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     font-style: italic;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
     flex: 1;
