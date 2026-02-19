@@ -1,3 +1,52 @@
+// Diary login password
+const DIARY_PASSWORD = "summer2026";
+
+// Check if user is already logged in
+window.addEventListener('DOMContentLoaded', () => {
+    const isLoggedIn = sessionStorage.getItem('diaryLoggedIn');
+    if (isLoggedIn === 'true') {
+        showDiary();
+    }
+});
+
+// Check diary password
+function checkDiaryPassword() {
+    const input = document.getElementById('login-password-input');
+    const hint = document.getElementById('login-hint');
+    const password = input.value;
+
+    if (password === DIARY_PASSWORD) {
+        sessionStorage.setItem('diaryLoggedIn', 'true');
+        showDiary();
+    } else {
+        hint.textContent = '❌ Incorrect password. Try again!';
+        hint.style.color = '#d32f2f';
+        input.value = '';
+        input.focus();
+    }
+}
+
+// Show diary after successful login
+function showDiary() {
+    document.getElementById('login-modal').style.display = 'none';
+    document.getElementById('diary-container').style.display = 'block';
+    // Initialize the diary
+    init();
+}
+
+// Handle Enter key on login
+document.addEventListener('DOMContentLoaded', () => {
+    const loginInput = document.getElementById('login-password-input');
+    if (loginInput) {
+        loginInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkDiaryPassword();
+            }
+        });
+        loginInput.focus();
+    }
+});
+
 // Pre-written diary entries
 const regularEntries = [
     {
@@ -172,12 +221,12 @@ let currentUnlockingEntry = null;
 let selectedRegularEntry = null;
 let selectedLockedEntry = null;
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize the diary
+function init() {
     initializeTabs();
     loadEntriesList('regular');
     loadEntriesList('locked');
-});
+}
 
 // Tab functionality
 function initializeTabs() {

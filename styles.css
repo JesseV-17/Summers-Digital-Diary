@@ -393,6 +393,39 @@ header h1 {
     margin-left: 0;
 }
 
+/* Login Modal Specific Styles */
+.login-modal {
+    min-width: 450px;
+    padding: 50px;
+}
+
+.login-modal h1 {
+    color: #654321;
+    margin-bottom: 10px;
+    font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-subtitle {
+    color: #8b7355;
+    font-size: 1.1em;
+    margin-bottom: 30px !important;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.login-modal input {
+    font-size: 1.2em;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.login-modal .btn-primary {
+    width: 100%;
+    font-size: 1.1em;
+}
+
 /* Entry Content View */
 .entry-content-view {
     max-width: 700px;
