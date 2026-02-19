@@ -309,7 +309,6 @@ function loadLockedEntriesSections() {
                 <div class="entry-list-item entry-locked" onclick="selectEntry('locked', ${entry.id})">
                     <h3>${entry.originalIndex + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
-                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
                 </div>
             `;
         }).join('');
