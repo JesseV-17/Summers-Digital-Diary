@@ -223,42 +223,25 @@ let selectedLockedEntry = null;
 
 // Initialize the diary
 function init() {
-    initializeTabs();
     loadEntriesList('regular');
     loadEntriesList('locked');
 }
 
-// Tab functionality
-function initializeTabs() {
-    const tabButtons = document.querySelectorAll('.tab-button');
+// Dropdown toggle functionality
+function toggleDropdown(type) {
+    const header = document.querySelector(`.dropdown-header[onclick*="${type}"]`);
+    const content = document.getElementById(type === 'regular' ? 'regular-entries-list' : 'locked-entries-container');
     
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const tabName = this.getAttribute('data-tab');
-            switchTab(tabName);
-        });
-    });
-}
-
-function switchTab(tabName) {
-    // Update tab buttons
-    const tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-tab') === tabName) {
-            btn.classList.add('active');
-        }
-    });
-
-    // Update tab content
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => {
-        content.classList.remove('active');
-    });
-
-    const activeTab = document.getElementById(tabName + '-tab');
-    if (activeTab) {
-        activeTab.classList.add('active');
+    // Toggle active class
+    header.classList.toggle('active');
+    content.classList.toggle('active');
+    
+    // Update icon
+    const icon = header.querySelector('.dropdown-icon');
+    if (header.classList.contains('active')) {
+        icon.textContent = '▼';
+    } else {
+        icon.textContent = '►';
     }
 }
 
@@ -387,8 +370,8 @@ function selectEntry(type, entryId) {
         });
     }
 
-    // Display full entry content
-    const contentContainer = document.getElementById(type + '-entry-content');
+    // Display full entry content in single content area
+    const contentContainer = document.getElementById('entry-content');
     contentContainer.innerHTML = `
         <div class="entry-full">
             <h1>${escapeHtml(entry.title)}</h1>
