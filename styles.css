@@ -116,7 +116,8 @@ header h1 {
 /* Diary Layout */
 .diary-layout {
     display: flex;
-    height: 600px;
+    height: calc(100vh - 200px);
+    min-height: 700px;
     gap: 0;
     background: #f4e8d8;
 }
@@ -412,7 +413,7 @@ header h1 {
 
 /* Entry Content View */
 .entry-content-view {
-    max-width: 700px;
+    width: 100%;
 }
 
 .no-selection {
