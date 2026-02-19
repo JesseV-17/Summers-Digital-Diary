@@ -232,7 +232,19 @@ function toggleDropdown(type) {
     const header = document.querySelector(`.dropdown-header[onclick*="${type}"]`);
     const content = document.getElementById(type === 'regular' ? 'regular-entries-list' : 'locked-entries-container');
     
-    // Toggle active class
+    // Close other dropdown first
+    const otherType = type === 'regular' ? 'locked' : 'regular';
+    const otherHeader = document.querySelector(`.dropdown-header[onclick*="${otherType}"]`);
+    const otherContent = document.getElementById(otherType === 'regular' ? 'regular-entries-list' : 'locked-entries-container');
+    
+    if (otherHeader && otherContent) {
+        otherHeader.classList.remove('active');
+        otherContent.classList.remove('active');
+        const otherIcon = otherHeader.querySelector('.dropdown-icon');
+        if (otherIcon) otherIcon.textContent = '►';
+    }
+    
+    // Toggle current dropdown
     header.classList.toggle('active');
     content.classList.toggle('active');
     
@@ -263,11 +275,6 @@ function loadEntriesList(type) {
                 </div>
             `;
         }).join('');
-
-        // Auto-select first entry
-        if (entries.length > 0) {
-            selectEntry(type, entries[0].id);
-        }
     } else {
         // Locked entries - separate into locked and unlocked
         loadLockedEntriesSections();
