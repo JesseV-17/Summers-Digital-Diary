@@ -2,6 +2,12 @@
 
 A beautiful, secure digital diary application featuring pre-written summer entries. Browse through regular diary entries and passcode-protected private entries with an intuitive sidebar navigation.
 
+## 🔐 Access Information
+
+**Diary Password:** `summer2026`
+
+You'll need to enter this password when you first open the diary. The password is stored for your current session only.
+
 ## ✨ Features
 
 ### 📝 Regular Entries
@@ -23,7 +29,8 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 
 1. **Open the Application**
    - Simply open `index.html` in your web browser
-   - No installation or server required!
+   - Enter the diary password: `summer2026`
+   - Your session will be remembered until you close the browser
 
 2. **Reading Regular Entries**
    - Click on the "📝 Regular Entries" tab
