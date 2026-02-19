@@ -201,6 +201,7 @@ header h1 {
             rgba(139, 115, 85, 0.15) 29px
         );
     display: flex;
+    flex-direction: column;
     min-height: 0;
 }
 
@@ -424,9 +425,10 @@ header h1 {
 /* Entry Content View */
 .entry-content-view {
     width: 100%;
-    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .no-selection {
