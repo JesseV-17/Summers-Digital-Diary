@@ -96,12 +96,14 @@ header h1 {
 .dropdown-content {
     max-height: 0;
     overflow: hidden;
+    overflow-y: auto;
     transition: max-height 0.3s ease;
     margin-top: 15px;
 }
 
 .dropdown-content.active {
-    max-height: 2000px;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -194,6 +196,8 @@ header h1 {
             rgba(139, 115, 85, 0.15) 28px,
             rgba(139, 115, 85, 0.15) 29px
         );
+    display: flex;
+    flex-direction: column;
 }
 
 /* Entry List Items */
@@ -425,7 +429,7 @@ header h1 {
     text-align: center;
     color: #8b7355;
     font-size: 2.5em;
-    padding: 100px 20px;
+    padding: 20px;
     font-style: italic;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
     flex: 1;
