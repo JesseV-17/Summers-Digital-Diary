@@ -339,13 +339,6 @@ function loadLockedEntriesSections() {
             `;
         }).join('');
     }
-    
-    // Auto-select first unlocked or locked entry
-    if (unlocked.length > 0) {
-        selectEntry('locked', unlocked[0].id);
-    } else if (locked.length > 0) {
-        selectEntry('locked', locked[0].id);
-    }
 }
 
 // Select and display an entry
