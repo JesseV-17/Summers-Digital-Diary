@@ -184,50 +184,6 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
 We're just friends, at least that's what I keep telling myself. But there are these moments - when our eyes meet across a room, when our hands accidentally brush - that make me wonder if maybe there's something more.
 
 I don't know if I should say anything or just enjoy the butterflies. What if I ruin the friendship? What if they don't feel the same way? For now, I'll keep this secret and see where the summer takes us.`
-    },
-    {
-        id: 104,
-        title: "Difficult Family Dinner",
-        date: "July 2, 2026",
-        passcode: "4444",
-        content: `Family dinner tonight was... tense. Old conflicts resurfaced, the usual expectations were mentioned, and I felt myself shrinking back into the role everyone expects me to play.
-
-Why is it so hard to be myself around the people who should know me best? I love my family, but sometimes I feel like they don't really see me - they see who they want me to be.
-
-I left feeling exhausted and a bit sad. But I'm trying to remember that their expectations don't define my worth. I'm enough, exactly as I am, even if they don't always understand that.`
-    },
-    {
-        id: 105,
-        title: "The Thing I'm Ashamed Of",
-        date: "July 9, 2026",
-        passcode: "5555",
-        content: `I did something I'm not proud of. I won't go into details, but it's been eating at me. I acted out of insecurity, jealousy maybe, and I hurt someone in the process.
-
-The guilt is heavy. I've been trying to justify it, make excuses, but deep down I know I was wrong. I need to apologize, to make it right, but I'm scared.
-
-This is my reminder that I'm human, flawed, still learning. The best I can do is acknowledge my mistakes, truly apologize, and do better going forward. Growth isn't pretty, but it's necessary.`
-    },
-    {
-        id: 106,
-        title: "Late Night Anxiety",
-        date: "July 16, 2026",
-        passcode: "6666",
-        content: `It's 2 AM and my mind won't shut off. All the worries, all the what-ifs, they're swirling around like a storm. My chest feels tight and my breathing is shallow.
-
-I hate these nights. When the world is quiet and my thoughts are so loud. I worry about things I can't control, imagine worst-case scenarios, question every decision I've made.
-
-I'm trying the breathing exercises. In for four, hold for four, out for four. Slowly, the storm starts to calm. It's going to be okay. Tomorrow is a new day. I just need to get through tonight.`
-    },
-    {
-        id: 107,
-        title: "The Dream I Haven't Told Anyone",
-        date: "July 23, 2026",
-        passcode: "7777",
-        content: `I have this dream. It's wild and impractical and probably impossible, but it's mine. I haven't told anyone because I'm afraid they'll laugh or tell me all the reasons it won't work.
-
-But when I think about it, really imagine it, I feel alive. Excited. Like maybe life could be an adventure instead of just going through the motions.
-
-What if I actually tried? What if I stopped playing it safe and took a chance? The thought terrifies me and thrills me at the same time. Maybe that's how you know it's worth pursuing.`
     }
 ];
 
@@ -255,6 +211,7 @@ function flipToNextPage() {
     if (unlockedPages.has(nextPage)) {
         currentPage = nextPage;
         loadEntriesList('regular');
+        loadLockedEntriesSections(); // Update special entries
         return;
     }
     
@@ -265,6 +222,7 @@ function flipToNextPage() {
         unlockedPages.add(nextPage);
         currentPage = nextPage;
         loadEntriesList('regular');
+        loadLockedEntriesSections(); // Update special entries
     } else if (password !== null) {
         alert('Incorrect password! Try again.');
     }
@@ -338,26 +296,31 @@ function loadLockedEntriesSections() {
     
     if (!lockedContainer || !unlockedContainer) return;
     
+    // Determine how many special entries to show based on current page
+    // Page 1: 1 entry, Page 2: 2 entries, Page 3: 3 entries
+    const numEntriesToShow = currentPage;
+    const availableEntries = lockedEntries.slice(0, numEntriesToShow);
+    
     const locked = [];
     const unlocked = [];
     
-    // Separate entries while preserving their original index
-    lockedEntries.forEach((entry, index) => {
+    // Separate available entries into locked and unlocked
+    availableEntries.forEach((entry, index) => {
         if (unlockedEntries.has(entry.id)) {
-            unlocked.push({ ...entry, originalIndex: index });
+            unlocked.push({ ...entry, index });
         } else {
-            locked.push({ ...entry, originalIndex: index });
+            locked.push({ ...entry, index });
         }
     });
     
     // Render locked entries
     if (locked.length === 0) {
-        lockedContainer.innerHTML = '<div class="empty-state-small">All entries unlocked!</div>';
+        lockedContainer.innerHTML = '';
     } else {
         lockedContainer.innerHTML = locked.map(entry => {
             return `
                 <div class="entry-list-item entry-locked" onclick="selectEntry('locked', ${entry.id})">
-                    <h3>${entry.originalIndex + 1}. ${escapeHtml(entry.title)}</h3>
+                    <h3>${entry.index + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
                 </div>
             `;
@@ -366,12 +329,12 @@ function loadLockedEntriesSections() {
     
     // Render unlocked entries
     if (unlocked.length === 0) {
-        unlockedContainer.innerHTML = '<div class="empty-state-small">No unlocked entries yet</div>';
+        unlockedContainer.innerHTML = '';
     } else {
         unlockedContainer.innerHTML = unlocked.map(entry => {
             return `
                 <div class="entry-list-item entry-unlocked" onclick="selectEntry('locked', ${entry.id})">
-                    <h3>${entry.originalIndex + 1}. ${escapeHtml(entry.title)}</h3>
+                    <h3>${entry.index + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
                     <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
                 </div>
