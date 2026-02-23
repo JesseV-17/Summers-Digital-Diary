@@ -8,15 +8,21 @@ A beautiful, secure digital diary application featuring pre-written summer entri
 
 You'll need to enter this password when you first open the diary. The password is stored for your current session only.
 
+**Page Passwords:**
+- Page 2 (entries 4-6): `page2`
+- Page 3 (entries 7-9): `page3`
+
 ## ✨ Features
 
 ### 📝 Regular Entries
-- **8 pre-written summer diary entries** chronicling adventures and memories
+- **9 pre-written summer diary entries** chronicling adventures and memories
+- **Page-based navigation** - Only 3 entries shown at a time (like turning pages in a real diary)
+- **Password-protected pages** - Click the "Turn Page" button and enter the password to access the next 3 entries
 - **Sidebar navigation** - Entry list on the left, full content on the right
 - **Click to read** - Select any entry to view its full content
 - Beautiful reading experience with smooth transitions
 
-### 🔒 Locked Entries
+### 🔒 Personal Entries
 - **Individual passcode protection** - Each private entry has its own unique passcode
 - **7 private entries** about dreams, feelings, and secrets
 - **Separate sections** - Locked entries 🔒 and Unlocked entries 🔓 in different areas
@@ -34,14 +40,16 @@ You'll need to enter this password when you first open the diary. The password i
 
 2. **Reading Regular Entries**
    - Click on the "📝 Regular Entries" tab
-   - Browse entry titles in the left sidebar
+   - Browse the first 3 entry titles in the left sidebar
    - Click any entry to read its full content on the right
+   - Click the "📖 Turn Page" button at the bottom to access more entries
+   - Enter the page password when prompted (`page2` for entries 4-6, `page3` for entries 7-9)
 
-3. **Accessing Locked Entries**
-   - Click on the "🔒 Locked Entries" tab
+3. **Accessing Personal Entries**
+   - Click on the "🔒 Personal Entries" tab
    - The sidebar shows two sections:
      - **🔓 Unlocked Entries** - Entries you've successfully unlocked
-     - **🔒 Locked Entries** - Entries still requiring passcodes
+     - **🔒 Personal Entries** - Entries still requiring passcodes
    - Click any locked entry to see a passcode prompt
    - Enter the specific passcode for that entry
    - Successfully unlocked entries automatically move to the "Unlocked Entries" section
@@ -65,8 +73,9 @@ You'll need to enter this password when you first open the diary. The password i
 - Fourth of July Fireworks
 - Learning to Surf
 - Farmers Market Treasures
+- Summer Night Concert
 
-**Locked Entries include:**
+**Personal Entries include:**
 - Dreams and Doubts
 - The Conversation I Avoided
 - Secret Crushes and Butterflies

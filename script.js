@@ -128,8 +128,28 @@ Those five seconds felt like flying. I can't wait to go again. My muscles are so
 I bought the most beautiful bouquet of sunflowers, fresh strawberries that taste like pure summer, and homemade honey from a local beekeeper. We chatted for twenty minutes about bees and I learned so much!
 
 Also discovered an incredible vendor selling handmade jewelry. Bought a bracelet made from sea glass - each piece smoothed by the ocean over time. Supporting local businesses and finding unique treasures makes my heart happy.`
+    },
+    {
+        id: 9,
+        title: "Summer Night Concert",
+        date: "July 26, 2026",
+        content: `Went to an outdoor concert tonight and it was absolutely magical. The band played under the stars while everyone sat on blankets or danced barefoot in the grass.
+
+The music filled the warm summer air and I felt completely present in the moment. Strangers became friends as we all swayed to the same rhythm. There's something special about live music on a summer night.
+
+As the final song played, I looked around at all the smiling faces lit by string lights and thought - these are the moments I'll remember forever. Summer magic at its finest.`
     }
 ];
+
+// Page passwords for regular entries
+const PAGE_PASSWORDS = {
+    2: "page2",  // Password to access entries 4-6
+    3: "page3"   // Password to access entries 7-9
+};
+
+// Track current page (1 = entries 1-3, 2 = entries 4-6, 3 = entries 7-9)
+let currentPage = 1;
+let unlockedPages = new Set([1]); // Page 1 is always unlocked
 
 const lockedEntries = [
     {
@@ -227,6 +247,29 @@ function init() {
     loadEntriesList('locked');
 }
 
+// Flip to next page function
+function flipToNextPage() {
+    const nextPage = currentPage + 1;
+    
+    // Check if the next page is already unlocked
+    if (unlockedPages.has(nextPage)) {
+        currentPage = nextPage;
+        loadEntriesList('regular');
+        return;
+    }
+    
+    // Show password prompt
+    const password = prompt(`Enter password to turn to page ${nextPage}:`);
+    
+    if (password === PAGE_PASSWORDS[nextPage]) {
+        unlockedPages.add(nextPage);
+        currentPage = nextPage;
+        loadEntriesList('regular');
+    } else if (password !== null) {
+        alert('Incorrect password! Try again.');
+    }
+}
+
 // Dropdown toggle functionality
 function toggleDropdown(type) {
     const header = document.querySelector(`.dropdown-header[onclick*="${type}"]`);
@@ -265,16 +308,36 @@ function loadEntriesList(type) {
     if (!container) return;
 
     if (type === 'regular') {
-        // Regular entries - load normally
-        container.innerHTML = entries.map((entry, index) => {
+        // Calculate which entries to show based on current page
+        const entriesPerPage = 3;
+        const startIndex = (currentPage - 1) * entriesPerPage;
+        const endIndex = startIndex + entriesPerPage;
+        const visibleEntries = entries.slice(startIndex, endIndex);
+        
+        // Regular entries - load only current page
+        let html = visibleEntries.map((entry, localIndex) => {
+            const globalIndex = startIndex + localIndex;
             return `
                 <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
-                    <h3>${index + 1}. ${escapeHtml(entry.title)}</h3>
+                    <h3>${globalIndex + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
                     <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
                 </div>
             `;
         }).join('');
+        
+        // Add flip page button if not on the last page
+        if (currentPage < 3) {
+            const nextPage = currentPage + 1;
+            const isUnlocked = unlockedPages.has(nextPage);
+            html += `
+                <div class="flip-page-button" onclick="flipToNextPage()">
+                    <span>📖 Turn Page</span>
+                </div>
+            `;
+        }
+        
+        container.innerHTML = html;
     } else {
         // Locked entries - separate into locked and unlocked
         loadLockedEntriesSections();

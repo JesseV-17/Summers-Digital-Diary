@@ -285,6 +285,41 @@ header h1 {
     color: rgba(244, 232, 216, 0.85);
 }
 
+/* Flip Page Button */
+.flip-page-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 15px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flip-page-button span {
+    background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+    color: #f4e8d8;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #654321;
+}
+
+.flip-page-button:hover span {
+    background: linear-gradient(135deg, #654321 0%, #8b4513 100%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.flip-page-button:active span {
+    transform: scale(0.98);
+}
+
 .entry-locked {
     position: relative;
     border-left: 4px solid #cd7f32;
