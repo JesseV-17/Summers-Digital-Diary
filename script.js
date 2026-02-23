@@ -308,18 +308,16 @@ function loadEntriesList(type) {
     if (!container) return;
 
     if (type === 'regular') {
-        // Calculate which entries to show based on current page
+        // Calculate which entries to show - all entries from page 1 to current page
         const entriesPerPage = 3;
-        const startIndex = (currentPage - 1) * entriesPerPage;
-        const endIndex = startIndex + entriesPerPage;
-        const visibleEntries = entries.slice(startIndex, endIndex);
+        const endIndex = currentPage * entriesPerPage;
+        const visibleEntries = entries.slice(0, endIndex);
         
-        // Regular entries - load only current page
-        let html = visibleEntries.map((entry, localIndex) => {
-            const globalIndex = startIndex + localIndex;
+        // Regular entries - show all entries up to current page
+        let html = visibleEntries.map((entry, index) => {
             return `
                 <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
-                    <h3>${globalIndex + 1}. ${escapeHtml(entry.title)}</h3>
+                    <h3>${index + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
                     <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
                 </div>
