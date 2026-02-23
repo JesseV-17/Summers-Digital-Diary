@@ -19,7 +19,7 @@ function checkDiaryPassword() {
         sessionStorage.setItem('diaryLoggedIn', 'true');
         showDiary();
     } else {
-        hint.textContent = '❌ Incorrect password. Try again!';
+        hint.textContent = 'Incorrect password. Try again!';
         hint.style.color = '#d32f2f';
         input.value = '';
         input.focus();
@@ -332,7 +332,7 @@ function loadEntriesList(type) {
             const isUnlocked = unlockedPages.has(nextPage);
             html += `
                 <div class="flip-page-button" onclick="flipToNextPage()">
-                    <span>📖 Turn Page</span>
+                    <span>Next Article</span>
                 </div>
             `;
         }
