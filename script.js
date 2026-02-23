@@ -431,11 +431,11 @@ function selectEntry(type, entryId) {
     // Display full entry content in single content area
     const contentContainer = document.getElementById('entry-content');
     
-    // Check if this entry should show the Next Article button (entries 3 and 6)
+    // Check if this entry should show the Next Entry button (entries 3 and 6)
     const shouldShowNextButton = (entry.id === 3 || entry.id === 6);
     const nextButtonHtml = shouldShowNextButton ? `
         <div class="flip-page-button" onclick="flipToNextPage()">
-            <span>Next Article</span>
+            <span>Next Entry</span>
         </div>
     ` : '';
     
