@@ -326,17 +326,6 @@ function loadEntriesList(type) {
             `;
         }).join('');
         
-        // Add flip page button if not on the last page
-        if (currentPage < 3) {
-            const nextPage = currentPage + 1;
-            const isUnlocked = unlockedPages.has(nextPage);
-            html += `
-                <div class="flip-page-button" onclick="flipToNextPage()">
-                    <span>Next Entry</span>
-                </div>
-            `;
-        }
-        
         container.innerHTML = html;
     } else {
         // Locked entries - separate into locked and unlocked
@@ -441,11 +430,21 @@ function selectEntry(type, entryId) {
 
     // Display full entry content in single content area
     const contentContainer = document.getElementById('entry-content');
+    
+    // Check if this entry should show the Next Article button (entries 3 and 6)
+    const shouldShowNextButton = (entry.id === 3 || entry.id === 6);
+    const nextButtonHtml = shouldShowNextButton ? `
+        <div class="flip-page-button" onclick="flipToNextPage()">
+            <span>Next Article</span>
+        </div>
+    ` : '';
+    
     contentContainer.innerHTML = `
         <div class="entry-full">
             <h1>${escapeHtml(entry.title)}</h1>
             <div class="entry-full-date">${entry.date}</div>
             <div class="entry-full-text">${escapeHtml(entry.content)}</div>
+            ${nextButtonHtml}
         </div>
     `;
 }
