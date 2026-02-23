@@ -332,7 +332,7 @@ function loadEntriesList(type) {
             const isUnlocked = unlockedPages.has(nextPage);
             html += `
                 <div class="flip-page-button" onclick="flipToNextPage()">
-                    <span>Next Article</span>
+                    <span>Next Entry</span>
                 </div>
             `;
         }
