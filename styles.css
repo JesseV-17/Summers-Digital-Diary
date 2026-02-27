@@ -452,23 +452,43 @@ header h1 {
     text-align: left;
 }
 
+.instructions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 0;
+}
+
+.instructions-header:hover {
+    opacity: 0.8;
+}
+
 .instructions-box h3 {
     color: #654321;
     font-family: Georgia, serif;
     font-size: 1.1em;
-    margin: 0 0 15px 0;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     letter-spacing: 1px;
+}
+
+.instructions-icon {
+    color: #8b7355;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
 }
 
 .instructions-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0 0 0;
     color: #5d4e37;
     font-family: Georgia, serif;
     font-size: 0.95em;
     line-height: 1.8;
+    animation: fadeIn 0.3s ease;
 }
 
 .instructions-list li {

@@ -264,6 +264,20 @@ function closePagePasswordModal() {
     error.style.display = 'none';
 }
 
+// Toggle instructions dropdown on login page
+function toggleInstructions() {
+    const content = document.getElementById('instructions-content');
+    const icon = document.querySelector('.instructions-icon');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.textContent = '▲';
+    } else {
+        content.style.display = 'none';
+        icon.textContent = '▼';
+    }
+}
+
 // Dropdown toggle functionality
 function toggleDropdown(type) {
     const header = document.querySelector(`.dropdown-header[onclick*="${type}"]`);
