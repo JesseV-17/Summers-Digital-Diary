@@ -53,7 +53,7 @@ const regularEntries = [
         id: 1,
         title: "Clean Spaces",
         date: "June 1, 2026",
-        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <em>Clear space = clear mind.</em> I know that you can develop those cleaning habits again, you were always so diligent about it.`
+        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <br> <br> <em>Clear space = clear mind.</em> <br> <br>I know that you can develop those cleaning habits again, you were always so diligent about it.`
     },
     {
         id: 2,
