@@ -52,24 +52,20 @@ const regularEntries = [
     {
         id: 1,
         title: "Clean Spaces",
-        date: "June 1, 2026",
+        date: "February 1st, 2026",
         content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <br> <br> <em>Clear space = clear mind.</em> <br> <br>I know that you can develop those cleaning habits again, you were always so diligent about it.`
     },
     {
         id: 2,
         title: "Face Yourself",
-        date: "June 8, 2026",
+        date: "February 1st, 2026",
         content: `It’s not too bad being alone, if you ever feel lonely it’s actually okay to feel sad and reflect. Make sure to face your emotions during difficult times so that they don’t bottle up into anger or resentment down the line. Let yourself feel sad, it’s part of being human. I think that it’s important to reach out to someone. When was the last time you took yourself on a solo date? Trust me on this one, going out alone is a perfect way to get to know more of you and how you’re actually feeling. Stop distracting yourself! <br> <br>Facing your feelings head on is a way to warm your heart and heal over time.`
     },
     {
         id: 3,
-        title: "Midnight Stargazing",
-        date: "June 15, 2026",
-        content: `Couldn't sleep tonight, so I went outside to look at the stars. The sky was incredibly clear - I could see the Milky Way stretching across like a river of light.
-
-I brought out a blanket and just lay there, thinking about how vast the universe is. I spotted several shooting stars and made wishes on each one. There's something humbling about stargazing, it puts everything into perspective.
-
-The crickets were chirping their night song, and a cool breeze made the summer heat bearable. I stayed out there for two hours, just lost in thought and wonder. These quiet moments are precious.`
+        title: "Get in the Car",
+        date: "February 1st, 2026",
+        content: `As I said before, going outside is a way to get out of your routine. If you’ve been in your room all day, you’re going to start attaching emotion and safety into that place. As nice as that sounds, you’re limiting yourself and hiding from the whole world that is out there. You can’t forget about the places that you used to love, those places are still there waiting for you.<br><br>I think I know a place where you could go that will make you feel alive, a reminder that you’re still here and that you have to keep going.<br><br>Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.<br><br><em>Go to the second floor of J wing to access your car<em>`
     },
     {
         id: 4,
