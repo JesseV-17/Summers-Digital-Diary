@@ -57,13 +57,9 @@ const regularEntries = [
     },
     {
         id: 2,
-        title: "Beach Day Adventures",
+        title: "Face Yourself",
         date: "June 8, 2026",
-        content: `Finally made it to the beach today! The sand was warm between my toes and the ocean sparkled like it was covered in diamonds. I spent hours just walking along the shore, collecting seashells and watching the waves crash against the rocks.
-
-Met a friendly dog named Max who was chasing the seagulls - it was hilarious watching him run back and forth. His owner and I chatted about our favorite beach spots. It's amazing how the beach brings people together.
-
-I stayed until sunset and treated myself to ice cream from the boardwalk. Mint chocolate chip, my favorite. Days like this remind me why summer is my favorite season.`
+        content: `It’s not too bad being alone, if you ever feel lonely it’s actually okay to feel sad and reflect. Make sure to face your emotions during difficult times so that they don’t bottle up into anger or resentment down the line. Let yourself feel sad, it’s part of being human. I think that it’s important to reach out to someone. When was the last time you took yourself on a solo date? Trust me on this one, going out alone is a perfect way to get to know more of you and how you’re actually feeling. Stop distracting yourself! <br> <br>Facing your feelings head on is a way to warm your heart and heal over time.`
     },
     {
         id: 3,
