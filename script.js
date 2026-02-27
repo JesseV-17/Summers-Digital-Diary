@@ -51,13 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const regularEntries = [
     {
         id: 1,
-        title: "First Day of Summer",
+        title: "Clean Spaces",
         date: "June 1, 2026",
-        content: `Today marks the beginning of summer! The weather is absolutely perfect - warm sunshine with a gentle breeze. I spent the morning planning all the adventures I want to have this season.
-
-I made a list of places to visit, books to read, and friends to reconnect with. There's something magical about the start of summer, like anything is possible. The days feel longer, the world feels brighter, and I'm filled with excitement for what's to come.
-
-Tonight, I watched the sunset from my favorite spot. The sky painted itself in shades of orange, pink, and purple. It felt like nature's way of saying "welcome to summer."`
+        content: `Reminder that a clean space can help with decluttering a messy mind. It’s a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it’s been challenging, but start off small. Making your bed and clearing your desk can be a start, and it’s a small win to celebrate yourself. clear space = clear mind. I know that you can develop those cleaning habits again, you were always so diligent about it."`
     },
     {
         id: 2,
