@@ -77,6 +77,20 @@
             <p class="passcode-hint" id="passcode-hint"></p>
         </div>
     </div>
+
+    <!-- Page Password Modal -->
+    <div id="page-password-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>📖 Turn to Next Page</h2>
+            <p id="page-modal-message">Enter password to turn to page 2:</p>
+            <input type="password" id="page-password-input" placeholder="Enter password">
+            <div class="modal-buttons">
+                <button onclick="submitPagePassword()" class="btn-primary">Enter</button>
+                <button onclick="closePagePasswordModal()" class="btn-secondary">Cancel</button>
+            </div>
+            <p class="error-message" id="page-password-error" style="display: none;"></p>
+        </div>
+    </div>
     </div>
 
     <script src="script.js"></script>

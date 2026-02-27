@@ -658,6 +658,21 @@ textarea:focus {
     font-family: Georgia, serif;
 }
 
+.error-message {
+    font-size: 0.9em;
+    color: #c44536;
+    margin-top: 15px;
+    font-weight: 600;
+    font-family: Georgia, serif;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
 /* Locked Content */
 .locked-header {
     display: flex;

@@ -203,17 +203,65 @@ function flipToNextPage() {
         return;
     }
     
-    // Show password prompt
-    const password = prompt(`Enter password to turn to page ${nextPage}:`);
+    // Show custom page password modal
+    showPagePasswordModal(nextPage);
+}
+
+// Show page password modal
+function showPagePasswordModal(pageNumber) {
+    const modal = document.getElementById('page-password-modal');
+    const message = document.getElementById('page-modal-message');
+    const input = document.getElementById('page-password-input');
+    const error = document.getElementById('page-password-error');
+    
+    message.textContent = `Enter password to turn to page ${pageNumber}:`;
+    input.value = '';
+    error.style.display = 'none';
+    modal.style.display = 'flex';
+    input.focus();
+    
+    // Store the page number for submission
+    modal.dataset.pageNumber = pageNumber;
+    
+    // Add enter key listener
+    input.onkeypress = function(e) {
+        if (e.key === 'Enter') {
+            submitPagePassword();
+        }
+    };
+}
+
+// Submit page password
+function submitPagePassword() {
+    const modal = document.getElementById('page-password-modal');
+    const input = document.getElementById('page-password-input');
+    const error = document.getElementById('page-password-error');
+    const nextPage = parseInt(modal.dataset.pageNumber);
+    const password = input.value;
     
     if (password === PAGE_PASSWORDS[nextPage]) {
         unlockedPages.add(nextPage);
         currentPage = nextPage;
         loadEntriesList('regular');
         loadLockedEntriesSections(); // Update special entries
-    } else if (password !== null) {
-        alert('Incorrect password! Try again.');
+        closePagePasswordModal();
+    } else if (password) {
+        error.textContent = 'Incorrect password! Try again.';
+        error.style.display = 'block';
+        input.value = '';
+        input.focus();
     }
+}
+
+// Close page password modal
+function closePagePasswordModal() {
+    const modal = document.getElementById('page-password-modal');
+    const input = document.getElementById('page-password-input');
+    const error = document.getElementById('page-password-error');
+    
+    modal.style.display = 'none';
+    input.value = '';
+    error.style.display = 'none';
 }
 
 // Dropdown toggle functionality
