@@ -53,11 +53,7 @@ const regularEntries = [
         id: 1,
         title: "Clean Spaces",
         date: "June 1, 2026",
-        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. 
-        
-        *Clear space = clear mind.* 
-        
-        I know that you can develop those cleaning habits again, you were always so diligent about it.`
+        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <em>Clear space = clear mind.</em> I know that you can develop those cleaning habits again, you were always so diligent about it.`
     },
     {
         id: 2,
@@ -343,6 +339,12 @@ function loadLockedEntriesSections() {
     }
 }
 
+// Helper function to format content with line breaks and allow specific HTML tags
+function formatContent(content) {
+    // Replace newlines with <br> tags and preserve HTML tags like <em>
+    return content.replace(/\n/g, '<br>');
+}
+
 // Select and display an entry
 function selectEntry(type, entryId) {
     const entries = type === 'regular' ? regularEntries : lockedEntries;
@@ -404,7 +406,7 @@ function selectEntry(type, entryId) {
         <div class="entry-full">
             <h1>${escapeHtml(entry.title)}</h1>
             <div class="entry-full-date">${entry.date}</div>
-            <div class="entry-full-text">${escapeHtml(entry.content)}</div>
+            <div class="entry-full-text">${formatContent(entry.content)}</div>
             ${nextButtonHtml}
         </div>
     `;
