@@ -582,6 +582,12 @@ header h1 {
     letter-spacing: 0.3px;
 }
 
+/* Golden italics for special entries */
+.entry-special .entry-full-text em {
+    color: #d4af37;
+    font-style: italic;
+}
+
 /* Entry Form - Remove/Hide */
 .entry-form {
     display: none;

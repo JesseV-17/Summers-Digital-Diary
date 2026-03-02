@@ -142,14 +142,12 @@ let unlockedPages = new Set([1]); // Page 1 is always unlocked
 const lockedEntries = [
     {
         id: 101,
-        title: "Dreams and Doubts",
-        date: "June 5, 2026",
-        passcode: "1111",
-        content: `Sometimes I wonder if I'm on the right path. Everyone seems so sure of their direction, but I feel like I'm still figuring things out. Is that okay?
+        title: "I HATE Being Late!",
+        date: "October 5, 2021",
+        passcode: "M1s$ U",
+        content: `Why is he ALWAYS late! It annoys me so much. Is it too much to ask for him to be punctual for once? Like, honestly, it hurts a lot when my time doesn’t feel valued. I set up this nice romantic picnic and now I’m stuck waiting here for him. *Sigh* I hope he’ll at least bring me some flowers to make up for it, or at least a picture of my favourite bird.
 
-I have so many dreams - some big, some small. But there's this fear that holds me back. What if I fail? What if I'm not good enough? These thoughts keep me up at night.
-
-But then I remind myself that it's okay not to have all the answers. Growth happens in the uncertainty. I'm allowed to be a work in progress.`
+<em>Looking back on it now, I don't know why I always rushed you. Maybe it was an early sign of my illness taking hold, but it's not fair to you if I blame it on that. Now I had wished I moved through things slower. I remember that shortly after I wrote this, you arrived. We ended up having such a good date, and in the end you did get a picture of that bird when we went out for a stroll.</em>`
     },
     {
         id: 102,
@@ -456,8 +454,11 @@ function selectEntry(type, entryId) {
         </div>
     ` : '';
     
+    // Add special class for locked entries
+    const specialClass = type === 'locked' ? 'entry-special' : '';
+    
     contentContainer.innerHTML = `
-        <div class="entry-full">
+        <div class="entry-full ${specialClass}">
             <h1>${escapeHtml(entry.title)}</h1>
             <div class="entry-full-date">${entry.date}</div>
             <div class="entry-full-text">${formatContent(entry.content)}</div>
