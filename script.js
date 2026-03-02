@@ -1,5 +1,5 @@
 // Diary login password
-const DIARY_PASSWORD = "summer2026";
+const DIARY_PASSWORD = "H3AL1NG";
 
 // Check if user is already logged in
 window.addEventListener('DOMContentLoaded', () => {
