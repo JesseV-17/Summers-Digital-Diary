@@ -144,6 +144,7 @@ const lockedEntries = [
         id: 101,
         title: "I HATE Being Late!",
         date: "October 5, 2021",
+        updated: "February 1st, 2026",
         passcode: "M1s$ U",
         content: `Why is he ALWAYS late! It annoys me so much. Is it too much to ask for him to be punctual for once? Like, honestly, it hurts a lot when my time doesn’t feel valued. I set up this nice romantic picnic and now I’m stuck waiting here for him. *Sigh* I hope he’ll at least bring me some flowers to make up for it, or at least a picture of my favourite bird.
 
@@ -153,6 +154,7 @@ const lockedEntries = [
         id: 102,
         title: "The Conversation I Avoided",
         date: "June 18, 2026",
+        updated: "February 1st, 2026",
         passcode: "2222",
         content: `There's a conversation I need to have, but I keep putting it off. You know the kind - the one where you have to be vulnerable and honest, and you're not sure how the other person will react.
 
@@ -164,6 +166,7 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
         id: 103,
         title: "Secret Crushes and Butterflies",
         date: "June 25, 2026",
+        updated: "February 1st, 2026",
         passcode: "3333",
         content: `Okay, so there's someone. Someone who makes me smile without even trying. Someone whose texts make my heart do that silly flutter thing.
 
@@ -457,10 +460,16 @@ function selectEntry(type, entryId) {
     // Add special class for locked entries
     const specialClass = type === 'locked' ? 'entry-special' : '';
     
+    // Format date with updated info for locked entries
+    let dateDisplay = entry.date;
+    if (type === 'locked' && entry.updated) {
+        dateDisplay += ` | Updated: ${entry.updated}`;
+    }
+    
     contentContainer.innerHTML = `
         <div class="entry-full ${specialClass}">
             <h1>${escapeHtml(entry.title)}</h1>
-            <div class="entry-full-date">${entry.date}</div>
+            <div class="entry-full-date">${dateDisplay}</div>
             <div class="entry-full-text">${formatContent(entry.content)}</div>
             ${nextButtonHtml}
         </div>
