@@ -326,7 +326,7 @@ header h1 {
 }
 
 .entry-locked::after {
-    content: '🔒';
+    content: '';
     position: absolute;
     top: 15px;
     right: 15px;
@@ -340,7 +340,7 @@ header h1 {
 }
 
 .entry-unlocked::after {
-    content: '🔓';
+    content: '';
     position: absolute;
     top: 15px;
     right: 15px;
