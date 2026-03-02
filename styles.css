@@ -7,6 +7,8 @@
 html {
     height: 100%;
     overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -17,6 +19,8 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -132,6 +136,8 @@ header h1 {
     flex-shrink: 0;
     border-right: 3px solid #8b7355;
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     background: #ebe1d1;
     background-image: 
         repeating-linear-gradient(
@@ -529,6 +535,8 @@ header h1 {
     right: 0;
     bottom: 0;
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     flex-direction: column;
 }
@@ -787,15 +795,137 @@ textarea:focus {
 }
 
 /* Responsive Design */
+/* Tablet Responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+    .entries-sidebar {
+        width: 300px;
+    }
+    
+    .entry-full {
+        padding: 30px 35px;
+    }
+    
+    .entry-full h1 {
+        font-size: 1.8em;
+    }
+    
+    .modal-content {
+        min-width: 350px;
+        padding: 35px;
+    }
+    
+    .login-modal {
+        min-width: 400px;
+        padding: 45px;
+    }
+}
+
+/* Mobile/Tablet Landscape (600px - 768px) */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 8px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .diary-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .entries-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #8b7355;
+        max-height: 400px;
+        padding: 0 15px 15px 15px;
+    }
+    
+    .entry-display {
+        padding: 15px;
+        min-height: 400px;
+    }
+    
+    .entry-full {
+        padding: 25px;
+    }
+    
+    .entry-full h1 {
+        font-size: 1.6em;
+    }
+    
+    .entry-full-text {
+        font-size: 1em;
+    }
+    
+    .dropdown-header {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+    
+    .entry-list-item {
+        padding: 12px;
+    }
+    
+    .entry-list-item h3 {
+        font-size: 1em;
+    }
+    
+    .modal-content {
+        min-width: 300px;
+        width: 85%;
+        padding: 30px 25px;
+    }
+    
+    .login-modal {
+        min-width: 350px;
+        width: 85%;
+        padding: 40px;
+    }
+    
+    .instructions-box {
+        padding: 15px;
+        margin: 15px 0 25px 0;
+    }
+    
+    .instructions-list {
+        font-size: 0.9em;
+    }
+    
+    .flip-page-button {
+        padding: 15px 12px;
+    }
+}
+
+/* Phone Responsiveness (below 600px) */
 @media (max-width: 600px) {
     .container {
         border-radius: 0;
         border-left: none;
         border-right: none;
+        height: 100vh;
+    }
+
+    header {
+        padding: 15px;
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
     }
 
     .tab-button {
@@ -817,19 +947,174 @@ textarea:focus {
         border-right: none;
         border-bottom: 3px solid #8b7355;
         max-height: 300px;
+        padding: 0 12px 12px 12px;
     }
 
     .entry-display {
-        padding: 20px;
+        padding: 12px;
+        min-height: 300px;
     }
 
     .entry-full {
-        padding: 20px;
+        padding: 15px;
+    }
+    
+    .entry-full h1 {
+        font-size: 1.4em;
+    }
+    
+    .entry-full-text {
+        font-size: 0.95em;
+        line-height: 1.7;
+    }
+    
+    .entry-full-date {
+        font-size: 0.85em;
+        margin-bottom: 20px;
+    }
+    
+    .dropdown-header {
+        font-size: 1em;
+        padding: 10px;
+    }
+    
+    .dropdown-icon {
+        font-size: 0.8em;
+    }
+    
+    .entry-list-item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .entry-list-item h3 {
+        font-size: 0.95em;
+    }
+    
+    .entry-list-date {
+        font-size: 0.8em;
+    }
+    
+    .entry-list-preview {
+        font-size: 0.85em;
+    }
+    
+    .no-selection {
+        padding: 30px 15px;
+    }
+    
+    .no-selection h2 {
+        font-size: 1.3em;
+    }
+    
+    .no-selection p {
+        font-size: 0.9em;
     }
 
     .passcode-box, .modal-content {
         min-width: auto;
         width: 90%;
+        padding: 25px 15px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+    
+    .modal-content p {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+    
+    .modal-content input {
+        padding: 10px;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    
+    .login-modal {
+        min-width: auto;
+        width: 90%;
         padding: 30px 20px;
+    }
+    
+    .login-modal h1 {
+        font-size: 1.8em;
+    }
+    
+    .login-subtitle {
+        font-size: 1em;
+        margin-bottom: 20px !important;
+    }
+    
+    .instructions-box {
+        padding: 12px;
+        margin: 12px 0 20px 0;
+    }
+    
+    .instructions-box h3 {
+        font-size: 1em;
+    }
+    
+    .instructions-list {
+        font-size: 0.85em;
+        line-height: 1.6;
+    }
+    
+    .instructions-list li {
+        margin-bottom: 6px;
+        padding-left: 18px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 18px;
+        font-size: 0.95em;
+    }
+    
+    .modal-buttons {
+        gap: 8px;
+    }
+    
+    .flip-page-button {
+        padding: 12px 10px;
+        margin-top: 8px;
+    }
+    
+    .flip-page-button span {
+        padding: 10px 16px;
+        font-size: 0.95em;
+    }
+}
+
+/* Very small phones (below 400px) */
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .entry-full h1 {
+        font-size: 1.2em;
+    }
+    
+    .entry-full-text {
+        font-size: 0.9em;
+    }
+    
+    .modal-content, .login-modal {
+        width: 95%;
+        padding: 20px 12px;
+    }
+    
+    .login-modal h1 {
+        font-size: 1.5em;
+    }
+    
+    .instructions-list {
+        font-size: 0.8em;
+    }
+    
+    .entry-list-item h3 {
+        font-size: 0.9em;
     }
 }
