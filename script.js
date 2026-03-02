@@ -369,11 +369,10 @@ function loadLockedEntriesSections() {
         lockedContainer.innerHTML = '';
     } else {
         lockedContainer.innerHTML = locked.map(entry => {
-            const dateDisplay = entry.updated ? `${entry.date} | Updated: ${entry.updated}` : entry.date;
             return `
                 <div class="entry-list-item entry-locked" onclick="selectEntry('locked', ${entry.id})">
                     <h3>${entry.index + 1}. ${escapeHtml(entry.title)}</h3>
-                    <div class="entry-list-date">${dateDisplay}</div>
+                    <div class="entry-list-date">${entry.date}</div>
                 </div>
             `;
         }).join('');
