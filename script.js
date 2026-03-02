@@ -484,7 +484,7 @@ function showPasscodeModal(entry) {
     const hintElement = document.getElementById('passcode-hint');
     
     titleElement.textContent = `"${entry.title}"`;
-    hintElement.textContent = `Hint: Passcode is ${entry.passcode}`;
+    hintElement.textContent = '';
     
     modal.style.display = 'flex';
     
