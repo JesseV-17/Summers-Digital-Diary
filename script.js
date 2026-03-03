@@ -126,18 +126,52 @@ Also discovered an incredible vendor selling handmade jewelry. Bought a bracelet
 The music filled the warm summer air and I felt completely present in the moment. Strangers became friends as we all swayed to the same rhythm. There's something special about live music on a summer night.
 
 As the final song played, I looked around at all the smiling faces lit by string lights and thought - these are the moments I'll remember forever. Summer magic at its finest.`
+    },
+    {
+        id: 10,
+        title: "Camping Under the Stars",
+        date: "August 2, 2026",
+        content: `Went camping this weekend with a group of friends. We drove two hours out of the city to a secluded campsite surrounded by tall pines. Setting up tents and gathering firewood felt like a return to something primal and essential.
+
+We cooked dinner over the campfire - nothing fancy, just hot dogs and s'mores, but everything tastes better when cooked over an open flame. As night fell, we told ghost stories and laughed until our sides hurt.
+
+The best part was lying in my sleeping bag with the tent flap open, watching the stars. So many stars - more than I've ever seen. The Milky Way stretched across the sky like a river of light. I forgot how small we are, and somehow that felt comforting. Nature has a way of putting things in perspective.`
+    },
+    {
+        id: 11,
+        title: "BookStore Adventure",
+        date: "August 9, 2026",
+        content: `Discovered a small independent bookstore today tucked away on a side street I'd never explored before. The moment I walked in, the smell of old books and coffee enveloped me like a warm hug.
+
+The owner, an elderly woman with kind eyes, gave me recommendations and we chatted about our favorite authors for nearly an hour. She has a cat that lives in the store who immediately claimed my lap when I sat down to browse.
+
+I left with three new books and a promise to return next week for their book club. There's something magical about finding a new favorite place. It feels like discovering a secret world that was there all along, just waiting to be found.`
+    },
+    {
+        id: 12,
+        title: "Sunset Picnic",
+        date: "August 16, 2026",
+        content: `Planned a spontaneous sunset picnic at the overlook today. Packed a basket with cheese, crackers, fruit, and a bottle of sparkling cider. The climb up was steep but worth every step.
+
+We arrived just as the sun began its descent, painting the sky in shades of orange, pink, and purple. The clouds looked like cotton candy. We sat on our blanket and watched in comfortable silence as day turned to evening.
+
+As the last rays of sunlight disappeared, the first stars appeared. We stayed until the sky was completely dark, not wanting the moment to end. Sometimes the simplest plans create the most beautiful memories. This summer has taught me to appreciate the little things.`
     }
 ];
 
 // Page passwords for regular entries
 const PAGE_PASSWORDS = {
     2: "page2",  // Password to access entries 4-6
-    3: "page3"   // Password to access entries 7-9
+    3: "page3",  // Password to access entries 7-9
+    4: "page4"   // Password to access entries 10-12
 };
 
-// Track current page (1 = entries 1-3, 2 = entries 4-6, 3 = entries 7-9)
+// Track current page (1 = entries 1-3, 2 = entries 4-6, 3 = entries 7-9, 4 = entries 10-12)
 let currentPage = 1;
 let unlockedPages = new Set([1]); // Page 1 is always unlocked
+
+// Track max visible entry for page 2 special unlock (entries 4,5,6)
+let maxVisibleEntry = 3; // Start with 3 entries visible
 
 const lockedEntries = [
     {
@@ -173,6 +207,42 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
 We're just friends, at least that's what I keep telling myself. But there are these moments - when our eyes meet across a room, when our hands accidentally brush - that make me wonder if maybe there's something more.
 
 I don't know if I should say anything or just enjoy the butterflies. What if I ruin the friendship? What if they don't feel the same way? For now, I'll keep this secret and see where the summer takes us.`
+    },
+    {
+        id: 104,
+        title: "Why Won't You Open Up?",
+        date: "December 12, 2021",
+        updated: "February 1st, 2026",
+        passcode: "4444",
+        content: `Sometimes I feel like I'm the only one trying in this relationship. I share everything with you - my fears, my dreams, my insecurities. But when I ask about YOUR feelings, you just change the subject or joke it away. It's like pulling teeth getting you to talk about anything real.
+
+I just want to know what's going on in that head of yours. Are you happy? Are we okay? Do you even want this? The silence is killing me more than any answer would.
+
+<em>I understand now why you struggled to share. Growing up, you were taught that showing emotion wasn't okay, that vulnerability was weakness. I wish I had been more patient with you instead of pushing so hard. You were trying, in your own way. I see that now. And by the time you learned to open up to me, I was the one who couldn't share anymore - hiding my diagnosis from you for months because I didn't want to burden you.</em>`
+    },
+    {
+        id: 105,
+        title: "The Fight We Keep Having",
+        date: "March 3, 2022",
+        updated: "February 1st, 2026",
+        passcode: "5555",
+        content: `We had the same fight again today. You know, the one about me wanting to make plans and you preferring to be spontaneous. I like having things to look forward to, you like living in the moment. Neither of us is wrong, but we can't seem to find middle ground.
+
+You said I'm too controlling. I said you're too flaky. We both said things we'll probably regret tomorrow. I hate fighting with you. I hate that we can't see eye to eye on this. Why does this keep happening?
+
+<em>What a silly thing to fight about. I'd give anything now to fight with you again, to have one more disagreement about weekend plans. After my diagnosis, all those planned futures I wanted became impossible dreams. And your spontaneity? That became our greatest gift. Every unexpected adventure, every last-minute decision to watch the sunset or drive nowhere in particular - those became the precious moments I held onto. You taught me to live in the now when that's all I had left.</em>`
+    },
+    {
+        id: 106,
+        title: "Your Ex Texted You",
+        date: "July 8, 2022",
+        updated: "February 1st, 2026",
+        passcode: "6666",
+        content: `I saw her name flash on your phone screen today. Your ex. My stomach dropped. You quickly put your phone away and tried to act normal, but I SAW it. You've been texting her?
+
+I wanted to ask about it but I was too scared. What if you're having second thoughts about us? What if you still have feelings for her? All these insecure thoughts are eating me alive and I can't stop them. I trust you, I do... but why didn't you tell me?
+
+<em>I found out later it was nothing - she was just returning some old belongings you'd left at her place years ago. Such a simple, innocent thing that my anxiety turned into a catastrophe in my mind. I worked myself up over nothing. You never gave me a reason not to trust you, not once. Not even when things got really hard with my illness, when I became difficult and demanding and scared. You stayed. You always stayed. I'm sorry I doubted you, even for a moment.</em>`
     }
 ];
 
@@ -199,6 +269,8 @@ function flipToNextPage() {
     // Check if the next page is already unlocked
     if (unlockedPages.has(nextPage)) {
         currentPage = nextPage;
+        maxVisibleEntry = currentPage * 3;
+        
         loadEntriesList('regular');
         loadLockedEntriesSections(); // Update special entries
         return;
@@ -243,6 +315,8 @@ function submitPagePassword() {
     if (password === PAGE_PASSWORDS[nextPage]) {
         unlockedPages.add(nextPage);
         currentPage = nextPage;
+        maxVisibleEntry = currentPage * 3;
+        
         loadEntriesList('regular');
         loadLockedEntriesSections(); // Update special entries
         closePagePasswordModal();
@@ -317,12 +391,10 @@ function loadEntriesList(type) {
     if (!container) return;
 
     if (type === 'regular') {
-        // Calculate which entries to show - all entries from page 1 to current page
-        const entriesPerPage = 3;
-        const endIndex = currentPage * entriesPerPage;
-        const visibleEntries = entries.slice(0, endIndex);
+        // Use maxVisibleEntry to control which entries are shown
+        const visibleEntries = entries.slice(0, maxVisibleEntry);
         
-        // Regular entries - show all entries up to current page
+        // Regular entries - show all entries up to maxVisibleEntry
         let html = visibleEntries.map((entry, index) => {
             return `
                 <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
@@ -348,8 +420,8 @@ function loadLockedEntriesSections() {
     if (!lockedContainer || !unlockedContainer) return;
     
     // Determine how many special entries to show based on current page
-    // Page 1: 1 entry, Page 2: 2 entries, Page 3: 3 entries
-    const numEntriesToShow = currentPage;
+    // Page 1: 2 entries, Page 2: 4 entries, Page 3+: all 6 entries
+    const numEntriesToShow = currentPage * 2;
     const availableEntries = lockedEntries.slice(0, numEntriesToShow);
     
     const locked = [];
@@ -450,8 +522,8 @@ function selectEntry(type, entryId) {
     // Display full entry content in single content area
     const contentContainer = document.getElementById('entry-content');
     
-    // Check if this entry should show the Next Entry button (entries 3 and 6)
-    const shouldShowNextButton = (entry.id === 3 || entry.id === 6);
+    // Check if this entry should show the Next Entry button (entries 3, 6, and 9)
+    const shouldShowNextButton = (entry.id === 3 || entry.id === 6 || entry.id === 9);
     const nextButtonHtml = shouldShowNextButton ? `
         <div class="flip-page-button" onclick="flipToNextPage()">
             <span>Next Entry</span>
