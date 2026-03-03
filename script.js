@@ -222,11 +222,9 @@ In all seriousness, we did have a long talk, and we both came out happy with the
         date: "November 17th, 2025",
         updated: "February 1st, 2026",
         passcode: "W@lK f0Rw@rD",
-        content: `We had the same fight again today. You know, the one about me wanting to make plans and you preferring to be spontaneous. I like having things to look forward to, you like living in the moment. Neither of us is wrong, but we can't seem to find middle ground.
+        content: `Why, why is this happening to me! I went to the doctor, and they told me that I’m ill. I already told Luke about it, told him about how I don't have long left to live. Just when everything was starting to look bright… Why did this have to happen to us? I can’t keep crying about this, I don’t want Luke to feel more hurt than he already is by seeing me in pain. I wanted to give him a gift after our wedding. I made the gift box and everything, maybe he’ll still find it. I don’t want to live the little time I have left sulking and feeling anxious about the end. I’ll ask Luke if we can spend the little time we have left, together without a care in the world. But I also need him to know that his world will continue on without me. I need him to learn how to live for himself.
 
-You said I'm too controlling. I said you're too flaky. We both said things we'll probably regret tomorrow. I hate fighting with you. I hate that we can't see eye to eye on this. Why does this keep happening?
-
-<em>What a silly thing to fight about. I'd give anything now to fight with you again, to have one more disagreement about weekend plans. After my diagnosis, all those planned futures I wanted became impossible dreams. And your spontaneity? That became our greatest gift. Every unexpected adventure, every last-minute decision to watch the sunset or drive nowhere in particular - those became the precious moments I held onto. You taught me to live in the now when that's all I had left.</em>`
+<em>Truely, all that I wanted was for both of us to be happy. If only times and circumstances were different. But the best thing I can do now to help you, to help me, is to guide you in your grief. It’s been ugly and stagnant, but life can’t continue on like this. Both of us need to pass on, I need you to let go, I need you to live for yourself. I couldn’t let go of my guilt if I was the one that was dragging you down this whole time. Please, remember all of our good times, and take them with you as you go, but don’t stop, keep going. Do it not for the sake of myself, but for you, so you can find happiness again… so you can find peace again, without me…</em>`
     },
     {
         id: 106,
