@@ -177,7 +177,7 @@ const lockedEntries = [
     {
         id: 101,
         title: "I HATE Being Late!",
-        date: "October 5, 2021",
+        date: "October 5th, 2021",
         updated: "February 1st, 2026",
         passcode: "M1s$ U",
         content: `Why is he ALWAYS late! It annoys me so much. Is it too much to ask for him to be punctual for once? Like, honestly, it hurts a lot when my time doesn’t feel valued. I set up this nice romantic picnic and now I’m stuck waiting here for him. *Sigh* I hope he’ll at least bring me some flowers to make up for it, or at least a picture of my favourite bird.
@@ -186,10 +186,10 @@ const lockedEntries = [
     },
     {
         id: 102,
-        title: "The Conversation I Avoided",
-        date: "June 18, 2026",
+        title: "Sonny Bought the Farm…",
+        date: "January 18th, 2022",
         updated: "February 1st, 2026",
-        passcode: "2222",
+        passcode: "Y0uR tH3 B3$t",
         content: `There's a conversation I need to have, but I keep putting it off. You know the kind - the one where you have to be vulnerable and honest, and you're not sure how the other person will react.
 
 I rehearse what I want to say in my head, but when the moment comes, I chicken out. I change the subject, make a joke, anything to avoid the discomfort.
@@ -198,10 +198,10 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
     },
     {
         id: 103,
-        title: "Secret Crushes and Butterflies",
-        date: "June 25, 2026",
+        title: "Wet Test Papers",
+        date: "June 25th, 2022",
         updated: "February 1st, 2026",
-        passcode: "3333",
+        passcode: "H0lD mY h@nD",
         content: `Okay, so there's someone. Someone who makes me smile without even trying. Someone whose texts make my heart do that silly flutter thing.
 
 We're just friends, at least that's what I keep telling myself. But there are these moments - when our eyes meet across a room, when our hands accidentally brush - that make me wonder if maybe there's something more.
@@ -210,10 +210,10 @@ I don't know if I should say anything or just enjoy the butterflies. What if I r
     },
     {
         id: 104,
-        title: "Why Won't You Open Up?",
-        date: "December 12, 2021",
+        title: "My Loving Partner",
+        date: "February 14th, 2023",
         updated: "February 1st, 2026",
-        passcode: "4444",
+        passcode: "gR@b T1gHt",
         content: `Sometimes I feel like I'm the only one trying in this relationship. I share everything with you - my fears, my dreams, my insecurities. But when I ask about YOUR feelings, you just change the subject or joke it away. It's like pulling teeth getting you to talk about anything real.
 
 I just want to know what's going on in that head of yours. Are you happy? Are we okay? Do you even want this? The silence is killing me more than any answer would.
@@ -222,10 +222,10 @@ I just want to know what's going on in that head of yours. Are you happy? Are we
     },
     {
         id: 105,
-        title: "The Fight We Keep Having",
-        date: "March 3, 2022",
+        title: "I Want You to be Happy",
+        date: "November 17th, 2025",
         updated: "February 1st, 2026",
-        passcode: "5555",
+        passcode: "W@lK f0Rw@rD",
         content: `We had the same fight again today. You know, the one about me wanting to make plans and you preferring to be spontaneous. I like having things to look forward to, you like living in the moment. Neither of us is wrong, but we can't seem to find middle ground.
 
 You said I'm too controlling. I said you're too flaky. We both said things we'll probably regret tomorrow. I hate fighting with you. I hate that we can't see eye to eye on this. Why does this keep happening?
@@ -234,10 +234,10 @@ You said I'm too controlling. I said you're too flaky. We both said things we'll
     },
     {
         id: 106,
-        title: "Your Ex Texted You",
-        date: "July 8, 2022",
+        title: "I Tried",
+        date: "February 1st, 2026",
         updated: "February 1st, 2026",
-        passcode: "6666",
+        passcode: "1M $0rRy",
         content: `I saw her name flash on your phone screen today. Your ex. My stomach dropped. You quickly put your phone away and tried to act normal, but I SAW it. You've been texting her?
 
 I wanted to ask about it but I was too scared. What if you're having second thoughts about us? What if you still have feelings for her? All these insecure thoughts are eating me alive and I can't stop them. I trust you, I do... but why didn't you tell me?
