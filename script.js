@@ -420,8 +420,8 @@ function loadLockedEntriesSections() {
     if (!lockedContainer || !unlockedContainer) return;
     
     // Determine how many special entries to show based on current page
-    // Page 1: 2 entries, Page 2: 4 entries, Page 3+: all 6 entries
-    const numEntriesToShow = currentPage * 2;
+    // Page 1: 2 entries, Page 2: 4 entries, Page 3: 5 entries, Page 4+: all 6 entries
+    const numEntriesToShow = currentPage >= 4 ? 6 : (currentPage === 3 ? 5 : currentPage * 2);
     const availableEntries = lockedEntries.slice(0, numEntriesToShow);
     
     const locked = [];
