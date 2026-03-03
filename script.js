@@ -190,11 +190,9 @@ const lockedEntries = [
         date: "January 18th, 2022",
         updated: "February 1st, 2026",
         passcode: "Y0uR tH3 B3$t",
-        content: `There's a conversation I need to have, but I keep putting it off. You know the kind - the one where you have to be vulnerable and honest, and you're not sure how the other person will react.
+        content: `Sonny passed away yesterday… I don’t know what to do now. Everything feels slow… and cold, so very cold. Mom and Dad said that he went peacefully, but I didn’t want him to go, I still needed him. Luke heard the news and called me. He gave me his condolences about Sonny and told me that he was there for me and asked if I needed anything. In truth, I don’t want anything or anyone right now… All I want is to be left alone in my room, away from all the noise and bullshit. I feel this empty void in my chest, like a piece of me died when Sonny left. I just need time…
 
-I rehearse what I want to say in my head, but when the moment comes, I chicken out. I change the subject, make a joke, anything to avoid the discomfort.
-
-But I know I can't avoid it forever. The words are building up inside me, and eventually, they need to come out. Maybe tomorrow I'll find the courage.`
+<em>It felt awful when Sonny died, but I realize that same feeling must be what you feel now. I’m sorry that during those hard weeks I pushed you and everyone else away, Luke. You were my only reason to keep going after everything around me felt crushed. I hope you knew that I never wanted to push you away. Of course you did, and you were still there for me. And now, I wanna be there for you, at least for as long as I can…</em>`
     },
     {
         id: 103,
@@ -202,11 +200,9 @@ But I know I can't avoid it forever. The words are building up inside me, and ev
         date: "June 25th, 2022",
         updated: "February 1st, 2026",
         passcode: "H0lD mY h@nD",
-        content: `Okay, so there's someone. Someone who makes me smile without even trying. Someone whose texts make my heart do that silly flutter thing.
+        content: `Why do we even have tests in an Industrial Design course! They always end up making my day worse… damn it, I can feel the tears peaking out from my eyes. My parents still don’t know yet, and I’m not going to tell them. If I do, they'll get mad… they’ll be worse than mad, they’ll be disappointed. Damn it Luke, why aren’t you awake? I need you to pick up your phone, I need you to tell me that it’ll be ok. I don’t want to cry anymore, my eyes are so very tired. 
 
-We're just friends, at least that's what I keep telling myself. But there are these moments - when our eyes meet across a room, when our hands accidentally brush - that make me wonder if maybe there's something more.
-
-I don't know if I should say anything or just enjoy the butterflies. What if I ruin the friendship? What if they don't feel the same way? For now, I'll keep this secret and see where the summer takes us.`
+<em>Sure, there were times where I had to journey on my own, but you were always with me. Even after a grueling 12 hour shift, the first thing you did after seeing the missed calls was call me back and calm me down. I remember my tears wouldn’t stop falling, you showed up at my house and hugged me… We sat there for such a long time in that embrace. It helped me a lot, not just the embrace but your presence. I hope even like this, I can provide you with the same comfort you provided me.</em>`
     },
     {
         id: 104,
@@ -214,11 +210,11 @@ I don't know if I should say anything or just enjoy the butterflies. What if I r
         date: "February 14th, 2023",
         updated: "February 1st, 2026",
         passcode: "gR@b T1gHt",
-        content: `Sometimes I feel like I'm the only one trying in this relationship. I share everything with you - my fears, my dreams, my insecurities. But when I ask about YOUR feelings, you just change the subject or joke it away. It's like pulling teeth getting you to talk about anything real.
+        content: `So, Luke and I had a big talk yesterday. It was a talk about the future, about us, about our relationship. It was only right that we talk about it now, since we’ll be graduating soon and we already moved in together, but funny enough Luke was actually the one who brought it up first. I have a feeling that some day within the year after graduation, he’s gonna propose. I really hope he doesn’t propose in front of people, wait no… of course he wouldn’t, he’s not a fan of big public displays lol. 
 
-I just want to know what's going on in that head of yours. Are you happy? Are we okay? Do you even want this? The silence is killing me more than any answer would.
+In all seriousness, we did have a long talk, and we both came out happy with the outcome! We even discussed the possibility of children in the future. We decided that we’ll see what the future holds, but if we do, we both agreed that if it’s a girl, her name will be Faye.
 
-<em>I understand now why you struggled to share. Growing up, you were taught that showing emotion wasn't okay, that vulnerability was weakness. I wish I had been more patient with you instead of pushing so hard. You were trying, in your own way. I see that now. And by the time you learned to open up to me, I was the one who couldn't share anymore - hiding my diagnosis from you for months because I didn't want to burden you.</em>`
+<em>And you did, you proposed about a year after we graduated. I could tell that you were planning something big, especially after our conversation about the future. I could see you working tirelessly day and night and saving money, I hope you knew that I didn’t need a fancy ring, a simple band was enough. A future where we exist now is long gone unfortunately, I’m sorry that this illness took so much from us. Maybe in another life, we could have had a daughter named Faye.</em>`
     },
     {
         id: 105,
@@ -238,11 +234,7 @@ You said I'm too controlling. I said you're too flaky. We both said things we'll
         date: "February 1st, 2026",
         updated: "February 1st, 2026",
         passcode: "1M $0rRy",
-        content: `I saw her name flash on your phone screen today. Your ex. My stomach dropped. You quickly put your phone away and tried to act normal, but I SAW it. You've been texting her?
-
-I wanted to ask about it but I was too scared. What if you're having second thoughts about us? What if you still have feelings for her? All these insecure thoughts are eating me alive and I can't stop them. I trust you, I do... but why didn't you tell me?
-
-<em>I found out later it was nothing - she was just returning some old belongings you'd left at her place years ago. Such a simple, innocent thing that my anxiety turned into a catastrophe in my mind. I worked myself up over nothing. You never gave me a reason not to trust you, not once. Not even when things got really hard with my illness, when I became difficult and demanding and scared. You stayed. You always stayed. I'm sorry I doubted you, even for a moment.</em>`
+        content: ``
     }
 ];
 
