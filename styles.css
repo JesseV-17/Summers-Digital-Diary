@@ -797,31 +797,6 @@ textarea:focus {
 /* Responsive Design */
 /* Tablet Responsiveness (768px - 1024px) */
 @media (max-width: 1024px) {
-    .entries-sidebar {
-        width: 300px;
-    }
-    
-    .entry-full {
-        padding: 30px 35px;
-    }
-    
-    .entry-full h1 {
-        font-size: 1.8em;
-    }
-    
-    .modal-content {
-        min-width: 350px;
-        padding: 35px;
-    }
-    
-    .login-modal {
-        min-width: 400px;
-        padding: 45px;
-    }
-}
-
-/* Mobile/Tablet Landscape (600px - 768px) */
-@media (max-width: 768px) {
     .container {
         border-radius: 8px;
     }
