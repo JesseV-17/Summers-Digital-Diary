@@ -838,22 +838,8 @@ textarea:focus {
         font-size: 1em;
     }
     
-    .diary-layout {
-        flex-direction: column;
-        height: auto;
-    }
-    
     .entries-sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 3px solid #8b7355;
-        max-height: 400px;
-        padding: 0 15px 15px 15px;
-    }
-    
-    .entry-display {
-        padding: 15px;
-        min-height: 400px;
+        width: 280px;
     }
     
     .entry-full {
