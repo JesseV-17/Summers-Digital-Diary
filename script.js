@@ -232,7 +232,16 @@ In all seriousness, we did have a long talk, and we both came out happy with the
         date: "February 1st, 2026",
         updated: "February 1st, 2026",
         passcode: "1M $0rRy",
-        content: ``
+        content: `<em>I’m sorry Luke, I tried my best to help you move on. Oh, you probably didn’t even realize it was me. It’s Mae, I know… you’re probably wondering how or why, to be honest I don’t even know. All I can tell you is that I’m stuck in a limbo, I can’t move on Luke, just like you. I’m stuck now, permanently here. I’m tied down by your un-ending grief, enraptured by it. 
+
+I worry for you Luke, please I beg, let go of me! You need to carry on without me, please keep trying! Why? Why are you giving up? Luke, you live like this! Please eat something! You can’t keep starving yourself, it’s not good for you! Drink something Luke, PLEASE, ANYTHING! 
+
+WHY ARE YOU WALKING AROUND AS IF YOU’RE ALREADY DEAD? WHAT’S WRONG WITH YOU!? PLEASE LUKE, FORGET ABOUT ME! YOU NEED TO LIVE! Damn this shitty diary… LUKE, YOU NEED TO LIVE FOR YOURSELF! PLEASE LUKE, please…
+
+I feel like I’m crying, but nothing is falling, why? I hate this place, Luke please, please… LUKE WAIT NO! PLEASE DON’T LUKE, I CAN’T WATCH YOU SUFFER LIKE THIS. NO! NO! NO! LUKE PLEASE, GET HELP, PLEASE! Please someone, anyone…
+
+It’s so… cold here, I hate it.</em>`
+
     }
 ];
 
