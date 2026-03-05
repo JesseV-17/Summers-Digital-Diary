@@ -584,7 +584,7 @@ header h1 {
 
 /* Golden italics for special entries */
 .entry-special .entry-full-text em {
-    color: #d4af37;
+    color: #dab738;
     font-style: italic;
     -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
     text-stroke: 0.5px rgba(0, 0, 0, 1);
