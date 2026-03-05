@@ -195,7 +195,7 @@ header h1 {
 
 .entry-display {
     flex: 1;
-    overflow: hidden;
+    overflow-y: auto;
     background: #f9f3e9;
     background-image: 
         repeating-linear-gradient(
@@ -206,6 +206,7 @@ header h1 {
         );
     position: relative;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Entry List Items */
