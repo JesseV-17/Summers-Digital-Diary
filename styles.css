@@ -532,7 +532,7 @@ header h1 {
 /* Entry Content View */
 .entry-content-view {
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 100px 20px;
     box-sizing: border-box;
 }
 
@@ -551,7 +551,7 @@ header h1 {
     background: rgba(255, 255, 255, 0.3);
     padding: 40px 50px;
     border-left: 4px solid #8b7355;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .entry-full h1 {
