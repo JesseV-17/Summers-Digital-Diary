@@ -35,7 +35,7 @@ body {
 header {
     background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
     color: #f4e8d8;
-    padding: 20px 30px;
+    padding: 40px 30px;
     text-align: center;
     border-bottom: 3px solid #654321;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -43,15 +43,15 @@ header {
 }
 
 header h1 {
-    font-size: 1.8em;
-    margin-bottom: 5px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
     opacity: 0.9;
-    font-size: 0.95em;
+    font-size: 1.1em;
     font-style: italic;
     font-family: Georgia, serif;
 }
