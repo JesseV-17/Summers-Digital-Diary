@@ -501,20 +501,40 @@ function selectEntry(type, entryId) {
         });
         
         // Find and activate the clicked entry
+        let activeItem = null;
         allListItems.forEach(item => {
             if (item.getAttribute('onclick')?.includes(`${entryId}`)) {
                 item.classList.add('active');
+                activeItem = item;
             }
         });
+        
+        // Scroll the active item into view in the sidebar
+        if (activeItem) {
+            activeItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
     } else {
         const listItems = document.querySelectorAll(`#${type}-entries-list .entry-list-item`);
+        let activeItem = null;
         listItems.forEach((item, index) => {
             if (entries[index].id === entryId) {
                 item.classList.add('active');
+                activeItem = item;
             } else {
                 item.classList.remove('active');
             }
         });
+        
+        // Scroll the active item into view in the sidebar
+        if (activeItem) {
+            activeItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
     }
 
     // Display full entry content in single content area
