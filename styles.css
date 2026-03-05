@@ -548,9 +548,7 @@ header h1 {
 
 .entry-full {
     animation: fadeIn 0.3s ease;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 40px 50px;
-    border-left: 4px solid #8b7355;
+    padding: 20px;
     margin-bottom: 40px;
 }
 
@@ -560,6 +558,7 @@ header h1 {
     margin-bottom: 10px;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', Georgia, cursive;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .entry-full-date {
@@ -570,6 +569,7 @@ header h1 {
     border-bottom: 2px dashed #d4c4b0;
     font-style: italic;
     font-family: Georgia, serif;
+    text-align: left;
 }
 
 .entry-full-text {
@@ -579,6 +579,7 @@ header h1 {
     white-space: pre-wrap;
     font-family: Georgia, serif;
     letter-spacing: 0.3px;
+    text-align: left;
 }
 
 /* Golden italics for special entries */
