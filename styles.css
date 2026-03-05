@@ -586,7 +586,6 @@ header h1 {
 .entry-special .entry-full-text em {
     color: #dab738;
     font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Regular em tags */
