@@ -537,8 +537,7 @@ header h1 {
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
 }
 
 .no-selection {
@@ -549,10 +548,11 @@ header h1 {
     margin: 0;
     font-style: italic;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .entry-full {
