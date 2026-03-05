@@ -586,14 +586,14 @@ header h1 {
 .entry-special .entry-full-text em {
     color: #dab738;
     font-style: italic;
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
-    text-stroke: 0.5px rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.8);
+    text-stroke: 0.5px rgba(0, 0, 0, 0.8);
 }
 
 /* Regular em tags with black stroke */
 .entry-full-text em {
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
-    text-stroke: 0.5px rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.8);
+    text-stroke: 0.5px rgba(0, 0, 0, 0.8);
 }
 
 /* Entry Form - Remove/Hide */
