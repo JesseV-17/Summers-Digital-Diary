@@ -532,21 +532,18 @@ header h1 {
 /* Entry Content View */
 .entry-content-view {
     width: 100%;
-    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .no-selection {
     text-align: center;
     color: #8b7355;
     font-size: 2.5em;
-    padding: 50px 20px;
+    padding: 100px 20px;
     margin: 0;
     font-style: italic;
     font-family: 'Brush Script MT', cursive, 'Segoe Script', cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
 }
 
 .entry-full {
@@ -554,6 +551,8 @@ header h1 {
     background: rgba(255, 255, 255, 0.3);
     padding: 40px 50px;
     border-left: 4px solid #8b7355;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .entry-full h1 {
