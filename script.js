@@ -545,6 +545,15 @@ function selectEntry(type, entryId) {
             ${nextButtonHtml}
         </div>
     `;
+    
+    // Scroll to top of entry display
+    const entryDisplay = document.querySelector('.entry-display');
+    if (entryDisplay) {
+        entryDisplay.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 }
 
 // Modal functions for individual entry locking
