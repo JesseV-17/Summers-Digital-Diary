@@ -128,7 +128,6 @@ header h1 {
     gap: 0;
     overflow: hidden;
     min-height: 0;
-    height: 100%;
 }
 
 .entries-sidebar {
