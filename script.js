@@ -398,7 +398,7 @@ function loadEntriesList(type) {
                 <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
                     <h3>${index + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${entry.date}</div>
-                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+                    <div class="entry-list-preview">${escapeHtml(stripHtml(entry.content).substring(0, 80))}...</div>
                 </div>
             `;
         }).join('');
@@ -458,7 +458,7 @@ function loadLockedEntriesSections() {
                 <div class="entry-list-item entry-unlocked" onclick="selectEntry('locked', ${entry.id})">
                     <h3>${entry.index + 1}. ${escapeHtml(entry.title)}</h3>
                     <div class="entry-list-date">${dateDisplay}</div>
-                    <div class="entry-list-preview">${escapeHtml(entry.content.substring(0, 80))}...</div>
+                    <div class="entry-list-preview">${escapeHtml(stripHtml(entry.content).substring(0, 80))}...</div>
                 </div>
             `;
         }).join('');
@@ -624,6 +624,13 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Strip HTML tags from text
+function stripHtml(text) {
+    const div = document.createElement('div');
+    div.innerHTML = text;
+    return div.textContent || div.innerText || '';
 }
 
 // Allow Enter key to submit passcode in modal
