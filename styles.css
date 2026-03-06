@@ -649,6 +649,25 @@ header h1 {
     transform: rotate(-3deg);
 }
 
+.entry-full::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    width: 50px;
+    height: 20px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(234, 216, 168, 0.7),
+        rgba(234, 216, 168, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 16px
+    );
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transform: rotate(5deg);
+}
+
 .entry-full h1 {
     color: #1a1a1a;
     font-size: 2.3em;
@@ -658,6 +677,26 @@ header h1 {
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
     text-align: left;
     transform: rotate(-0.5deg);
+    position: relative;
+}
+
+.entry-full h1::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    right: 10%;
+    width: 45px;
+    height: 18px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(234, 216, 168, 0.75),
+        rgba(234, 216, 168, 0.75) 8px,
+        rgba(250, 248, 240, 0.75) 8px,
+        rgba(250, 248, 240, 0.75) 16px
+    );
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transform: rotate(8deg);
 }
 
 .entry-full-date {
@@ -693,6 +732,26 @@ header h1 {
     font-family: 'Indie Flower', cursive;
     letter-spacing: 0.5px;
     text-align: left;
+    position: relative;
+}
+
+.entry-full-text::after {
+    content: '';
+    position: absolute;
+    bottom: -45px;
+    right: 5%;
+    width: 55px;
+    height: 22px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(234, 216, 168, 0.7),
+        rgba(234, 216, 168, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 16px
+    );
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transform: rotate(-4deg);
 }
 
 /* Golden italics for special entries */
