@@ -243,8 +243,10 @@ header h1 {
 
 /* Entry List Items */
 .entry-list-item {
-    background: url('sticky-note.png') center/cover no-repeat;
+    background-image: url('./StickyNote.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
     border-radius: 0;
     padding: 50px 20px 20px 20px;
@@ -271,8 +273,10 @@ header h1 {
 }
 
 .entry-list-item.active {
-    background: url('sticky-note.png') center/cover no-repeat;
+    background-image: url('./StickyNote.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     filter: brightness(0.95);
     color: #3a2a22;
     box-shadow: 
