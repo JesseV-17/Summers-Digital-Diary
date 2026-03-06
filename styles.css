@@ -619,49 +619,45 @@ header h1 {
 
 .entry-full {
     animation: fadeIn 0.3s ease;
-    padding: 60px 50px 50px 50px;
+    padding: 30px;
     margin: 20px;
     margin-bottom: 40px;
-    background-image: url('./Scrap paper.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 0;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
-    transform: rotate(-0.5deg);
+    background: #fff;
+    border: 3px solid #d4c89a;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.2deg);
     position: relative;
-    min-height: 400px;
 }
 
 .entry-full::before {
     content: '';
     position: absolute;
-    top: 15px;
-    right: 40px;
-    width: 60px;
-    height: 25px;
+    top: -8px;
+    right: 30px;
+    width: 50px;
+    height: 20px;
     background: repeating-linear-gradient(
         45deg,
-        rgba(234, 216, 168, 0.8),
-        rgba(234, 216, 168, 0.8) 8px,
-        rgba(250, 248, 240, 0.8) 8px,
-        rgba(250, 248, 240, 0.8) 16px
+        rgba(234, 216, 168, 0.7),
+        rgba(234, 216, 168, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 8px,
+        rgba(250, 248, 240, 0.7) 16px
     );
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
 }
 
 .entry-full h1 {
     color: #1a1a1a;
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 2.3em;
+    margin-bottom: 10px;
     font-family: 'Caveat', cursive;
     font-weight: 700;
-    text-shadow: none;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
     text-align: left;
-    transform: rotate(-0.3deg);
+    transform: rotate(-0.5deg);
 }
 
 .entry-full-date {
@@ -670,7 +666,7 @@ header h1 {
     margin-bottom: 30px;
     padding-bottom: 15px;
     padding-left: 25px;
-    border-bottom: 2px dotted rgba(212, 200, 154, 0.6);
+    border-bottom: 2px dashed #d4c89a;
     font-family: 'Patrick Hand', cursive;
     text-align: left;
     position: relative;
@@ -710,19 +706,18 @@ header h1 {
 }
 
 .entry-special .entry-full {
-    background-image: url('./Scrap paper.png');
-    background-size: cover;
-    background-position: center;
-    box-shadow: 4px 4px 12px rgba(201, 184, 138, 0.25);
+    border-color: #c9b88a;
+    background: linear-gradient(to bottom, #fff 0%, #fffcf5 100%);
+    box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
 .entry-special .entry-full::before {
     background: repeating-linear-gradient(
         45deg,
-        rgba(234, 216, 168, 0.85),
-        rgba(234, 216, 168, 0.85) 8px,
-        rgba(249, 244, 226, 0.85) 8px,
-        rgba(249, 244, 226, 0.85) 16px
+        rgba(234, 216, 168, 0.7),
+        rgba(234, 216, 168, 0.7) 8px,
+        rgba(249, 244, 226, 0.7) 8px,
+        rgba(249, 244, 226, 0.7) 16px
     );
 }
 
@@ -958,8 +953,7 @@ textarea:focus {
     }
     
     .entry-full {
-        padding: 50px 40px 45px 40px;
-        min-height: 350px;
+        padding: 30px 35px;
     }
     
     .entry-full h1 {
@@ -1000,8 +994,7 @@ textarea:focus {
     }
     
     .entry-full {
-        padding: 45px 30px 40px 30px;
-        min-height: 320px;
+        padding: 25px;
     }
     
     .entry-full h1 {
@@ -1102,8 +1095,7 @@ textarea:focus {
     }
 
     .entry-full {
-        padding: 40px 25px 35px 25px;
-        min-height: 300px;
+        padding: 15px;
     }
     
     .entry-full h1 {
