@@ -83,34 +83,43 @@ header h1 {
 }
 
 .dropdown-header {
-    color: #2d3d2d;
+    color: #1a1a1a;
     font-size: 1.3em;
-    padding: 15px 20px;
-    margin: 0 -20px;
+    padding: 15px 30px 15px 20px;
+    margin: 0 -20px 15px -20px;
     cursor: pointer;
     user-select: none;
     font-family: 'Kalam', cursive;
     font-weight: 700;
-    background: #ead8a8;
-    background-image: linear-gradient(135deg, #ead8a8 0%, #dcc99a 100%);
-    border-bottom: 2px dashed #c9b88a;
+    background: #fde992;
+    border: none;
     transition: all 0.3s ease;
     position: relative;
-    transform: rotate(-0.2deg);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 8px 8px 0 0;
+    transform: rotate(0deg);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
 }
 
 .dropdown-header:hover {
-    background: #dcc99a;
-    transform: rotate(0deg) scale(1.01);
+    transform: translateX(5px);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.08);
 }
 
 .dropdown-header.active {
-    background: #dcc99a;
-    border-bottom: 2px solid #c0a87a;
-    color: #2d3d2d;
-    transform: rotate(0.3deg);
+    filter: brightness(0.92);
+    color: #1a1a1a;
+    transform: translateX(3px);
+}
+
+/* Alternate colors for dropdown headers */
+.dropdown-section:nth-child(odd) .dropdown-header {
+    background: #fde992; /* Yellow */
+}
+
+.dropdown-section:nth-child(even) .dropdown-header {
+    background: #ff9ec7; /* Pink */
 }
 
 .dropdown-icon {
@@ -247,36 +256,22 @@ header h1 {
 
 /* Entry List Items */
 .entry-list-item {
-    background: #fde992;
+    background-image: url('./StickyNote.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
-    border-radius: 4px;
-    padding: 20px 40px 20px 20px;
-    margin-bottom: 15px;
+    border-radius: 0;
+    padding: 50px 30px 30px 30px;
+    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
     position: relative;
-    transform: rotate(0deg);
-    min-height: 100px;
-    width: calc(100% - 15px);
-    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
-}
-
-/* Colorful sticky note variations */
-.entry-list-item:nth-child(4n+1) {
-    background: #fde992; /* Yellow */
-}
-
-.entry-list-item:nth-child(4n+2) {
-    background: #b8e986; /* Green */
-}
-
-.entry-list-item:nth-child(4n+3) {
-    background: #ff9ec7; /* Pink */
-}
-
-.entry-list-item:nth-child(4n+4) {
-    background: #7dd3fc; /* Blue */
+    transform: rotate(-1deg);
+    min-height: 180px;
+    width: 100%;
+    clip-path: none;
 }
 
 .entry-list-item::before {
@@ -284,17 +279,20 @@ header h1 {
 }
 
 .entry-list-item:hover {
-    transform: translateX(5px);
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.08);
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: none;
+    filter: brightness(1.05);
 }
 
 .entry-list-item.active {
-    filter: brightness(0.92);
-    color: #1a1a1a;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15);
-    transform: translateX(3px);
-    font-weight: 600;
+    background-image: url('./StickyNote.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.95);
+    color: #3a2a22;
+    box-shadow: none;
+    transform: rotate(1deg) translateY(-2px);
 }
 
 .entry-list-item.active::before {
@@ -302,10 +300,10 @@ header h1 {
 }
 
 .entry-list-item h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 5px;
     color: #1a1a1a;
-    font-family: 'Kalam', cursive;
+    font-family: 'Caveat', cursive;
     font-weight: 700;
     word-wrap: break-word;
     overflow: hidden;
@@ -318,11 +316,10 @@ header h1 {
 }
 
 .entry-list-date {
-    font-size: 0.8em;
-    color: #2a2a2a;
+    font-size: 0.85em;
+    color: #3a3a3a;
     font-family: 'Patrick Hand', cursive;
-    margin-bottom: 6px;
-    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .entry-list-item.active .entry-list-date {
@@ -331,19 +328,19 @@ header h1 {
 }
 
 .entry-list-preview {
-    font-size: 0.75em;
-    color: #2a2a2a;
+    font-size: 0.8em;
+    color: #3a3a3a;
     margin-top: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     font-family: 'Patrick Hand', cursive;
-    line-height: 1.4;
+    line-height: 1.3;
     word-wrap: break-word;
-    max-width: calc(100% - 20px);
+    max-width: 100%;
 }
 
 .entry-list-item.active .entry-list-preview {
@@ -390,46 +387,31 @@ header h1 {
 
 .entry-locked {
     position: relative;
-    opacity: 0.6;
-    filter: grayscale(0.5);
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    filter: grayscale(0.3);
+    box-shadow: none;
 }
 
 .entry-locked::after {
-    content: '🔒';
+    content: '';
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 1.3em;
-    opacity: 0.7;
+    top: 15px;
+    right: 15px;
+    font-size: 1.2em;
 }
 
 .entry-unlocked {
     position: relative;
-    filter: brightness(1.05) saturate(1.15);
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
-    animation: unlockPulse 0.5s ease;
-}
-
-@keyframes unlockPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    filter: brightness(1.05) saturate(1.1);
+    box-shadow: none;
 }
 
 .entry-unlocked::after {
-    content: '✨';
+    content: '';
     position: absolute;
-    top: 10px;
-    right: 25px;
+    top: 15px;
+    right: 15px;
     font-size: 1.2em;
-    opacity: 0.8;
-    animation: sparkle 2s infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0.8; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
 }
 
 /* Modal Styles */
@@ -1020,14 +1002,13 @@ textarea:focus {
     
     .dropdown-header {
         font-size: 1.1em;
-        padding: 12px;
+        padding: 12px 25px 12px 15px;
+        clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
     }
     
     .entry-list-item {
-        padding: 15px 35px 15px 15px;
-        min-height: 85px;
-        width: calc(100% - 12px);
-        clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
+        padding: 45px 25px 25px 25px;
+        min-height: 160px;
     }
     
     .entry-list-item h3 {
@@ -1128,7 +1109,8 @@ textarea:focus {
     
     .dropdown-header {
         font-size: 1em;
-        padding: 10px;
+        padding: 10px 22px 10px 12px;
+        clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
     }
     
     .dropdown-icon {
@@ -1136,11 +1118,9 @@ textarea:focus {
     }
     
     .entry-list-item {
-        padding: 12px 30px 12px 12px;
-        margin-bottom: 12px;
-        min-height: 75px;
-        width: calc(100% - 10px);
-        clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+        padding: 40px 20px 20px 20px;
+        margin-bottom: 15px;
+        min-height: 140px;
     }
     
     .entry-list-item h3 {
@@ -1152,9 +1132,9 @@ textarea:focus {
     }
     
     .entry-list-preview {
-        font-size: 0.7em;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
+        font-size: 0.75em;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
     
     .entry-list-preview {
