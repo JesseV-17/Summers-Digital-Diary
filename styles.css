@@ -387,7 +387,7 @@ header h1 {
 
 .entry-locked {
     position: relative;
-    opacity: 0.5;
+    opacity: 0.9;
     filter: grayscale(0.3);
     box-shadow: none;
 }
