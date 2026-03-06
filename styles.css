@@ -756,12 +756,9 @@ header h1 {
 
 /* Golden italics for special entries */
 .entry-special .entry-full-text em {
-    color: #c9b366;
+    color: #b8a070;
     font-style: italic;
     font-weight: bold;
-    background: linear-gradient(120deg, rgba(249, 237, 166, 0.4) 0%, rgba(240, 224, 140, 0.4) 100%);
-    padding: 2px 6px;
-    border-radius: 4px;
 }
 
 .entry-special .entry-full {
