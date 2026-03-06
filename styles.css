@@ -246,8 +246,8 @@ header h1 {
         repeating-linear-gradient(
             transparent,
             transparent 28px,
-            rgba(234, 216, 168, 0.12) 28px,
-            rgba(234, 216, 168, 0.12) 29px
+            rgba(234, 216, 168, 0.25) 28px,
+            rgba(234, 216, 168, 0.25) 29px
         );
     position: relative;
     min-height: 0;
