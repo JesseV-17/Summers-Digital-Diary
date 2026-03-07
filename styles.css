@@ -760,6 +760,9 @@ header h1 {
     color: #b8a070;
     font-style: italic;
     font-weight: bold;
+    background: none;
+    padding: 0;
+    border-radius: 0;
 }
 
 .entry-special .entry-full {
