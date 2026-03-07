@@ -65,62 +65,74 @@ const regularEntries = [
         id: 3,
         title: "Get in the Car",
         date: "February 1st, 2026",
-        content: `As I said before, going outside is a way to get out of your routine. If you’ve been in your room all day, you’re going to start attaching emotion and safety into that place. As nice as that sounds, you’re limiting yourself and hiding from the whole world that is out there. You can’t forget about the places that you used to love, those places are still there waiting for you.<br><br>I think I know a place where you could go that will make you feel alive, a reminder that you’re still here and that you have to keep going.<br><br>Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.<br><br><em>Go to the second floor of J wing to access your car<em>`
+        content: `As I said before, going outside is a way to get out of your routine. If you’ve been in your room all day, you’re going to start attaching emotion and safety into that place. As nice as that sounds, you’re limiting yourself and hiding from the whole world that is out there. You can’t forget about the places that you used to love, those places are still there waiting for you.
+        
+        I think I know a place where you could go that will make you feel alive, a reminder that you’re still here and that you have to keep going.
+        
+        Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.
+        
+        <em>Go to the second floor of J wing to access your car<em>`
     },
     {
         id: 4,
-        title: "Garden Party Success",
-        date: "June 22, 2026",
-        content: `Hosted my first garden party today and it was such a success! I spent all morning setting up fairy lights, arranging flowers, and preparing snacks. The backyard looked magical.
+        title: "Your Passions will Forever be with You",
+        date: "February 1st, 2026",
+        content: `I see that you’ve completed my first task for you to do already! You should give yourself a pat on the back for that one. I may be wrong but I know that when people are feeling lost in life, they start to leave their passions behind. That’s going to be hard for your inner child to hear, but it’s never too late to go back to your passion. 
 
-Friends started arriving around 4 PM and we spent the entire evening laughing, eating, and playing games. We had a impromptu karaoke session that had everyone in tears from laughing so hard.
+Don’t let anything stop you from doing your passion. You used to love photography, remember? Those photos you took captured real emotions, you have a gift Luke. 
 
-As the sun set, the fairy lights created the most beautiful ambiance. We roasted marshmallows and told stories until midnight. This is what summer memories are made of.`
+It’s okay to start it back up again. Your passions will forever be within you.`
     },
     {
         id: 5,
-        title: "Rainy Day Reading",
-        date: "June 29, 2026",
-        content: `Not every summer day is sunny, and that's okay. Today brought rain - the kind that drums steadily on the roof and creates that cozy atmosphere perfect for reading.
-
-I curled up on the window seat with a cup of tea and my favorite novel. The smell of rain mixed with the scent of my lavender candle. Hours passed in what felt like minutes as I got lost in the story.
-
-Sometimes the best days are the quiet ones, the ones where you slow down and just exist in the moment. The rain washed away the summer heat and left everything feeling fresh and new.`
+        title: "Tend to Your Responsibilities",
+        date: "February 1st, 2026",
+        content: `Similar to plants that we have to take care of and tend to, you need to tend to your responsibilities in a similar way. Humans are meant to connect, feel, and improve on themselves every day. That’s part of life, and your responsibilities are waiting to be tended to and looked after. Trust me, it will make more sense as you start getting back into it, your life will feel so much lighter. 
+        
+        <em>Remember, bulletin boards and poster boards are always helpful to keep track of your responsibilities! Especially on the floor you frequent most…</em>`
     },
     {
         id: 6,
-        title: "Fourth of July Fireworks",
-        date: "July 4, 2026",
-        content: `Independence Day! The whole neighborhood came together for a massive celebration. There was a parade in the morning with marching bands, colorful floats, and kids on decorated bikes.
+        title: "Get Your Comfort Meal",
+        date: "February 1st, 2026",
+        content: `Have you been eating well? I hope you’ve been eating. Food is fuel! You used to love going to the school cafeteria and you would order the same snack every day. Onion rings from Harvey’s. 
 
-The evening was the highlight - we all gathered at the park for the fireworks show. I spread out a blanket with friends and we shared snacks while waiting for dark. When the fireworks finally started, the entire sky lit up in brilliant colors.
+Well now that you’re not a broke college student anymore, I think you should go to the cafeteria for old times sake and grab a bite. There’s something about food that ignites something inside of us, food can connect us to old memories or certain times of our life. I hope you can remember some of the good times when you eat, holding onto the good memories rather than the sad. 
 
-Each boom echoed in my chest and the crowd "oohed" and "aahed" together. The grand finale was breathtaking - so many explosions of light that it looked like daylight for a moment. What a perfect way to celebrate summer!`
+[Find the laptop located in the cafeteria]`
     },
     {
         id: 7,
-        title: "Learning to Surf",
-        date: "July 12, 2026",
-        content: `Today I tried surfing for the first time! My friend who's been surfing for years offered to teach me. I was nervous but excited. The wetsuit felt strange and the surfboard was heavier than I expected.
-
-The first dozen attempts were... let's say humbling. I fell off more times than I can count and swallowed more seawater than I care to admit. But then, on attempt number 15, I actually stood up and rode a small wave for about five seconds!
-
-Those five seconds felt like flying. I can't wait to go again. My muscles are sore and I'm sunburned despite the sunscreen, but I'm already hooked on the feeling of catching a wave.`
+        title: "Don’t be Afraid, You’re Processing",
+        date: "February 1st, 2026",
+        content: `Those flashbacks that you’re going through right now are completely and entirely normal. It just means you’re processing something that means a lot to you. Don’t ever beat yourself up for feeling sad, don’t ever feel ashamed for taking your time to process. Everyone’s timing in healing is different, and there’s nothing set in stone with that. Let yourself process, let it flow. The winter outside will soon pass, and spring will come again; a reminder of life’s constant cycle and new beginnings. Just like the flowers outside, you will bloom once again during the process of healing. 
+        
+        Give yourself a butterfly hug, it is known to release pressure from your chest and to help an individual calm their body down from anxious or tough emotions. Cross your arms against each other into an x shape and apply pressure gently to your chest and shoulder area. Doing this in times of processing will help ease your body from being overwhelmed.`
     },
     {
         id: 8,
-        title: "Farmers Market Treasures",
-        date: "July 19, 2026",
-        content: `Spent my Saturday morning at the local farmers market. The energy there is always so vibrant - vendors calling out their fresh produce, the smell of baked bread and flowers mixing in the air.
+        title: "Celebrate Your Small Wins",
+        date: "February 1st, 2026",
+        content: `Everything that you have been doing today or keeping in mind is a small win. Consider the things you do each day that benefit you a small win. These wins don’t need to be much but acknowledging them at the end of the day or after they happen will benefit you in the long run. I know this may seem silly to do, but this is something that can help brighten up your day if you’re feeling stagnant. 
 
-I bought the most beautiful bouquet of sunflowers, fresh strawberries that taste like pure summer, and homemade honey from a local beekeeper. We chatted for twenty minutes about bees and I learned so much!
+Practice this: Instead of thinking:
 
-Also discovered an incredible vendor selling handmade jewelry. Bought a bracelet made from sea glass - each piece smoothed by the ocean over time. Supporting local businesses and finding unique treasures makes my heart happy.`
+- Oh I HAVE to go to the bank
+- I have to go make dinner
+- I have to get groceries. 
+
+Repeat this in your head:
+
+- It is nice that I GET to go to the bank
+- I GET to go make dinner
+- I GET the chance to go to the grocery. 
+
+This is a simple and straightforward way to celebrate the small win of privilege and as you go on with life and practice this, you’re able to become more grounded.`
     },
     {
         id: 9,
-        title: "Summer Night Concert",
-        date: "July 26, 2026",
+        title: "Drive Back Home, You had a Long Day",
+        date: "February 1st, 2026",
         content: `Went to an outdoor concert tonight and it was absolutely magical. The band played under the stars while everyone sat on blankets or danced barefoot in the grass.
 
 The music filled the warm summer air and I felt completely present in the moment. Strangers became friends as we all swayed to the same rhythm. There's something special about live music on a summer night.
@@ -129,33 +141,29 @@ As the final song played, I looked around at all the smiling faces lit by string
     },
     {
         id: 10,
-        title: "Camping Under the Stars",
-        date: "August 2, 2026",
-        content: `Went camping this weekend with a group of friends. We drove two hours out of the city to a secluded campsite surrounded by tall pines. Setting up tents and gathering firewood felt like a return to something primal and essential.
+        title: "Time to Reflect on Your Past",
+        date: "February 1st, 2026",
+        content: `Happiness, feelings, and health, cannot be forced but it can be handled in a way so beautiful where it won’t affect us too heavily. Working and living with a heavy heart is something that many go through, so it is important to reflect on your past in order to reach a lighter feeling. 
 
-We cooked dinner over the campfire - nothing fancy, just hot dogs and s'mores, but everything tastes better when cooked over an open flame. As night fell, we told ghost stories and laughed until our sides hurt.
-
-The best part was lying in my sleeping bag with the tent flap open, watching the stars. So many stars - more than I've ever seen. The Milky Way stretched across the sky like a river of light. I forgot how small we are, and somehow that felt comforting. Nature has a way of putting things in perspective.`
+Something that has been shown to help people navigate their past is by talking to someone about it. If someone isn’t there the best resort is to journal about it, essentially talking to yourself. After some time you are able to read back your old pages and reflect on the things that have changed since the last time you opened it. It may seem minuscule doing this everyday, but seriously after a long time it is very therapeutic to be able to read words from your old self.`
     },
     {
         id: 11,
-        title: "BookStore Adventure",
-        date: "August 9, 2026",
-        content: `Discovered a small independent bookstore today tucked away on a side street I'd never explored before. The moment I walked in, the smell of old books and coffee enveloped me like a warm hug.
+        title: "Acceptance for the Inevitable ways of Life",
+        date: "February 1st, 2026",
+        content: `As miserable it may sound, there are countless things in this life that are out of our control. The inevitable ways of life I like to call it. You must do your best to accept this and you will unlock a lifetime's worth of happiness and peace from being able to do whatever you want with the things you do have control over. 
 
-The owner, an elderly woman with kind eyes, gave me recommendations and we chatted about our favorite authors for nearly an hour. She has a cat that lives in the store who immediately claimed my lap when I sat down to browse.
-
-I left with three new books and a promise to return next week for their book club. There's something magical about finding a new favorite place. It feels like discovering a secret world that was there all along, just waiting to be found.`
+An example of this is, you can’t control what others think about or feel, but you can control how you will react to the situation at hand. If something is pulling you down and dragging you down, let it go. If people talk, let them talk but don’t let it get to you because you know they aren’t you, they haven’t gone through your life.`
     },
     {
         id: 12,
-        title: "Sunset Picnic",
-        date: "August 16, 2026",
-        content: `Planned a spontaneous sunset picnic at the overlook today. Packed a basket with cheese, crackers, fruit, and a bottle of sparkling cider. The climb up was steep but worth every step.
+        title: "Love Yourself for me and for Yourself",
+        date: "February 1st, 2026",
+        content: `I think you know who I really am by now. Luke I have been trying to guide you, it hurts to see you this way, please take care of yourself for me. You know how they say that in order to love someone else you need to be able to love yourself first? I think that we both need to rediscover and find ourselves again, worlds apart. 
 
-We arrived just as the sun began its descent, painting the sky in shades of orange, pink, and purple. The clouds looked like cotton candy. We sat on our blanket and watched in comfortable silence as day turned to evening.
+I’ve always admired the way you were able to calm my storms when I needed you, but who is there to take care of you now? Luke you have to keep fighting, keep going and remember your core. You’re strong, and have gotten out of situations so painful people don’t even need to think about it. Your heart right now is a caged bird, it’s time that you set it free.
 
-As the last rays of sunlight disappeared, the first stars appeared. We stayed until the sky was completely dark, not wanting the moment to end. Sometimes the simplest plans create the most beautiful memories. This summer has taught me to appreciate the little things.`
+[You can find the box close to the stream, outside of the SSU]`
     }
 ];
 
