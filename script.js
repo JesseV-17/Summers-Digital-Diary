@@ -67,11 +67,11 @@ const regularEntries = [
         date: "February 1st, 2026",
         content: `As I said before, going outside is a way to get out of your routine. If you’ve been in your room all day, you’re going to start attaching emotion and safety into that place. As nice as that sounds, you’re limiting yourself and hiding from the whole world that is out there. You can’t forget about the places that you used to love, those places are still there waiting for you.
         
-        I think I know a place where you could go that will make you feel alive, a reminder that you’re still here and that you have to keep going.
+I think I know a place where you could go that will make you feel alive, a reminder that you’re still here and that you have to keep going.
         
-        Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.
+Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.
         
-        <em>Go to the second floor of J wing to access your car<em>`
+<em>Go to the second floor of J wing to access your car<em>`
     },
     {
         id: 4,
@@ -89,7 +89,7 @@ It’s okay to start it back up again. Your passions will forever be within you.
         date: "February 1st, 2026",
         content: `Similar to plants that we have to take care of and tend to, you need to tend to your responsibilities in a similar way. Humans are meant to connect, feel, and improve on themselves every day. That’s part of life, and your responsibilities are waiting to be tended to and looked after. Trust me, it will make more sense as you start getting back into it, your life will feel so much lighter. 
         
-        <em>Remember, bulletin boards and poster boards are always helpful to keep track of your responsibilities! Especially on the floor you frequent most…</em>`
+<em>Remember, bulletin boards and poster boards are always helpful to keep track of your responsibilities! Especially on the floor you frequent most…</em>`
     },
     {
         id: 6,
@@ -107,7 +107,7 @@ Well now that you’re not a broke college student anymore, I think you should g
         date: "February 1st, 2026",
         content: `Those flashbacks that you’re going through right now are completely and entirely normal. It just means you’re processing something that means a lot to you. Don’t ever beat yourself up for feeling sad, don’t ever feel ashamed for taking your time to process. Everyone’s timing in healing is different, and there’s nothing set in stone with that. Let yourself process, let it flow. The winter outside will soon pass, and spring will come again; a reminder of life’s constant cycle and new beginnings. Just like the flowers outside, you will bloom once again during the process of healing. 
         
-        Give yourself a butterfly hug, it is known to release pressure from your chest and to help an individual calm their body down from anxious or tough emotions. Cross your arms against each other into an x shape and apply pressure gently to your chest and shoulder area. Doing this in times of processing will help ease your body from being overwhelmed.`
+Give yourself a butterfly hug, it is known to release pressure from your chest and to help an individual calm their body down from anxious or tough emotions. Cross your arms against each other into an x shape and apply pressure gently to your chest and shoulder area. Doing this in times of processing will help ease your body from being overwhelmed.`
     },
     {
         id: 8,
