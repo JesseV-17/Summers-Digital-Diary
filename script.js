@@ -89,7 +89,7 @@ It’s okay to start it back up again. Your passions will forever be within you.
         date: "February 1st, 2026",
         content: `Similar to plants that we have to take care of and tend to, you need to tend to your responsibilities in a similar way. Humans are meant to connect, feel, and improve on themselves every day. That’s part of life, and your responsibilities are waiting to be tended to and looked after. Trust me, it will make more sense as you start getting back into it, your life will feel so much lighter. 
         
-<em>Remember, bulletin boards and poster boards are always helpful to keep track of your responsibilities! Especially on the floor you frequent most…</em>`
+<em>Remember, bulletin boards and poster boards are always helpful to keep track of your responsibilities! Especially on the floor you frequent most…<em>`
     },
     {
         id: 6,
@@ -99,7 +99,7 @@ It’s okay to start it back up again. Your passions will forever be within you.
 
 Well now that you’re not a broke college student anymore, I think you should go to the cafeteria for old times sake and grab a bite. There’s something about food that ignites something inside of us, food can connect us to old memories or certain times of our life. I hope you can remember some of the good times when you eat, holding onto the good memories rather than the sad. 
 
-[Find the laptop located in the cafeteria]`
+<em>Find the laptop located in the cafeteria<em>`
     },
     {
         id: 7,
@@ -163,7 +163,7 @@ An example of this is, you can’t control what others think about or feel, but 
 
 I’ve always admired the way you were able to calm my storms when I needed you, but who is there to take care of you now? Luke you have to keep fighting, keep going and remember your core. You’re strong, and have gotten out of situations so painful people don’t even need to think about it. Your heart right now is a caged bird, it’s time that you set it free.
 
-[You can find the box close to the stream, outside of the SSU]`
+<em>You can find the box close to the stream, outside of the SSU<em>`
     }
 ];
 
