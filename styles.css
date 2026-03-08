@@ -646,7 +646,7 @@ header h1 {
     );
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    transform: rotate(-6deg);
+    transform: rotate(-3deg);
 }
 
 .entry-full::after {
@@ -665,7 +665,7 @@ header h1 {
     );
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    transform: rotate(7deg);
+    transform: rotate(5deg);
 }
 
 .entry-full h1 {
@@ -735,31 +735,11 @@ header h1 {
     position: relative;
 }
 
-.entry-full-text::before {
-    content: '';
-    position: absolute;
-    bottom: -65px;
-    left: -40px;
-    width: 60px;
-    height: 22px;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(234, 216, 168, 0.75),
-        rgba(234, 216, 168, 0.75) 8px,
-        rgba(250, 248, 240, 0.75) 8px,
-        rgba(250, 248, 240, 0.75) 16px
-    );
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    transform: rotate(-1deg);
-    z-index: 10;
-}
-
 .entry-full-text::after {
     content: '';
     position: absolute;
-    bottom: -65px;
-    right: -40px;
+    bottom: -45px;
+    right: 5%;
     width: 55px;
     height: 22px;
     background: repeating-linear-gradient(
