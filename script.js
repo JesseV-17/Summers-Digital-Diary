@@ -133,11 +133,9 @@ This is a simple and straightforward way to celebrate the small win of privilege
         id: 9,
         title: "Drive Back Home, You had a Long Day",
         date: "February 1st, 2026",
-        content: `Went to an outdoor concert tonight and it was absolutely magical. The band played under the stars while everyone sat on blankets or danced barefoot in the grass.
+        content: `It’s time to drive back home Luke. There's something waiting for you. Take note of your surroundings, it’s important to slow down to smell the roses. Make sure to listen out for any sounds from the road and the radio, you never know what or who might call out. 
 
-The music filled the warm summer air and I felt completely present in the moment. Strangers became friends as we all swayed to the same rhythm. There's something special about live music on a summer night.
-
-As the final song played, I looked around at all the smiling faces lit by string lights and thought - these are the moments I'll remember forever. Summer magic at its finest.`
+<em>Go back to the Car<em>`
     },
     {
         id: 10,
