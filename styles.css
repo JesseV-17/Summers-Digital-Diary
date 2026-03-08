@@ -491,6 +491,55 @@ header h1 {
     margin-left: 0;
 }
 
+/* Padlock Instructions Modal */
+.padlock-instructions {
+    max-width: 500px;
+}
+
+.padlock-steps {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.padlock-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(120deg, rgba(249, 237, 166, 0.3) 0%, rgba(240, 224, 140, 0.3) 100%);
+    border-radius: 10px;
+    border: 2px solid #d4c89a;
+    transform: rotate(-0.3deg);
+}
+
+.padlock-step:nth-child(2) {
+    transform: rotate(0.4deg);
+}
+
+.padlock-step:nth-child(3) {
+    transform: rotate(-0.2deg);
+}
+
+.step-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c9b366;
+    margin-right: 15px;
+    font-family: 'Caveat', cursive;
+    min-width: 30px;
+}
+
+.step-text {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1em;
+    color: #2d3d2d;
+}
+
+.step-text strong {
+    color: #b8a070;
+    font-weight: bold;
+}
+
 /* Login Modal Specific Styles */
 .login-modal {
     min-width: 450px;
@@ -875,6 +924,32 @@ textarea:focus {
     background: #ede4d5;
     transform: rotate(-0.5deg) translateY(-1px);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Special Entry 5 Button */
+.special-unlock-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.special-unlock-btn {
+    min-width: 200px;
+    font-size: 1.1em;
+}
+
+.special-unlock-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+}
+
+.special-unlock-btn.disabled:hover {
+    transform: rotate(-0.5deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+    background: #ead8a8;
 }
 
 /* Passcode Screen */

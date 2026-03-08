@@ -104,6 +104,31 @@
             <p class="error-message" id="page-password-error" style="display: none;"></p>
         </div>
     </div>
+
+    <!-- Padlock Instructions Modal -->
+    <div id="padlock-modal" class="modal" style="display: none;">
+        <div class="modal-content padlock-instructions">
+            <h2>🔒 Padlock Instructions</h2>
+            <p style="margin-bottom: 20px; font-family: 'Patrick Hand', cursive; font-size: 1.1em;">To unlock the padlock, follow these steps carefully:</p>
+            <div class="padlock-steps">
+                <div class="padlock-step">
+                    <span class="step-number">1.</span>
+                    <span class="step-text">Rotate <strong>clockwise</strong> to <strong>28</strong></span>
+                </div>
+                <div class="padlock-step">
+                    <span class="step-number">2.</span>
+                    <span class="step-text">Rotate <strong>counter-clockwise</strong> to <strong>34</strong></span>
+                </div>
+                <div class="padlock-step">
+                    <span class="step-number">3.</span>
+                    <span class="step-text">Rotate <strong>clockwise</strong> to <strong>24</strong></span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button onclick="closePadlockModal()" class="btn-primary">Got it!</button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="script.js"></script>

@@ -284,6 +284,29 @@ function flipToNextPage() {
     showPagePasswordModal(nextPage);
 }
 
+// Handle special entry 5 button click
+function handleSpecialEntry5Button() {
+    // Check if all entries 1-5 are unlocked
+    const allEntriesUnlocked = [101, 102, 103, 104, 105].every(id => unlockedEntries.has(id));
+    
+    if (allEntriesUnlocked) {
+        // Show padlock instructions modal
+        showPadlockModal();
+    }
+}
+
+// Show padlock instructions modal
+function showPadlockModal() {
+    const modal = document.getElementById('padlock-modal');
+    modal.style.display = 'flex';
+}
+
+// Close padlock instructions modal
+function closePadlockModal() {
+    const modal = document.getElementById('padlock-modal');
+    modal.style.display = 'none';
+}
+
 // Show page password modal
 function showPagePasswordModal(pageNumber) {
     const modal = document.getElementById('page-password-modal');
@@ -554,6 +577,17 @@ function selectEntry(type, entryId) {
         </div>
     ` : '';
     
+    // Check if this is special entry 5 and if entries 1-5 are all unlocked
+    const isSpecialEntry5 = (entry.id === 105);
+    const allEntriesUnlocked = [101, 102, 103, 104, 105].every(id => unlockedEntries.has(id));
+    const specialEntry5ButtonHtml = isSpecialEntry5 ? `
+        <div class="special-unlock-button-container">
+            <button onclick="handleSpecialEntry5Button()" class="btn-primary special-unlock-btn ${allEntriesUnlocked ? '' : 'disabled'}" ${allEntriesUnlocked ? '' : 'disabled'}>
+                ${allEntriesUnlocked ? 'Continue' : 'Unlock all entries first'}
+            </button>
+        </div>
+    ` : '';
+    
     // Add special class for locked entries
     const specialClass = type === 'locked' ? 'entry-special' : '';
     
@@ -569,6 +603,7 @@ function selectEntry(type, entryId) {
             <div class="entry-full-date">${dateDisplay}</div>
             <div class="entry-full-text">${formatContent(entry.content)}</div>
             ${nextButtonHtml}
+            ${specialEntry5ButtonHtml}
         </div>
     `;
 }
