@@ -540,6 +540,47 @@ header h1 {
     font-weight: bold;
 }
 
+/* Trigger Warning Modal */
+.trigger-warning {
+    max-width: 550px;
+    border: 4px solid #d4a574;
+    background: linear-gradient(to bottom, #fff9f0 0%, #fff 100%);
+}
+
+.trigger-warning h2 {
+    color: #d4a574;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.warning-content {
+    text-align: left;
+    padding: 20px;
+    background: rgba(212, 165, 116, 0.1);
+    border-radius: 10px;
+    border: 2px dashed #d4a574;
+    margin-bottom: 25px;
+}
+
+.warning-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.trigger-warning .modal-buttons {
+    gap: 15px;
+}
+
+.trigger-warning .btn-primary {
+    background: #d4a574;
+    background-image: linear-gradient(135deg, #d4a574 0%, #c9a070 100%);
+    border-color: #b8906a;
+}
+
+.trigger-warning .btn-primary:hover {
+    background: #c9a070;
+}
+
 /* Login Modal Specific Styles */
 .login-modal {
     min-width: 450px;

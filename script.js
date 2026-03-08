@@ -307,6 +307,33 @@ function closePadlockModal() {
     modal.style.display = 'none';
 }
 
+// Show trigger warning modal for entry 106
+function showTriggerWarningModal() {
+    const modal = document.getElementById('trigger-warning-modal');
+    modal.style.display = 'flex';
+}
+
+// Close trigger warning modal
+function closeTriggerWarningModal() {
+    const modal = document.getElementById('trigger-warning-modal');
+    modal.style.display = 'none';
+    // Clear pending entry
+    window.pendingEntry106 = null;
+}
+
+// Proceed to display entry 106 after warning acceptance
+function proceedToEntry106() {
+    const modal = document.getElementById('trigger-warning-modal');
+    modal.style.display = 'none';
+    
+    // Display the entry if it was stored
+    if (window.pendingEntry106) {
+        const { entry, type } = window.pendingEntry106;
+        displayEntry(entry, type);
+        window.pendingEntry106 = null;
+    }
+}
+
 // Show page password modal
 function showPagePasswordModal(pageNumber) {
     const modal = document.getElementById('page-password-modal');
@@ -514,6 +541,22 @@ function selectEntry(type, entryId) {
         showPasscodeModal(entry);
         return;
     }
+
+    // Check if this is entry 106 (trigger warning needed)
+    if (entryId === 106) {
+        // Store the entry data to display after warning acceptance
+        window.pendingEntry106 = { entry, type };
+        showTriggerWarningModal();
+        return;
+    }
+
+    // Display the entry
+    displayEntry(entry, type);
+}
+
+// Display entry content (separated from selectEntry for trigger warning flow)
+function displayEntry(entry, type) {
+    const entryId = entry.id;
 
     // Update selected entry tracker
     if (type === 'regular') {
