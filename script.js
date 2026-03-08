@@ -557,6 +557,7 @@ function selectEntry(type, entryId) {
 // Display entry content (separated from selectEntry for trigger warning flow)
 function displayEntry(entry, type) {
     const entryId = entry.id;
+    const entries = type === 'regular' ? regularEntries : lockedEntries;
 
     // Update selected entry tracker
     if (type === 'regular') {
