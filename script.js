@@ -167,9 +167,9 @@ I’ve always admired the way you were able to calm my storms when I needed you,
 
 // Page passwords for regular entries
 const PAGE_PASSWORDS = {
-    2: "page2",  // Password to access entries 4-6
-    3: "page3",  // Password to access entries 7-9
-    4: "page4"   // Password to access entries 10-12
+    2: "lUk3!",  // Password to access entries 4-6
+    3: "c@N y0U?",  // Password to access entries 7-9
+    4: "H3rE m3?"   // Password to access entries 10-12
 };
 
 // Track current page (1 = entries 1-3, 2 = entries 4-6, 3 = entries 7-9, 4 = entries 10-12)
