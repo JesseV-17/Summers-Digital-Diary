@@ -846,7 +846,7 @@ header h1 {
 }
 
 /* Golden italics for special entries */
-.entry-special .entry-full-text em {
+.entry-full.entry-special .entry-full-text em {
     color: #b8a070;
     font-style: italic;
     font-weight: bold;
@@ -855,7 +855,7 @@ header h1 {
     border-radius: 0;
 }
 
-.entry-special .entry-full {
+.entry-full.entry-special {
     border-color: #c9b88a;
     background: #e8f4ff 
         repeating-linear-gradient(0deg, #a8c9e8 0px, #a8c9e8 1px, transparent 1px, transparent 20px),
@@ -864,7 +864,7 @@ header h1 {
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
-.entry-special .entry-full::before {
+.entry-full.entry-special::before {
     background: repeating-linear-gradient(
         45deg,
         rgba(234, 216, 168, 0.7),
