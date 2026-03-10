@@ -612,6 +612,14 @@ function displayEntry(entry, type) {
 
     // Display full entry content in single content area
     const contentContainer = document.getElementById('entry-content');
+    const entryDisplay = document.querySelector('.entry-display');
+    
+    // Add or remove special background class based on entry type
+    if (type === 'locked') {
+        entryDisplay.classList.add('special-entry-background');
+    } else {
+        entryDisplay.classList.remove('special-entry-background');
+    }
     
     // Check if this entry should show the Next Entry button (entries 3, 6, and 9)
     const shouldShowNextButton = (entry.id === 3 || entry.id === 6 || entry.id === 9);

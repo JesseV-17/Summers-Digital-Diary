@@ -254,6 +254,15 @@ header h1 {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Special entry background - blue graph paper */
+.entry-display.special-entry-background {
+    background: 
+        repeating-linear-gradient(0deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
+        #e8f4ff;
+    background-size: 20px 20px, 20px 20px, 100%;
+}
+
 /* Entry List Items */
 .entry-list-item {
     background-image: url('./StickyNote.png');
@@ -857,11 +866,7 @@ header h1 {
 
 .entry-full.entry-special {
     border-color: #c9b88a;
-    background: 
-        repeating-linear-gradient(0deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
-        repeating-linear-gradient(90deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
-        #e8f4ff;
-    background-size: 20px 20px, 20px 20px, 100%;
+    background: #fff;
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
