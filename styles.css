@@ -857,10 +857,11 @@ header h1 {
 
 .entry-full.entry-special {
     border-color: #c9b88a;
-    background: #e8f4ff 
-        repeating-linear-gradient(0deg, #a8c9e8 0px, #a8c9e8 1px, transparent 1px, transparent 20px),
-        repeating-linear-gradient(90deg, #a8c9e8 0px, #a8c9e8 1px, transparent 1px, transparent 20px);
-    background-size: 20px 20px;
+    background: 
+        repeating-linear-gradient(0deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 19px, #a8c9e8 19px, #a8c9e8 20px),
+        #e8f4ff;
+    background-size: 20px 20px, 20px 20px, 100%;
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
