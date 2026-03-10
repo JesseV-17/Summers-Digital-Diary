@@ -406,6 +406,12 @@ header h1 {
     position: absolute;
     top: 15px;
     right: 15px;
+    width: 40px;
+    height: 40px;
+    background-image: url('./sticker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 1.2em;
 }
 
@@ -420,6 +426,12 @@ header h1 {
     position: absolute;
     top: 15px;
     right: 15px;
+    width: 40px;
+    height: 40px;
+    background-image: url('./sticker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 1.2em;
 }
 
