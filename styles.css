@@ -721,7 +721,9 @@ header h1 {
     padding: 30px;
     margin: 20px;
     margin-bottom: 40px;
-    background: #fff;
+    background: url('./paper.png');
+    background-size: cover;
+    background-position: center;
     border: 3px solid #d4c89a;
     border-radius: 12px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -866,7 +868,9 @@ header h1 {
 
 .entry-full.entry-special {
     border-color: #c9b88a;
-    background: #fff;
+    background: url('./paper.png');
+    background-size: cover;
+    background-position: center;
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
