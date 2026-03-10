@@ -1,3 +1,5 @@
+<!-- I had co-pilot developed the general format for the diary. I had it make 2 tabs for regular entries and locked entries.  -->
+
 User: Create a digital dairy that has two tabs, one for regular entries and another that has locked entries that require a passcode to access
 
 GitHub Copilot: I'll create a digital diary application with two tabs - one for regular entries and another for locked entries with passcode protection. Let me start by exploring the current workspace and then build the application.  
@@ -63,6 +65,10 @@ Simply open index.html in your browser and start writing! The default passcode f
 The app features a modern design with smooth animations, is fully responsive for mobile devices, and keeps all your data private on your device.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here, I had co-pilot make pre-written entries as the user was not meant to write their own entries and I asked it to reformat the tabs for the entries. -->
 
 User: so the diary entries are gonna be pre written, also I want the different entry tabs to be located on the left while the actual selected entry is on the right
 
@@ -189,6 +195,10 @@ Perfect! I've completely redesigned the digital diary with pre-written entries a
 Open index.html in your browser to see the new layout in action! The diary now feels like reading through someone's summer memories.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to make the individual special entries have their own locks. -->
 
 User: I want each locked entry to have it's own individual lock instead of the overall lock
 
@@ -342,6 +352,10 @@ The passcodes are shown in hints within the modal for demo purposes. Open index.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I tried to trouble shoot syncing issues using co-pilot. -->
+
 User: why cant I sync changes
 
 GitHub Copilot: Let me check the git status to see what might be preventing you from syncing changes. 
@@ -429,6 +443,10 @@ The issue was that your local and remote branches had diverged. Here's what I di
 Your repository is now fully synced with the remote! Note: GitHub mentioned the repository moved to `Summers-Digital-Diary` (without hyphens in "Summer's"), but the push completed successfully.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to group entries that were unlocked apart from the locked ones. -->
 
 User: make it so then when a locked entry is unlocked, it moves to the unlocked entries tab
 
@@ -543,6 +561,10 @@ Perfect! I've updated the diary so locked entries automatically move to a separa
 Open index.html to see entries move between sections as you unlock them!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I had co-pilot number the different entries. -->
 
 User: number the entries
 
@@ -692,6 +714,10 @@ Open index.html to see your digital diary that now looks like a real handwritten
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to fix an issue I found where the diary background was being squished together, leaving a bunch of white space.  -->
+
 User: fix this
 
 GitHub Copilot: I can see there's a layout issue with overlapping content. Let me check the current code and fix it.  
@@ -750,6 +776,10 @@ The "📅 Entries" header will now properly stay on top and won't have content s
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I wanted to know why there were extra shapes on the side bar tab entry cards. So I asked co-pilot to identify the issue. -->
+
 User: why are ther extra shapes in the locked entries side bar and why is the entries header not filling it's column
 
 GitHub Copilot: I can see the issues. Let me fix them:
@@ -798,6 +828,10 @@ The sidebar now looks clean with:
 Refresh index.html to see the clean sidebar!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to publish the digital diary to vercel so it could be a live site. -->
 
 User: help me publish this to vercel through git hub
 
@@ -874,6 +908,10 @@ Ready to deploy? Just follow Option 1 above - it's super easy!
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to fix the issue causing the vercel site to appear warped. -->
+
 User: why does the vercel site look like this
 
 GitHub Copilot: The CSS isn't loading! This is a common issue with Vercel deployments. Let me check the file structure and fix it. 
@@ -907,6 +945,10 @@ I've updated vercel.json to explicitly set the correct MIME types for CSS and Ja
 The deployment should now show the styled diary interface with the brown leather header, paper texture, and handwritten fonts working correctly.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to add a password pop up when they first enter the site.  -->
 
 User: Make it so that a password is required to enter the digital diary
 
@@ -1005,6 +1047,10 @@ The changes have been pushed to GitHub and Vercel will automatically redeploy. O
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to stop pushing things to git hub and vercel so i could overlook any potential issues before hand.  -->
+
 User: please dont auto push things to git hub or vercel, let me do that
 
 GitHub Copilot: Understood! Going forward, I'll only make local changes and commits without pushing to GitHub. You can review the changes and push them yourself when you're ready.
@@ -1032,6 +1078,10 @@ Now when you enter the diary, you'll only see the Regular Entries tab with the f
 The changes have been committed locally. You can push whenever you're ready.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to create a side bar where all the entries would be, sperated into different tabs.  -->
 
 User: make the tabs and entries appear in the same column on the left side of the page, the main entries tab and the locked entries tab will work as drop down menus for their entries
 
@@ -1132,6 +1182,10 @@ The changes have been committed locally. You can test it by opening index.html i
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to start off the tabs for the two sets of entries as closed, as well as only allowing one to be open at a time. -->
+
 User: start the regular and locked entries as closed, only one can be open at a time
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/index.html#26-26), lines 26 to 50
@@ -1173,6 +1227,10 @@ Done! I've updated the dropdown behavior:
 Changes committed locally. You can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to rename the locked entries and to make all entry display cards show the title. -->
 
 User: the locked entries section should be called personal entries. The private entries should only have the title not the content
 
@@ -1224,6 +1282,10 @@ Done! I've increased the "Select an entry to read" text from 1.2em to 2.5em. It'
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to fix an issue that was causing the content to be squished at the top. -->
+
 User: make the actual content fill the page
 
 GitHub Copilot: Searched for text `.entry-display` (`**/styles.css`), 2 results
@@ -1265,6 +1327,10 @@ The entry content will now take up much more screen space. Changes committed loc
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I was attempting to solve the same issue using co-pilot. -->
+
 User: when i said fill the page, i mean fill the entire page
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#1-1), lines 1 to 30
@@ -1289,6 +1355,10 @@ Done! The diary now fills the entire page:
 The diary interface now takes up the complete screen. Changes committed locally - you can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Attempt number 3 to solve the same issue. -->
 
 User: whats with the white space at the bottom?
 
@@ -1323,6 +1393,10 @@ Fixed! The whitespace at the bottom was caused by the entry content not filling 
 The content now fills the entire display area with no whitespace at the bottom. Changes committed locally - you can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I tried to get co-pilot to fix the whitespace issue and scrolling issue I found. -->
 
 User: ok so first i cant scroll down through the different entries on the page, also when no entries are selected there is a lot of white space at the bottom
 
@@ -1361,6 +1435,10 @@ Fixed both issues:
 The dropdown entries list will now scroll properly, and there won't be excess whitespace at the bottom when no entry is selected. Changes committed locally - you can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- One again trying to fix the whitespace. -->
 
 User: white space is still there
 
@@ -1536,6 +1614,10 @@ This should force the content area to fill 100% of the available space with no g
 
 Made changes.
 
+<!-- End of prompts and responses -->
+
+<!-- Here I tried a different approch at trying to get co-pilot to fix the issue. -->
+
 User: I want the background for the dropdown menus and the background for the selected entry to fill the page apart from the top header area
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#22-22), lines 22 to 50
@@ -1570,6 +1652,10 @@ The dropdown menus and entry content now completely fill the page below the head
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I once again tried another approch to get the whitespace issue fixed. -->
+
 User: in the image, those twwo little top sections, I want them to fill the page
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#1-1), lines 1 to 25
@@ -1603,6 +1689,10 @@ Done! I've added explicit `height: 100%` to:
 Now both sections should expand to fill the entire page height below the header, eliminating the brown background showing through. Changes committed - you can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to only show the other sets of entries after the user had pressed a button on every 3rd page in the set. -->
 
 User: Make there be only 9 main entries, only the first 3 are shown though, on every third entry there should be a flip page button in the bottom right corner. When the user clicks that button, they will need to enter a password, when the password is entered it will then show the next 3 entries
 
@@ -1699,6 +1789,10 @@ The system tracks which pages have been unlocked, so once you enter the correct 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to change the text for the button. -->
+
 User: instead of the button being called turn page, make it say next article
 
 GitHub Copilot: Searched for text `Turn Page` (`**/script.js`), 1 result
@@ -1718,6 +1812,10 @@ Ran terminal command:  git add script.js && git commit -m "Change button text fr
 Done! The button now says "Next Article" instead of "Turn Page". Changes committed locally - you can push when ready!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to remove the button from the 9th page. -->
 
 User: Put the Next Entry on the 3rd and 6th pages only, on the right side under the entry text
 
@@ -1761,6 +1859,10 @@ The button has been removed from the sidebar, so it will only appear in the cont
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to make the text for the button next entry. -->
+
 User: it should be next entry not next article
 
 GitHub Copilot: Replacing 10 lines with 10 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -1772,6 +1874,10 @@ GitHub Copilot: Replacing 10 lines with 10 lines in [](file:///Users/jessevieira
 Updated the button text to "Next Entry".
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to still display the previous entries. -->
 
 User: when the user clicks next entry, the previous entries should still stay in the side bar
 
@@ -1793,6 +1899,10 @@ Done! Now when you click "Next Entry", the previous entries will remain visible 
 - Page 3: Shows entries 1-9
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Then I had co-pilot make the site load with one special entry and more after the user unlocks the other sets of entries. -->
 
 User: the website should load with one special entry in the special entries section. Then when page 2 is unlocked another special entry will appear, same goes for page 3
 
@@ -1841,6 +1951,10 @@ Now when you unlock a new page, an additional special entry will automatically a
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I told co-pilot to add back the passcodes to the special entries.  -->
+
 User: no the special entries still should have passcodes
 
 GitHub Copilot: Replacing 62 lines with 94 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -1866,6 +1980,10 @@ They still progressively unlock based on pages (1 entry on page 1, 2 on page 2, 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to make a piece of text different and align the text content. -->
+
 User: italisize clear space = clear mind, and put the two last sentances in line with the previous paragraph
 
 GitHub Copilot: Searched for text `clear space = clear mind` (`**/script.js`), 1 result
@@ -1883,6 +2001,10 @@ Done! I've italicized "clear space = clear mind" with emphasis markers and combi
 Note: Since the content is displayed using `escapeHtml()`, the asterisks will show as literal characters. If you want actual italic rendering in the display, I can modify the code to support HTML formatting in the content.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I attempted to correct the same issue.  -->
 
 User: the clear space = clear mind is not italisized yet, and the last two sentances for some reason are pushed up on their lines
 
@@ -1907,6 +2029,10 @@ Done! I've:
 Now "Clear space = clear mind" will be properly italicized and the text will flow naturally in one paragraph.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to stylize the password pop-up. -->
 
 User: Can we get this to be an actually stylized pop up on the digital diary
 
@@ -1960,6 +2086,10 @@ The modal uses the same background texture and colors as the rest of your diary,
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I told co-pilot to add a set of pre-written instructions to the opening login page. -->
+
 User: add these instructions to the opening password page when the user first enters the site: INSTRUCTIONS
 Read every page of this book
 Follow the directions to find the codes to unlock the next entries
@@ -2001,6 +2131,10 @@ The instructions will be visible to users before they enter the diary password.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to make the intructions a drop down menu. -->
+
 User: make the instructions a drop down menu
 
 GitHub Copilot: Replacing 23 lines with 40 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/index.html), [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -2036,6 +2170,10 @@ Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/index.html#10-10), line
 Done! The instructions are now a collapsible dropdown menu. The instructions start collapsed with a ▼ arrow. When users click on "INSTRUCTIONS", it expands to show the content and the arrow changes to ▲. They can click again to collapse it back.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Asked co-pilot to make all special entries italisized text a gold colour. -->
 
 User: Make all italisized text in the secreat entries a golden colour
 
@@ -2097,6 +2235,10 @@ Now when you view any special entry, all italicized text will appear in gold!
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to add update dates to all special entries. -->
+
 User: next to all secret entries, add text next to the date that says: Updated: Feburary 1st, 2026
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js#142-142), lines 142 to 177
@@ -2139,6 +2281,10 @@ The display code was already in place to show the updated date, so all three sec
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to add the update date to the side nav. -->
+
 User: also add it in the side nav
 
 GitHub Copilot: Searched for text `loadLockedEntriesSections` (`**/script.js`), 5 results
@@ -2161,6 +2307,10 @@ Done! The "Updated: February 1st, 2026" text now appears in both the sidebar nav
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to only show the updated dates when the user unlocks the entry.  -->
+
 User: only show the updated date in the side bar when the user unlocks the entry
 
 GitHub Copilot: Replacing 30 lines with 29 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -2172,6 +2322,10 @@ GitHub Copilot: Replacing 30 lines with 29 lines in [](file:///Users/jessevieira
 Done! Now the "Updated: February 1st, 2026" text will only appear in the sidebar after the user unlocks the entry. Locked entries will only show the original date.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Asked co-pilot to make the site responsive. -->
 
 User: can you make this site responsive for tablet and phone view
 
@@ -2275,6 +2429,10 @@ The site will now automatically adapt its layout and sizing based on the device 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to remove password hints. -->
+
 User: remove the password hints from all the passwords
 
 GitHub Copilot: Searched for text `passcode-hint` (`**/index.html`), 3 results
@@ -2300,6 +2458,10 @@ Checked workspace, no problems found
 Done! I've removed the password hints that were revealing the actual passcodes. The special entries modal will no longer show "Hint: Passcode is [password]" when users try to unlock entries. Users will now need to discover the correct passcodes on their own.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I also then asked co-pilot to add 3 more entries. -->
 
 User: I want 3 more locked entries, keep them in line with the 3 we have so far
 
@@ -2353,6 +2515,10 @@ All entries:
 **System Update:** Changed the unlock progression to show 2 entries per page (Page 1: 2 entries, Page 2: 4 entries, Page 3: 6 entries).
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to add 3 more regular entries. -->
 
 User: and make 3 more regular entries, keep them in line with the other regular entries
 
@@ -2417,6 +2583,10 @@ Done! I've added 3 more regular entries following the same summer diary style as
 All new entries follow the same tone, structure, and dating pattern (chronologically continuing into August 2026) as the existing summer activity entries!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to only show special entries 4 and 5 after the first set of regular entries have been unlocked. Then I asked it to add a button to special entry 5 that would unlock special entry 6. -->
 
 User: ok, so after the first 3 entries and the user unlocks the next set of entries that being 4, 5 and 6. make it so that they only unlock 4 and 5, then 5 will have the next page button, with will then unlock 6. This will only be for pages 4, 5, and 6
 
@@ -2501,6 +2671,10 @@ This special unlock pattern only applies to entries 4, 5, and 6 - all other page
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I then asked co-pilot to include special entry 6 with 4 and 5. -->
+
 User: actually never mind, make 6 appear with 4 and 5
 
 GitHub Copilot: Replacing 82 lines with 49 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -2516,6 +2690,10 @@ Checked workspace, no problems found
 Done! I've reverted the special unlock pattern. Now when the user unlocks page 2, entries 4, 5, and 6 will all appear together in the sidebar. The "Next Entry" button will show on entry 6 (along with entries 3 and 9) to unlock the next page.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to only show special entries 1 and 2 when they enter the diary. -->
 
 User: when the user enters the digital diary password, special entries 1 and 2 will be the only ones shown for now
 
@@ -2574,6 +2752,10 @@ The progression is now:
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to allow me to enter larger passwords.  -->
+
 User: why can i not enter larger passwords?
 
 GitHub Copilot: I'll check the password input fields to see if there's a character limit set. 
@@ -2599,6 +2781,10 @@ Replacing 8 lines with 8 lines in [](file:///Users/jessevieira/Summer-s-Digital-
 Fixed! The passcode input had a 6-character limit (`maxlength="6"`), but some of your passcodes are longer than that. I've removed the restriction so you can now enter passwords of any length.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to refine the responsivness of the ipad views. -->
 
 User: make Ipad 1 resposive in the same way Ipad 2 is
 
@@ -2645,6 +2831,10 @@ The redundant 768px breakpoint has been removed since the 1024px breakpoint now 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then requested co-pilot to add the side bar back to the tablet view. -->
+
 User: no i wanted the side bar to stay on the side on tablets
 
 GitHub Copilot: I'll revert the tablet layout to keep the sidebar on the side for iPads. 
@@ -2676,6 +2866,10 @@ Both iPad orientations now have their own appropriate layouts with the sidebar s
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to place the side bar back on the side of the tablet view. -->
+
 User: I dont want the the side bar to stack on the top for the portrait sidebar
 
 GitHub Copilot: I'll modify the 768px breakpoint to keep the sidebar on the side for portrait tablets as well. 
@@ -2699,6 +2893,10 @@ The responsive behavior is now:
 - **600px and below**: Phones - sidebar stacks on top
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I tried having co-pilot fix an issue where I couldn't scroll down a page. -->
 
 User: I want to be able to scroll down on the diary entry I select only if it has enough content that goes off the page
 
@@ -2730,6 +2928,10 @@ Done! The entry display area will now show a scrollbar only when the content is 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I told co-pilot to move the scroll bar to the displayed entries. -->
+
 User: no the scroll bar is for the entries themselves
 
 GitHub Copilot: I'll fix the scrolling to apply to the sidebar entries list instead of the main display area. 
@@ -2747,6 +2949,10 @@ Replacing 15 lines with 14 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! The scrollbar is now set up for the entries sidebar. The sidebar will show a scrollbar only when there are enough entries that they extend beyond the visible area. The main entry display area won't scroll - only the list of entries in the sidebar will scroll when needed.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot if I undid a change I made. -->
 
 User: did the undo button undo that?
 
@@ -2769,6 +2975,10 @@ Replacing 7 lines with 6 lines in [](file:///Users/jessevieira/Summer-s-Digital-
 Done! I've removed the flex property from `.entry-full` that was preventing the content from expanding naturally. Now you should be able to scroll down within the entry display area to see all the content of special entry 6 (and any other long entries).
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I tried using co-pilot to fix the scrolling issue again.  -->
 
 User: so i still cant scroll
 
@@ -2930,6 +3140,10 @@ Now the entry content can expand to its natural height, and the scrollbar will a
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to make the top banner smaller so I could see the rest of the content. -->
+
 User: just make the digital diary's banner smaller
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#34-34), lines 34 to 55
@@ -2950,6 +3164,10 @@ The banner is now more compact, giving you more space for the diary entries.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to undo a change. -->
+
 User: revert that change
 
 GitHub Copilot: Replacing 19 lines with 19 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css)
@@ -2961,6 +3179,10 @@ GitHub Copilot: Replacing 19 lines with 19 lines in [](file:///Users/jessevieira
 Done! The banner is back to its original size with the larger padding and font sizes.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to add a scroll feature per entry.  -->
 
 User: add a scroll feature to every entry
 
@@ -2980,6 +3202,10 @@ Done! I've added automatic smooth scrolling to the top of the entry display when
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to undo the change. -->
+
 User: revert that change
 
 GitHub Copilot: Replacing 18 lines with 9 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js)
@@ -2991,6 +3217,10 @@ GitHub Copilot: Replacing 18 lines with 9 lines in [](file:///Users/jessevieira/
 Done! The automatic scroll feature has been removed.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I tried once again to get co-pilot to fix the scrolling issue. -->
 
 User: cand you add a similar scrolling function from the entries side bar to the selected entry itself? 
 
@@ -3085,6 +3315,10 @@ The content should now expand naturally and show a scrollbar in the `.entry-disp
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I got a bit frustrated with co-pilot, so I asked it to just undo the changes it made.  -->
+
 User: revert the change, you just broke it even more
 
 GitHub Copilot: Replacing 23 lines with 24 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css)
@@ -3112,6 +3346,10 @@ Replacing 13 lines with 9 lines in [](file:///Users/jessevieira/Summer-s-Digital
 Now the layout should work properly. I've removed ALL height constraints from `.entry-content-view` and `.no-selection` so the content can expand naturally beyond the viewport. The `.entry-display` container has `overflow-y: auto`, so when content is taller than the viewport, a scrollbar will appear. Refresh the page and try scrolling on a long entry like special entry 6.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I tried once again to fix the scrolling issue with co-pilot. -->
 
 User: ok you fixed it but it's still not scrollable
 
@@ -3155,6 +3393,10 @@ Done! I've added padding to `.entry-content-view` (20px) and a bottom margin to 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to refine the scrolling feature it made.  -->
+
 User: ok we have a scroll feature, but i need it to be longer so it can fit all the content
 
 GitHub Copilot: I'll increase the bottom padding/margin to ensure all content is visible when you scroll to the bottom. 
@@ -3170,6 +3412,10 @@ Replacing 13 lines with 13 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! I've increased the bottom padding to 100px on the content area and increased the margin to 40px. This will ensure all content is visible when you scroll to the bottom. Refresh the page and try scrolling down on special entry 6 - you should now be able to see all the content.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to remove clutter and to align all text. -->
 
 User: it works, now make this brown box disappear and make sure that all the text is aligned properly
 
@@ -3192,6 +3438,10 @@ Done! I've removed the brown box by:
 Refresh the page and the brown box should be gone with properly aligned text.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to not show the em tag with the text. -->
 
 User: make sure that the em isn't seen here
 
@@ -3216,6 +3466,10 @@ Replacing 23 lines with 30 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! I've added a `stripHtml()` function that removes all HTML tags from the preview text in the sidebar. Now the `<em>` tags won't show in the preview - you'll only see the plain text. The formatting will still work when you open the full entry. Refresh the page to see the change.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to increase bottom padding. -->
 
 User: can you increase the bottom padding a bit more
 
@@ -3254,6 +3508,10 @@ Done! I've added a slight black stroke to all italicized text:
 This will make the italic text stand out more with a subtle outline effect. Refresh the page to see the change.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I worked with co-pilot to find the right italisized text opacity. -->
 
 User: make it 100% opacity for the italisized text
 
@@ -3333,6 +3591,10 @@ Done! The text stroke has been removed entirely from all italicized text.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then wanted co-pilot to try a drop shadow with the text for the special entries. -->
+
 User: put a drop shadow on the italisized text in the special entries
 
 GitHub Copilot: Replacing 5 lines with 6 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css)
@@ -3356,6 +3618,10 @@ GitHub Copilot: Replacing 6 lines with 5 lines in [](file:///Users/jessevieira/S
 Done! The drop shadow has been removed.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to change the style of the diary to a scrap booky theme. -->
 
 User: make the styling of the site scrap booky and artsy but keeping the general format and content
 
@@ -3483,6 +3749,10 @@ The overall aesthetic is now like a vintage scrapbook with aged paper and soft w
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- After that I asked co-pilot to remove the pin emoji it added and make the entry cards on the side look like sticky notes. -->
+
 User: get rid of the pin emoji and make the entry previews on the side bar look like sticky notes
 
 GitHub Copilot: Replacing 54 lines with 76 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css)
@@ -3559,6 +3829,10 @@ Done! I've updated the sticky notes to match the image you provided. They now ha
 The active (selected) notes appear slightly darker, and the locked/unlocked states maintain the same styling with subtle variations.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then tried fixing a display issue with co-pilot about the sticky note. -->
 
 User: no i want you to use that png specifically
 
@@ -3656,6 +3930,10 @@ Perfect! Now do a hard refresh in your browser (`Cmd + Shift + R` on Mac) and th
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted remove a added object using co-pilot and align the text properly. -->
+
 User: get rid of the card that you added to the back of the image and make the text not veer off the sticky note
 
 GitHub Copilot: Replacing 47 lines with 44 lines in [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css)
@@ -3711,6 +3989,10 @@ Done! I've made the sticky notes bigger and adjusted the text layout:
 The text should now stay comfortably within the sticky note boundaries while the notes themselves are more prominent!
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to change the colour palete of the site. -->
 
 User: make the colours mainly a muted green and yellow while keeping black for the text
 
@@ -3878,6 +4160,10 @@ The diary now has a warm, inviting cream and muted yellow color palette while ke
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to make the entry drop down menus like pointed sticky notes. -->
+
 User: make the drop down menus for the entries look similar to the pointed sticky notes in this image
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#135-135), lines 135 to 185
@@ -3965,6 +4251,10 @@ The sticky notes now have that fun, colorful pointed tab look just like the imag
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to make the side bar's background a png I added. -->
+
 User: for the background of the entries side bar use the background png and make sure that it fits the whole side bar 
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#158-158), lines 158 to 175
@@ -3986,6 +4276,10 @@ Done! The entries sidebar now uses the Background.png as its background image. I
 The background image will fill the whole sidebar while maintaining its aspect ratio.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I asked co-pilot to make the drop down menus the pointed sticky notes and not the netry cards. -->
 
 User: so I wanted the drop down button to look like the colourful sticky notes not the entry preview's themselves, can you make this change and revert the entry previews back to what they were
 
@@ -4038,6 +4332,10 @@ The dropdown headers now have that fun pointed sticky note tab look from the ima
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted to try out different opacity percents with co-pilot. -->
+
 User: how transparent are the special entries when they are locked
 
 GitHub Copilot: Searched for text `.entry-locked` (`**/styles.css`), 2 results
@@ -4070,6 +4368,10 @@ Done! Locked entries now have 70% opacity.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to replace the calendar icon with the png I added of a calendar. I also wanted to change one of the colours of the drop down menus. -->
+
 User: get rid of the calender icon and replace it with the png I added. Then make the special entry drop down menu header button thing the blue version of that sticky note
 
 GitHub Copilot: Ran terminal command:  ls -la *.png
@@ -4089,6 +4391,10 @@ Replacing 15 lines with 20 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! I've replaced the calendar emoji with the Calender.png image and changed the Special Entries dropdown header to blue (#7dd3fc) to match the blue sticky note style.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I wanted to try applying different assets to the site using co-pilot. -->
 
 User: get rid of the box area here and fill the area with the scrap paper png, over lap if needed, and then add the content back in that similar format
 
@@ -4202,6 +4508,10 @@ Done! The notebook-style lines in the entry display area are now more visible. I
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to add more tape graphics to the site. -->
+
 User: add more of this tape like styling
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#620-620), lines 620 to 650
@@ -4261,6 +4571,10 @@ Each tape piece uses a diagonal striped pattern with muted yellow and cream colo
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to change clear space clear mind text to the regular black colours. -->
+
 User: make the  Clear space = clear mind text the same colour as the regular entry colours
 
 GitHub Copilot: Searched for text `Clear space = clear mind`, 1 result
@@ -4278,6 +4592,10 @@ Replacing 13 lines with 10 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! The "Clear space = clear mind" text now uses the same color (#b8a070) as regular entry text, and I've removed the golden gradient background so it matches the simpler styling of regular entries.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to move a tape asset to the corner of the page. -->
 
 User: can you fix this problem where the tape is behind the next page button instead of on the edge of the content card. It happens on every page with the next page button
 
@@ -4315,6 +4633,10 @@ Fixed! I've added a `z-index: 10` to the bottom tape piece so it now appears on 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to add a flower png as the site icon. -->
+
 User: use this flower png as the tab icon for the site
 
 GitHub Copilot: Ran terminal command:  ls -la *.png
@@ -4333,6 +4655,10 @@ Done! The Flower.png is now set as the tab icon for your site. You should see it
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to highlight italisized text in the regular entries. -->
+
 User: can you make the content that are italisized for the regular entries highlighted instead?
 
 GitHub Copilot: Searched for text `.entry-full-text em` (`**/styles.css`), 2 results
@@ -4349,6 +4675,10 @@ Done! I've changed the italicized text in regular entries to be highlighted inst
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I specifide to co-pilot that I only wanted the text in em tags to be highlighted. -->
+
 User: i dont want the special entry text to be highlighted, only the regular entries text in the <em>
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/styles.css#755-755), lines 755 to 795
@@ -4362,6 +4692,10 @@ Replacing 6 lines with 9 lines in [](file:///Users/jessevieira/Summer-s-Digital-
 Done! Special entries' emphasized text will now remain italic without highlighting, while regular entries will keep the yellow highlight for their `<em>` tags.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- I then asked co-pilot to add more tape. -->
 
 User: can you add some more tape to the bottom areas of the bigger entries
 
@@ -4535,6 +4869,10 @@ The extra bottom-left tape piece has been removed, and all angle modifications h
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+Here I asked co-pilot to add a button to special entry 5 that is only clickable if they have the other special entries.
+
 User: add a button to special entry 5 that is only clickable if the user has unlocked special entries 1, 2, 3, 4, and 5
 
 GitHub Copilot: Searched for text `special entry 5` (`**/script.js`), no results
@@ -4593,6 +4931,10 @@ The button will appear centered at the bottom of special entry 5, and users won'
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I told co-pilot that I wanted the button to show a pop up detailing how to unlock a pad lock. -->
+
 User: do not have it unlock special entry 6, instead make it show a pop up detailing how to unlock a pad lock, the way to unlock the pad lock will be: rotate clockwise to 28, then rotate counter clockwise to 34, then rotate clockwise to 24
 
 GitHub Copilot: Searched for text `modal` (`**/index.html`), 20 results
@@ -4634,6 +4976,10 @@ Done! I've updated the special entry 5 button to show a popup with padlock instr
 Each step is styled with the scrapbook aesthetic - yellow highlighted backgrounds, handwritten fonts, and slight rotations. The button says "Continue" when all entries are unlocked, and clicking it will display the padlock combination instructions.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I had co-pilot add a trigger warning to special entry 6. -->
 
 User: please add a trigger warning for special entry 6 telling the user it contains implicated self harm/suicide and if they cannot handle these topics to avoid the entry, also tell them that the entry is the bad ending
 
@@ -4706,6 +5052,10 @@ The warning modal is styled with an orange/brown color scheme to make it visuall
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I wanted co-pilot to fix an issue that prevented me from clicking any entries. -->
+
 User: i can't click any of the entries now, please fix this
 
 GitHub Copilot: Checked [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js), no problems found
@@ -4723,6 +5073,10 @@ Replacing 7 lines with 8 lines in [](file:///Users/jessevieira/Summer-s-Digital-
 Fixed! The issue was that when I split the `selectEntry` function to handle the trigger warning, I forgot to add the `entries` variable lookup in the new `displayEntry` function. Now all entries should be clickable again.
 
 Made changes.
+
+<!-- End of prompt and response -->
+
+<!-- Here I was having co-pilot experiment with different text colours and I wanted it to add a light blue graph paper to the background of the special entries. -->
 
 User: what is the text colour for the special entries?
 
@@ -4840,6 +5194,10 @@ The blue graph paper should now display correctly on all special entries.
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I asked co-pilot to put the blue graph paper as the background. -->
+
 User: i can see it now, but i wanted it behind the content card only for the special entries
 
 GitHub Copilot: Read [](file:///Users/jessevieira/Summer-s-Digital-Diary/script.js#610-610), lines 610 to 640
@@ -4864,6 +5222,10 @@ Done! The blue graph paper background now appears behind the white content card 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- Here I had co-pilot make the content card backgrounds change to a paper texture. -->
+
 User: Make the content cards have the paper.png as the content car background for all of them
 
 GitHub Copilot: Ran terminal command:  ls -la *.png
@@ -4884,6 +5246,10 @@ Done! All content cards now use paper.png as their background. The image covers 
 
 Made changes.
 
+<!-- End of prompt and response -->
+
+<!-- I then had co-pilot add a sticker png to the side bar special entries. -->
+
 User: add the sticker.png to the top right corners of the different special entries in the side bar
 
 GitHub Copilot: Ran terminal command:  ls -la *.png | grep -i sticker
@@ -4899,3 +5265,5 @@ Replacing 14 lines with 26 lines in [](file:///Users/jessevieira/Summer-s-Digita
 Done! The sticker.png image now appears in the top right corner of all special entries in the sidebar, both locked and unlocked. The sticker is 40x40px and positioned 15px from the top and right edges of each entry preview.
 
 Made changes.
+
+<!-- End of prompt and response -->
