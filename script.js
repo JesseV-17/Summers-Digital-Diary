@@ -51,15 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const regularEntries = [
     {
         id: 1,
-        title: "Clean Spaces",
-        date: "February 1st, 2026",
-        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <br> <br> Clear space = clear mind. <br> <br>I know that you can develop those cleaning habits again, you were always so diligent about it.`
-    },
-    {
-        id: 2,
         title: "Face Yourself",
         date: "February 1st, 2026",
         content: `It’s not too bad being alone, if you ever feel lonely it’s actually okay to feel sad and reflect. Make sure to face your emotions during difficult times so that they don’t bottle up into anger or resentment down the line. Let yourself feel sad, it’s part of being human. I think that it’s important to reach out to someone. When was the last time you took yourself on a solo date? Trust me on this one, going out alone is a perfect way to get to know more of you and how you’re actually feeling. Stop distracting yourself! <br> <br>Facing your feelings head on is a way to warm your heart and heal over time.`
+    },
+    {
+        id: 2,
+        title: "Clean Spaces",
+        date: "February 1st, 2026",
+        content: `Reminder that a clean space can help with decluttering a messy mind. It's a gentle breath for the mind to be quiet and at peace. Do not forget to look after yourself, and it starts with the morning when you wake up. I know it's been challenging, but start off small. Making your bed and clearing your desk can be a start, and it's a small win to celebrate yourself. <br> <br> Clear space = clear mind. <br> <br>I know that you can develop those cleaning habits again, you were always so diligent about it.`
     },
     {
         id: 3,
