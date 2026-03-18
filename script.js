@@ -264,10 +264,143 @@ let currentUnlockingEntry = null;
 let selectedRegularEntry = null;
 let selectedLockedEntry = null;
 
+// Refresh callback for custom sidebar scroll handles
+let refreshEntryScrollbars = null;
+
 // Initialize the diary
 function init() {
     loadEntriesList('regular');
     loadEntriesList('locked');
+    initSidebarEntryScrollbars();
+}
+
+// Create always-visible draggable scroll handles for entry dropdowns
+function initSidebarEntryScrollbars() {
+    const scrollers = [
+        document.getElementById('regular-entries-list'),
+        document.getElementById('locked-entries-container')
+    ].filter(Boolean);
+
+    const updateFns = [];
+
+    scrollers.forEach((scroller) => {
+        if (scroller.dataset.customScrollbarInit === 'true') {
+            if (typeof scroller._updateCustomScrollbar === 'function') {
+                updateFns.push(scroller._updateCustomScrollbar);
+            }
+            return;
+        }
+
+        scroller.dataset.customScrollbarInit = 'true';
+
+        const track = document.createElement('div');
+        track.className = 'entry-scrollbar-track';
+
+        const thumb = document.createElement('div');
+        thumb.className = 'entry-scrollbar-thumb';
+
+        track.appendChild(thumb);
+        scroller.appendChild(track);
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+        const updateThumb = () => {
+            const trackHeight = track.clientHeight;
+            const visibleHeight = scroller.clientHeight;
+            const contentHeight = scroller.scrollHeight;
+
+            if (!trackHeight || !visibleHeight) return;
+
+            const maxScrollTop = Math.max(contentHeight - visibleHeight, 0);
+            const thumbHeight = clamp((visibleHeight / Math.max(contentHeight, 1)) * trackHeight, 36, trackHeight);
+            const maxThumbTop = Math.max(trackHeight - thumbHeight, 0);
+            const thumbTop = maxScrollTop > 0 ? (scroller.scrollTop / maxScrollTop) * maxThumbTop : 0;
+
+            thumb.style.height = `${thumbHeight}px`;
+            thumb.style.transform = `translateY(${thumbTop}px)`;
+            track.classList.toggle('is-inactive', maxScrollTop <= 0);
+        };
+
+        let isDragging = false;
+        let dragStartY = 0;
+        let dragStartTop = 0;
+
+        const getThumbTop = () => {
+            const transform = thumb.style.transform || 'translateY(0px)';
+            const match = transform.match(/translateY\(([-\d.]+)px\)/);
+            return match ? parseFloat(match[1]) : 0;
+        };
+
+        thumb.addEventListener('pointerdown', (event) => {
+            isDragging = true;
+            dragStartY = event.clientY;
+            dragStartTop = getThumbTop();
+            thumb.setPointerCapture(event.pointerId);
+            event.preventDefault();
+        });
+
+        thumb.addEventListener('pointermove', (event) => {
+            if (!isDragging) return;
+
+            const trackHeight = track.clientHeight;
+            const thumbHeight = thumb.offsetHeight;
+            const maxThumbTop = Math.max(trackHeight - thumbHeight, 0);
+            const maxScrollTop = Math.max(scroller.scrollHeight - scroller.clientHeight, 0);
+            const nextTop = clamp(dragStartTop + (event.clientY - dragStartY), 0, maxThumbTop);
+
+            thumb.style.transform = `translateY(${nextTop}px)`;
+            scroller.scrollTop = maxThumbTop > 0 ? (nextTop / maxThumbTop) * maxScrollTop : 0;
+            event.preventDefault();
+        });
+
+        const endDrag = (event) => {
+            if (!isDragging) return;
+            isDragging = false;
+            if (event && thumb.hasPointerCapture(event.pointerId)) {
+                thumb.releasePointerCapture(event.pointerId);
+            }
+        };
+
+        thumb.addEventListener('pointerup', endDrag);
+        thumb.addEventListener('pointercancel', endDrag);
+
+        track.addEventListener('pointerdown', (event) => {
+            if (event.target === thumb) return;
+
+            const rect = track.getBoundingClientRect();
+            const thumbHeight = thumb.offsetHeight;
+            const maxThumbTop = Math.max(track.clientHeight - thumbHeight, 0);
+            const maxScrollTop = Math.max(scroller.scrollHeight - scroller.clientHeight, 0);
+            const targetTop = clamp(event.clientY - rect.top - (thumbHeight / 2), 0, maxThumbTop);
+
+            thumb.style.transform = `translateY(${targetTop}px)`;
+            scroller.scrollTop = maxThumbTop > 0 ? (targetTop / maxThumbTop) * maxScrollTop : 0;
+        });
+
+        scroller.addEventListener('scroll', updateThumb);
+        window.addEventListener('resize', updateThumb);
+
+        const observer = new MutationObserver(() => {
+            requestAnimationFrame(updateThumb);
+        });
+        observer.observe(scroller, { childList: true, subtree: true, characterData: true });
+
+        scroller._updateCustomScrollbar = updateThumb;
+        updateFns.push(updateThumb);
+        requestAnimationFrame(updateThumb);
+    });
+
+    refreshEntryScrollbars = () => {
+        updateFns.forEach((updateFn) => {
+            if (typeof updateFn === 'function') {
+                requestAnimationFrame(updateFn);
+            }
+        });
+    };
+
+    if (typeof refreshEntryScrollbars === 'function') {
+        refreshEntryScrollbars();
+    }
 }
 
 // Flip to next page function
@@ -439,6 +572,11 @@ function toggleDropdown(type) {
     } else {
         icon.textContent = '►';
     }
+
+    if (typeof refreshEntryScrollbars === 'function') {
+        refreshEntryScrollbars();
+        setTimeout(() => refreshEntryScrollbars(), 320);
+    }
 }
 
 // Load entries list in sidebar
@@ -467,6 +605,10 @@ function loadEntriesList(type) {
     } else {
         // Locked entries - separate into locked and unlocked
         loadLockedEntriesSections();
+    }
+
+    if (typeof refreshEntryScrollbars === 'function') {
+        refreshEntryScrollbars();
     }
 }
 
@@ -522,6 +664,10 @@ function loadLockedEntriesSections() {
                 </div>
             `;
         }).join('');
+    }
+
+    if (typeof refreshEntryScrollbars === 'function') {
+        refreshEntryScrollbars();
     }
 }
 

@@ -138,10 +138,11 @@ header h1 {
     overflow: hidden;
     overflow-y: scroll;
     scrollbar-gutter: stable;
-    scrollbar-width: thin;
-    scrollbar-color: #c9b88a rgba(250, 248, 240, 0.7);
+    scrollbar-width: none;
     transition: max-height 0.3s ease;
     margin-top: 15px;
+    position: relative;
+    padding-right: 18px;
 }
 
 .dropdown-content.active {
@@ -150,32 +151,56 @@ header h1 {
 }
 
 .dropdown-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.entry-scrollbar-track {
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    bottom: 8px;
     width: 14px;
+    background: rgba(250, 248, 240, 0.72);
+    border-left: 1px solid rgba(212, 200, 154, 0.45);
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px rgba(201, 184, 138, 0.2);
+    z-index: 6;
 }
 
-.dropdown-content::-webkit-scrollbar-track {
-    background: rgba(250, 248, 240, 0.7);
-    border-left: 1px solid rgba(212, 200, 154, 0.35);
+.entry-scrollbar-track.is-inactive {
+    opacity: 0.55;
 }
 
-.dropdown-content::-webkit-scrollbar-thumb {
+.entry-scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 12px;
+    min-height: 36px;
+    cursor: grab;
+    touch-action: none;
     background:
-        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 8px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 8px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 8px 2px no-repeat,
         linear-gradient(180deg, #d9c48f 0%, #bea56f 100%);
     border-radius: 999px;
-    border: 3px solid rgba(250, 248, 240, 0.82);
+    border: 2px solid rgba(250, 248, 240, 0.82);
     background-clip: padding-box;
-    min-height: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
-.dropdown-content::-webkit-scrollbar-thumb:hover {
+.entry-scrollbar-thumb:hover {
     background:
-        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 8px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 8px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 8px 2px no-repeat,
         linear-gradient(180deg, #cfb97f 0%, #aa8f57 100%);
+}
+
+.entry-scrollbar-thumb:active {
+    cursor: grabbing;
 }
 
 @keyframes fadeIn {
