@@ -136,14 +136,36 @@ header h1 {
 .dropdown-content {
     max-height: 0;
     overflow: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #c9b88a rgba(250, 248, 240, 0.7);
     transition: max-height 0.3s ease;
     margin-top: 15px;
 }
 
 .dropdown-content.active {
     max-height: calc(100vh - 300px);
-    overflow-y: auto;
+    overflow-y: scroll;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: rgba(250, 248, 240, 0.7);
+    border-left: 1px solid rgba(212, 200, 154, 0.35);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #dcc99a 0%, #c9b88a 100%);
+    border-radius: 10px;
+    border: 2px solid rgba(250, 248, 240, 0.8);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d4c089 0%, #b8a675 100%);
 }
 
 @keyframes fadeIn {
