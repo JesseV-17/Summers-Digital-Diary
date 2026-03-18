@@ -171,9 +171,12 @@ header h1 {
     width: 350px;
     flex-shrink: 0;
     border-right: 4px solid #d4c89a;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #c9b88a rgba(250, 248, 240, 0.75);
     background-image: url('./Background.png');
     background-size: cover;
     background-position: center;
@@ -182,6 +185,25 @@ header h1 {
     padding: 15px 20px 20px 20px;
     box-shadow: inset -3px 0 8px rgba(0, 0, 0, 0.05);
     height: 100%;
+}
+
+.entries-sidebar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.entries-sidebar::-webkit-scrollbar-track {
+    background: rgba(250, 248, 240, 0.75);
+    border-left: 1px solid rgba(212, 200, 154, 0.45);
+}
+
+.entries-sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #dcc99a 0%, #c9b88a 100%);
+    border-radius: 10px;
+    border: 2px solid rgba(250, 248, 240, 0.85);
+}
+
+.entries-sidebar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d4c089 0%, #b8a675 100%);
 }
 
 .dropdown-section {
@@ -605,6 +627,7 @@ header h1 {
 /* Login Modal Specific Styles */
 .login-modal {
     min-width: 450px;
+    min-height: 600px;
     padding: 50px;
 }
 
@@ -1170,6 +1193,7 @@ textarea:focus {
     
     .login-modal {
         min-width: 400px;
+        min-height: 560px;
         padding: 45px;
     }
 }
@@ -1231,6 +1255,7 @@ textarea:focus {
     
     .login-modal {
         min-width: 350px;
+        min-height: 540px;
         width: 85%;
         padding: 40px;
     }
@@ -1385,6 +1410,7 @@ textarea:focus {
     
     .login-modal {
         min-width: auto;
+        min-height: 520px;
         width: 90%;
         padding: 30px 20px;
     }

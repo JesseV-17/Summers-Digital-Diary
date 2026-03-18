@@ -75,7 +75,7 @@ I think I know a place where you could go that will make you feel alive, a remin
         
 Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.
         
-<em>Go to the second floor of J wing to access your car<em>`
+<em>Now where did you leave your car keys? Ha, I remeber you would always leave them on the second floor of J wing<em>`
     },
     {
         id: 4,
@@ -103,7 +103,7 @@ It’s okay to start it back up again. Your passions will forever be within you.
 
 Well now that you’re not a broke college student anymore, I think you should go to the cafeteria for old times sake and grab a bite. There’s something about food that ignites something inside of us, food can connect us to old memories or certain times of our life. I hope you can remember some of the good times when you eat, holding onto the good memories rather than the sad. 
 
-<em>Find the laptop located in the cafeteria</em>`
+<em>By the way, did you ever find that laptop you lost in the cafeteria? Maybe it's still there...</em>`
     },
     {
         id: 7,
@@ -139,7 +139,7 @@ This is a simple and straightforward way to celebrate the small win of privilege
         date: "February 1st, 2026",
         content: `It’s time to drive back home Luke. There's something waiting for you. Take note of your surroundings, it’s important to slow down to smell the roses. Make sure to listen out for any sounds from the road and the radio, you never know what or who might call out. 
 
-<em>Go back to the Car</em>`
+<em>Oh! And don't forget your keys!</em>`
     },
     {
         id: 10,
@@ -173,7 +173,7 @@ I’ve always admired the way you were able to calm my storms when I needed you,
 const PAGE_PASSWORDS = {
     2: "lUk3!",  // Password to access entries 4-6
     3: "c@N y0U?",  // Password to access entries 7-9
-    4: "H3rE m3?"   // Password to access entries 10-12
+    4: "H3@r m3?"   // Password to access entries 10-12
 };
 
 // Track current page (1 = entries 1-3, 2 = entries 4-6, 3 = entries 7-9, 4 = entries 10-12)
@@ -199,7 +199,7 @@ const lockedEntries = [
         title: "Sonny Bought the Farm…",
         date: "January 18th, 2022",
         updated: "February 1st, 2026",
-        passcode: "Y0uR tH3 B3$t",
+        passcode: "uR tH3 B3$t",
         content: `Sonny passed away yesterday… I don’t know what to do now. Everything feels slow… and cold, so very cold. Mom and Dad said that he went peacefully, but I didn’t want him to go, I still needed him. Luke heard the news and called me. He gave me his condolences about Sonny and told me that he was there for me and asked if I needed anything. In truth, I don’t want anything or anyone right now… All I want is to be left alone in my room, away from all the noise and bullshit. I feel this empty void in my chest, like a piece of me died when Sonny left. I just need time…
 
 <em>It felt awful when Sonny died, but I realize that same feeling must be what you feel now. I’m sorry that during those hard weeks I pushed you and everyone else away, Luke. You were my only reason to keep going after everything around me felt crushed. I hope you knew that I never wanted to push you away. Of course you did, and you were still there for me. And now, I wanna be there for you, at least for as long as I can…</em>`
