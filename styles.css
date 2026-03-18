@@ -150,7 +150,7 @@ header h1 {
 }
 
 .dropdown-content::-webkit-scrollbar {
-    width: 10px;
+    width: 14px;
 }
 
 .dropdown-content::-webkit-scrollbar-track {
@@ -159,13 +159,23 @@ header h1 {
 }
 
 .dropdown-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #dcc99a 0%, #c9b88a 100%);
-    border-radius: 10px;
-    border: 2px solid rgba(250, 248, 240, 0.8);
+    background:
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(180deg, #d9c48f 0%, #bea56f 100%);
+    border-radius: 999px;
+    border: 3px solid rgba(250, 248, 240, 0.82);
+    background-clip: padding-box;
+    min-height: 30px;
 }
 
 .dropdown-content::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #d4c089 0%, #b8a675 100%);
+    background:
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(180deg, #cfb97f 0%, #aa8f57 100%);
 }
 
 @keyframes fadeIn {
@@ -210,7 +220,7 @@ header h1 {
 }
 
 .entries-sidebar::-webkit-scrollbar {
-    width: 12px;
+    width: 14px;
 }
 
 .entries-sidebar::-webkit-scrollbar-track {
@@ -219,13 +229,23 @@ header h1 {
 }
 
 .entries-sidebar::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #dcc99a 0%, #c9b88a 100%);
-    border-radius: 10px;
-    border: 2px solid rgba(250, 248, 240, 0.85);
+    background:
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(180deg, #d9c48f 0%, #bea56f 100%);
+    border-radius: 999px;
+    border: 3px solid rgba(250, 248, 240, 0.85);
+    background-clip: padding-box;
+    min-height: 30px;
 }
 
 .entries-sidebar::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #d4c089 0%, #b8a675 100%);
+    background:
+        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 9px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 9px 2px no-repeat,
+        linear-gradient(180deg, #cfb97f 0%, #aa8f57 100%);
 }
 
 .dropdown-section {
