@@ -707,15 +707,15 @@ header h1 {
 
 .instructions-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    cursor: pointer;
+    cursor: default;
     user-select: none;
     padding: 5px 0;
 }
 
 .instructions-header:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .instructions-box h3 {
