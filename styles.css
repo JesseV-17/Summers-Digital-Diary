@@ -926,7 +926,7 @@ header h1 {
     margin: 6px 0 8px 0;
     padding: 2px 8px;
     font-family: 'Patrick Hand', cursive;
-    font-size: 1.05em;
+    font-size: 1.4em;
     font-weight: 700;
     color: #6f5b2c;
     border-bottom: 1px dashed rgba(111, 91, 44, 0.45);
@@ -1313,6 +1313,10 @@ textarea:focus {
     .entry-full-date {
         font-size: 1.2em;
     }
+
+    .entry-updated-date {
+        font-size: 1.2em;
+    }
     
     .dropdown-header {
         font-size: 1.1em;
@@ -1420,6 +1424,10 @@ textarea:focus {
     .entry-full-date {
         font-size: 1.05em;
         margin-bottom: 20px;
+    }
+
+    .entry-updated-date {
+        font-size: 1.05em;
     }
     
     .dropdown-header {
@@ -1560,6 +1568,10 @@ textarea:focus {
     }
 
     .entry-full-date {
+        font-size: 1em;
+    }
+
+    .entry-updated-date {
         font-size: 1em;
     }
     
