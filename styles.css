@@ -951,11 +951,27 @@ header h1 {
 
 .entry-full.entry-special {
     border-color: #c9b88a;
-    background-image: url('./sticker.png'), url('./paper.png');
-    background-size: 42px 42px, cover;
-    background-position: 14px 12px, center;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url('./paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
+}
+
+.entry-full.entry-special h1::before {
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: -18px;
+    width: 44px;
+    height: 44px;
+    background-image: url('./sticker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-6deg);
+    z-index: 3;
+    pointer-events: none;
 }
 
 .entry-full.entry-special::before {
