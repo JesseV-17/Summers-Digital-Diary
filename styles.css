@@ -185,9 +185,7 @@ header h1 {
     cursor: grab;
     touch-action: none;
     background:
-        linear-gradient(#ffffff, #ffffff) center 28% / 10px 2px no-repeat,
         linear-gradient(#ffffff, #ffffff) center 50% / 10px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center 72% / 10px 2px no-repeat,
         linear-gradient(180deg, #d9c48f 0%, #bea56f 100%);
     border-radius: 999px;
     border: 2px solid rgba(250, 248, 240, 0.82);
@@ -197,9 +195,7 @@ header h1 {
 
 .entry-scrollbar-thumb:hover {
     background:
-    linear-gradient(#ffffff, #ffffff) center 28% / 10px 2px no-repeat,
     linear-gradient(#ffffff, #ffffff) center 50% / 10px 2px no-repeat,
-    linear-gradient(#ffffff, #ffffff) center 72% / 10px 2px no-repeat,
         linear-gradient(180deg, #cfb97f 0%, #aa8f57 100%);
 }
 
