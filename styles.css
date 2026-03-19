@@ -885,10 +885,12 @@ header h1 {
 
 .entry-full-date {
     color: #3a3a3a;
-    font-size: 1em;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.25;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    padding-left: 25px;
+    padding-left: 30px;
     border-bottom: 2px dashed #d4c89a;
     font-family: 'Patrick Hand', cursive;
     text-align: left;
@@ -899,8 +901,8 @@ header h1 {
     content: '';
     position: absolute;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background-image: url('./Calender.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -1296,6 +1298,10 @@ textarea:focus {
     .entry-full-text {
         font-size: 1em;
     }
+
+    .entry-full-date {
+        font-size: 1.2em;
+    }
     
     .dropdown-header {
         font-size: 1.1em;
@@ -1401,7 +1407,7 @@ textarea:focus {
     }
     
     .entry-full-date {
-        font-size: 0.85em;
+        font-size: 1.05em;
         margin-bottom: 20px;
     }
     
@@ -1540,6 +1546,10 @@ textarea:focus {
     
     .entry-full-text {
         font-size: 0.9em;
+    }
+
+    .entry-full-date {
+        font-size: 1em;
     }
     
     .modal-content, .login-modal {
