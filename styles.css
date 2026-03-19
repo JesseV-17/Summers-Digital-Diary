@@ -958,18 +958,18 @@ header h1 {
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
-.entry-full.entry-special h1::before {
+.entry-full.entry-special::after {
     content: '';
     position: absolute;
-    top: -26px;
-    left: -18px;
-    width: 44px;
-    height: 44px;
+    top: -14px;
+    left: -14px;
+    width: 46px;
+    height: 46px;
     background-image: url('./sticker.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transform: rotate(-6deg);
+    transform: rotate(-7deg);
     z-index: 3;
     pointer-events: none;
 }
