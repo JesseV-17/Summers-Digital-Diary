@@ -491,17 +491,7 @@ header h1 {
 }
 
 .entry-locked::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    background-image: url('./sticker.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 1.2em;
+    display: none;
 }
 
 .entry-unlocked {
@@ -511,17 +501,7 @@ header h1 {
 }
 
 .entry-unlocked::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    background-image: url('./sticker.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 1.2em;
+    display: none;
 }
 
 /* Modal Styles */
@@ -970,9 +950,10 @@ header h1 {
 
 .entry-full.entry-special {
     border-color: #c9b88a;
-    background: url('./paper.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('./sticker.png'), url('./paper.png');
+    background-size: 42px 42px, cover;
+    background-position: 14px 12px, center;
+    background-repeat: no-repeat, no-repeat;
     box-shadow: 4px 4px 10px rgba(201, 184, 138, 0.2);
 }
 
