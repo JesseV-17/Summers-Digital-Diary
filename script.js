@@ -824,8 +824,10 @@ function displayEntry(entry, type) {
     
     contentContainer.innerHTML = `
         <div class="entry-full ${specialClass}">
-            <h1>${escapeHtml(entry.title)}</h1>
-            <div class="entry-full-date">${dateDisplay}</div>
+            <div class="entry-header-row">
+                <h1>${escapeHtml(entry.title)}</h1>
+                <div class="entry-full-date">${dateDisplay}</div>
+            </div>
             <div class="entry-full-text">${contentHtml}</div>
             ${nextButtonHtml}
             ${specialEntry5ButtonHtml}
