@@ -308,6 +308,13 @@ function initSidebarEntryScrollbars() {
         const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
         const updateThumb = () => {
+            const isActive = scroller.classList.contains('active');
+            track.style.display = isActive ? 'block' : 'none';
+
+            if (!isActive) {
+                return;
+            }
+
             const topOffset = scroller.offsetTop + 8;
             const trackHeightPx = Math.max(scroller.clientHeight - 16, 0);
 
