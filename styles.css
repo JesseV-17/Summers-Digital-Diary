@@ -145,6 +145,10 @@ header h1 {
     padding-right: 18px;
 }
 
+.dropdown-section {
+    position: relative;
+}
+
 .dropdown-content.active {
     max-height: calc(100vh - 300px);
     overflow-y: scroll;
@@ -157,10 +161,10 @@ header h1 {
 
 .entry-scrollbar-track {
     position: absolute;
-    top: 8px;
+    top: 0;
     right: 2px;
-    bottom: 8px;
-    width: 14px;
+    height: 0;
+    width: 18px;
     background: rgba(250, 248, 240, 0.72);
     border-left: 1px solid rgba(212, 200, 154, 0.45);
     border-radius: 999px;
@@ -176,14 +180,14 @@ header h1 {
     position: absolute;
     top: 0;
     left: 1px;
-    width: 12px;
+    width: 16px;
     min-height: 36px;
     cursor: grab;
     touch-action: none;
     background:
-        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 8px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center 50% / 8px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 8px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 28% / 10px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 50% / 10px 2px no-repeat,
+        linear-gradient(#ffffff, #ffffff) center 72% / 10px 2px no-repeat,
         linear-gradient(180deg, #d9c48f 0%, #bea56f 100%);
     border-radius: 999px;
     border: 2px solid rgba(250, 248, 240, 0.82);
@@ -193,9 +197,9 @@ header h1 {
 
 .entry-scrollbar-thumb:hover {
     background:
-        linear-gradient(#ffffff, #ffffff) center calc(50% - 5px) / 8px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center 50% / 8px 2px no-repeat,
-        linear-gradient(#ffffff, #ffffff) center calc(50% + 5px) / 8px 2px no-repeat,
+    linear-gradient(#ffffff, #ffffff) center 28% / 10px 2px no-repeat,
+    linear-gradient(#ffffff, #ffffff) center 50% / 10px 2px no-repeat,
+    linear-gradient(#ffffff, #ffffff) center 72% / 10px 2px no-repeat,
         linear-gradient(180deg, #cfb97f 0%, #aa8f57 100%);
 }
 

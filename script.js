@@ -293,6 +293,9 @@ function initSidebarEntryScrollbars() {
 
         scroller.dataset.customScrollbarInit = 'true';
 
+        const host = scroller.parentElement;
+        if (!host) return;
+
         const track = document.createElement('div');
         track.className = 'entry-scrollbar-track';
 
@@ -300,11 +303,17 @@ function initSidebarEntryScrollbars() {
         thumb.className = 'entry-scrollbar-thumb';
 
         track.appendChild(thumb);
-        scroller.appendChild(track);
+    host.appendChild(track);
 
         const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
         const updateThumb = () => {
+            const topOffset = scroller.offsetTop + 8;
+            const trackHeightPx = Math.max(scroller.clientHeight - 16, 0);
+
+            track.style.top = `${topOffset}px`;
+            track.style.height = `${trackHeightPx}px`;
+
             const trackHeight = track.clientHeight;
             const visibleHeight = scroller.clientHeight;
             const contentHeight = scroller.scrollHeight;
