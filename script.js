@@ -37,6 +37,20 @@ function showDiary() {
 // Handle Enter key on login
 document.addEventListener('DOMContentLoaded', () => {
     const loginInput = document.getElementById('login-password-input');
+    const instructionsContent = document.getElementById('instructions-content');
+    const instructionsIcon = document.querySelector('.instructions-icon');
+
+    // Reserve instruction area height so login card size stays constant.
+    if (instructionsContent) {
+        instructionsContent.style.display = 'block';
+        instructionsContent.style.visibility = 'hidden';
+        instructionsContent.style.opacity = '0';
+        instructionsContent.style.pointerEvents = 'none';
+    }
+    if (instructionsIcon) {
+        instructionsIcon.textContent = '▼';
+    }
+
     if (loginInput) {
         loginInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -550,12 +564,19 @@ function closePagePasswordModal() {
 function toggleInstructions() {
     const content = document.getElementById('instructions-content');
     const icon = document.querySelector('.instructions-icon');
+    if (!content || !icon) return;
     
-    if (content.style.display === 'none') {
-        content.style.display = 'block';
+    const isHidden = content.style.visibility === 'hidden';
+
+    if (isHidden) {
+        content.style.visibility = 'visible';
+        content.style.opacity = '1';
+        content.style.pointerEvents = 'auto';
         icon.textContent = '▲';
     } else {
-        content.style.display = 'none';
+        content.style.visibility = 'hidden';
+        content.style.opacity = '0';
+        content.style.pointerEvents = 'none';
         icon.textContent = '▼';
     }
 }

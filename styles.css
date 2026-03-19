@@ -743,6 +743,7 @@ header h1 {
     font-size: 1em;
     line-height: 2;
     animation: fadeIn 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .instructions-list li {
