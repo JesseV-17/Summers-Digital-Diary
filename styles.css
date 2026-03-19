@@ -921,6 +921,17 @@ header h1 {
     position: relative;
 }
 
+.entry-updated-date {
+    display: inline-block;
+    margin: 6px 0 8px 0;
+    padding: 2px 8px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #6f5b2c;
+    border-bottom: 1px dashed rgba(111, 91, 44, 0.45);
+}
+
 .entry-full-text::after {
     content: '';
     position: absolute;

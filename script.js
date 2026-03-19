@@ -808,17 +808,25 @@ function displayEntry(entry, type) {
     // Add special class for locked entries
     const specialClass = type === 'locked' ? 'entry-special' : '';
     
-    // Format date with updated info for locked entries
-    let dateDisplay = entry.date;
+    // Keep top date line as the original entry date only.
+    const dateDisplay = entry.date;
+
+    // For special entries, place updated date between normal body text and yellow emphasized text.
+    let contentHtml = formatContent(entry.content);
     if (type === 'locked' && entry.updated) {
-        dateDisplay += ` | Updated: ${entry.updated}`;
+        const updatedLabelHtml = `<div class="entry-updated-date">Updated: ${escapeHtml(entry.updated)}</div>`;
+        if (contentHtml.includes('<em>')) {
+            contentHtml = contentHtml.replace('<em>', `${updatedLabelHtml}<br><em>`);
+        } else {
+            contentHtml = `${contentHtml}<br><br>${updatedLabelHtml}`;
+        }
     }
     
     contentContainer.innerHTML = `
         <div class="entry-full ${specialClass}">
             <h1>${escapeHtml(entry.title)}</h1>
             <div class="entry-full-date">${dateDisplay}</div>
-            <div class="entry-full-text">${formatContent(entry.content)}</div>
+            <div class="entry-full-text">${contentHtml}</div>
             ${nextButtonHtml}
             ${specialEntry5ButtonHtml}
         </div>
