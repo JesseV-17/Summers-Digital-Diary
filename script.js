@@ -76,7 +76,7 @@ I think I know a place where you could go that will make you feel alive, a remin
         
 Take a few deep breaths and get in the car right now. Drive to Sheridan College. Yes, your college, and yes right now.
         
-<em>Now where did you leave your car keys? Ha, I remeber you would always leave them on the second floor of J wing<em>`
+<em>Now where did you leave your car keys? Ha, I remeber you would always leave them on the second floor of J wing back then!<em>`
     },
     {
         id: 4,
@@ -169,6 +169,22 @@ I’ve always admired the way you were able to calm my storms when I needed you,
 <em>You can find the box close to the stream, outside of the SSU</em>`
     }
 ];
+
+// Written timestamps for regular entries, ordered by entry sequence.
+const REGULAR_ENTRY_TIMES = {
+    1: '8:05 AM',
+    2: '8:42 AM',
+    3: '9:18 AM',
+    4: '10:07 AM',
+    5: '11:25 AM',
+    6: '12:48 PM',
+    7: '2:15 PM',
+    8: '4:02 PM',
+    9: '5:36 PM',
+    10: '7:08 PM',
+    11: '8:54 PM',
+    12: '10:21 PM'
+};
 
 // Page passwords for regular entries
 const PAGE_PASSWORDS = {
@@ -607,10 +623,11 @@ function loadEntriesList(type) {
         
         // Regular entries - show all entries up to maxVisibleEntry
         let html = visibleEntries.map((entry, index) => {
+            const regularDateDisplay = `${entry.date} | ${REGULAR_ENTRY_TIMES[entry.id] || ''}`;
             return `
                 <div class="entry-list-item" onclick="selectEntry('${type}', ${entry.id})">
                     <h3>${index + 1}. ${escapeHtml(entry.title)}</h3>
-                    <div class="entry-list-date">${entry.date}</div>
+                    <div class="entry-list-date">${regularDateDisplay}</div>
                     <div class="entry-list-preview">${escapeHtml(stripHtml(entry.content).substring(0, 80))}...</div>
                 </div>
             `;
@@ -808,8 +825,10 @@ function displayEntry(entry, type) {
     // Add special class for locked entries
     const specialClass = type === 'locked' ? 'entry-special' : '';
     
-    // Keep top date line as the original entry date only.
-    const dateDisplay = entry.date;
+    // Regular entries show written timestamps; locked entries keep just the date.
+    const dateDisplay = type === 'regular'
+        ? `${entry.date} | ${REGULAR_ENTRY_TIMES[entry.id] || ''}`
+        : entry.date;
 
     // For special entries, place updated date between normal body text and yellow emphasized text.
     let contentHtml = formatContent(entry.content);
