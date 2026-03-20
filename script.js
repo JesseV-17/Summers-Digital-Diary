@@ -197,11 +197,11 @@ const lockedEntries = [
     },
     {
         id: 102,
-        title: "Sonny Bought the Farm…",
+        title: "Goodbye Sonny...",
         date: "January 18th, 2022",
         updated: "February 1st, 2026",
         passcode: "uR tH3 B3$t",
-        content: `Sonny passed away yesterday… I don’t know what to do now. Everything feels slow… and cold, so very cold. Mom and Dad said that he went peacefully, but I didn’t want him to go, I still needed him. Luke heard the news and called me. He gave me his condolences about Sonny and told me that he was there for me and asked if I needed anything. In truth, I don’t want anything or anyone right now… All I want is to be left alone in my room, away from all the noise and bullshit. I feel this empty void in my chest, like a piece of me died when Sonny left. I just need time…
+        content: `Sonny passed away yesterday… I don’t know what to do now. Everything feels slow… and cold, so very cold. Mom and Dad said that he went peacefully, but I didn’t want him to go, I still needed him. His soft miss matched fur would always brighten my day when was struggling. But now he's gone... Luke heard the news and called me. He gave me his condolences about Sonny and told me that he was there for me and asked if I needed anything. In truth, I don’t want anything or anyone right now… All I want is to be left alone in my room, away from all the noise and bullshit. I feel this empty void in my chest, like a piece of me died when Sonny left. I just need time…
 
 <em>It felt awful when Sonny died, but I realize that same feeling must be what you feel now. I’m sorry that during those hard weeks I pushed you and everyone else away, Luke. You were my only reason to keep going after everything around me felt crushed. I hope you knew that I never wanted to push you away. Of course you did, and you were still there for me. And now, I wanna be there for you, at least for as long as I can…</em>`
     },
