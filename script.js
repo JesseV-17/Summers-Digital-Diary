@@ -258,7 +258,7 @@ In all seriousness, we did have a long talk, and we both came out happy with the
         title: "I Tried",
         date: "February 1st, 2026",
         passcode: "1M $0rRy",
-        content: `<em>I’m sorry Luke, I tried my best to help you move on. Oh, you probably didn’t even realize it was me. It’s Mae, I know… you’re probably wondering how or why, to be honest I don’t even know. All I can tell you is that I’m stuck in a limbo, I can’t move on Luke, just like you. I’m stuck now, permanently here. I’m tied down by your un-ending grief, enraptured by it. 
+        content: `<em>I’m sorry Luke, I tried my best to help you move on. I know… you’re probably wondering how or why I'm here, to be honest I don’t even know. All I can tell you is that I’m stuck in a limbo, I can’t move on Luke, just like you. I’m stuck now, permanently here. I’m tied down by your un-ending grief, enraptured by it. 
 
 I worry for you Luke, please I beg, let go of me! You need to carry on without me, please keep trying! Why? Why are you giving up? Luke, you live like this! Please eat something! You can’t keep starving yourself, it’s not good for you! Drink something Luke, PLEASE, ANYTHING! 
 
