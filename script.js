@@ -226,7 +226,7 @@ const lockedEntries = [
         title: "Wet Test Papers",
         date: "June 25th, 2022",
         updated: "February 1st, 2026",
-        passcode: "H0lD mY h@nD",
+        passcode: "HOLD MY H@ND",
         content: `Why do we even have tests in an Industrial Design course! They always end up making my day worse… damn it, I can feel the tears peaking out from my eyes. My parents still don’t know yet, and I’m not going to tell them. If I do, they'll get mad… they’ll be worse than mad, they’ll be disappointed. Damn it Luke, why aren’t you awake? I need you to pick up your phone, I need you to tell me that it’ll be ok. I don’t want to cry anymore, my eyes are so very tired. 
 
 <em>Sure, there were times where I had to journey on my own, but you were always with me. Even after a grueling 12 hour shift, the first thing you did after seeing the missed calls was call me back and calm me down. I remember my tears wouldn’t stop falling, you showed up at my house and hugged me… We sat there for such a long time in that embrace. It helped me a lot, not just the embrace but your presence. I hope even like this, I can provide you with the same comfort you provided me.</em>`
