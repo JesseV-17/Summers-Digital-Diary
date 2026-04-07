@@ -84,7 +84,7 @@ header h1 {
 
 .dropdown-header {
     color: #1a1a1a;
-    font-size: 1.3em;
+    font-size: 1.45em;
     padding: 15px 30px 15px 20px;
     margin: 0 -20px 15px -20px;
     cursor: pointer;
@@ -401,8 +401,8 @@ header h1 {
     font-size: 1.1em;
     margin-bottom: 5px;
     color: #1a1a1a;
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
+    font-family: 'Reenie Beanie', cursive;
+    font-weight: 400;
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -866,8 +866,8 @@ header h1 {
     color: #1a1a1a;
     font-size: 2.3em;
     margin: 0;
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
+    font-family: 'Reenie Beanie', cursive;
+    font-weight: 400;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
     text-align: left;
     transform: rotate(-0.5deg);
@@ -1394,7 +1394,7 @@ button,
     }
     
     .dropdown-header {
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding: 12px 25px 12px 15px;
         clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
     }
@@ -1511,7 +1511,7 @@ button,
     }
     
     .dropdown-header {
-        font-size: 1em;
+        font-size: 1.1em;
         padding: 10px 22px 10px 12px;
         clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
     }
