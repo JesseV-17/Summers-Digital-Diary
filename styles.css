@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Indie+Flower&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Jost:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -16,7 +16,7 @@ html {
 body {
     height: 100%;
     overflow: hidden;
-    font-family: 'Patrick Hand', 'Indie Flower', cursive;
+    font-family: 'Jost', sans-serif;
     background: #f5f0e8;
     background-image:
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter><rect width="200" height="200" filter="url(%23noise)" opacity="0.02"/></svg>');
@@ -1278,6 +1278,48 @@ textarea:focus {
     color: #c97064;
     border: 2px solid #d89589;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography System */
+/* Headers + subheaders */
+h1,
+h2,
+h3,
+.subtitle,
+.login-subtitle,
+.dropdown-header,
+.entry-full-date,
+.entry-updated-date,
+.entry-list-item h3,
+.section-group h3,
+.instructions-box h3,
+.no-selection,
+.step-number,
+.locked-header h2,
+.modal-content h2,
+.passcode-box h2 {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+/* Body text + UI copy */
+body,
+p,
+li,
+input,
+textarea,
+button,
+.entry-full-text,
+.entry-list-date,
+.entry-list-preview,
+.instructions-list,
+.modal-content p,
+.passcode-box p,
+.passcode-hint,
+.message,
+.step-text,
+.entry-title,
+.error-message {
+    font-family: 'Jost', sans-serif;
 }
 
 /* Responsive Design */
