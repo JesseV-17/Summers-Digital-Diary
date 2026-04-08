@@ -1285,40 +1285,41 @@ textarea:focus {
 h1,
 h2,
 h3,
+.btn-primary,
+.btn-secondary,
+button,
+input,
+textarea,
 .subtitle,
 .login-subtitle,
 .dropdown-header,
 .entry-full-date,
 .entry-updated-date,
+.entry-list-date,
 .entry-list-item h3,
 .section-group h3,
 .instructions-box h3,
 .no-selection,
 .step-number,
+.passcode-hint,
+.error-message,
+.message,
+.step-text,
 .locked-header h2,
 .modal-content h2,
 .passcode-box h2 {
     font-family: 'Reenie Beanie', cursive;
 }
 
-/* Body text + UI copy */
+/* Body text only */
 body,
-p,
-li,
-input,
-textarea,
-button,
 .entry-full-text,
-.entry-list-date,
 .entry-list-preview,
 .instructions-list,
+.instructions-list li,
 .modal-content p,
 .passcode-box p,
-.passcode-hint,
-.message,
-.step-text,
-.entry-title,
-.error-message {
+.warning-content p {
     font-family: 'Jost', sans-serif;
 }
 
