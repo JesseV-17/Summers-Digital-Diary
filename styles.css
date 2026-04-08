@@ -62,7 +62,7 @@ header::before {
 header h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-weight: 700;
     text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
     color: #b8a070;
@@ -559,7 +559,7 @@ header h1 {
     letter-spacing: 3px;
     background: #faf8f0;
     color: #2d3d2d;
-    font-family: 'Kalam', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-weight: 700;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
 }
@@ -681,7 +681,7 @@ header h1 {
 .login-modal h1 {
     color: #2d3d2d;
     margin-bottom: 10px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 3em;
     font-weight: 700;
     text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
@@ -777,7 +777,7 @@ header h1 {
 
 .login-modal .btn-primary {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 /* Entry Content View */
@@ -1052,7 +1052,7 @@ header h1 {
     transition: border-color 0.3s ease;
     background: #faf8f0;
     color: #2d3d2d;
-    font-family: 'Kalam', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-weight: 700;
 }
 
@@ -1069,7 +1069,7 @@ textarea {
     border: 2px solid #d4c89a;
     border-radius: 10px;
     font-size: 1.05em;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Reenie Beanie', cursive;
     resize: vertical;
     transition: border-color 0.3s ease;
     background: #faf8f0;
@@ -1088,11 +1088,11 @@ textarea:focus {
     padding: 12px 30px;
     border: none;
     border-radius: 15px;
-    font-size: 1.1em;
+    font-size: 1.3em;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 700;
-    font-family: 'Kalam', cursive;
+    font-family: 'Reenie Beanie', cursive;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
     transform: rotate(-0.5deg);
 }
@@ -1135,7 +1135,7 @@ textarea:focus {
 
 .special-unlock-btn {
     min-width: 200px;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .special-unlock-btn.disabled {
@@ -1198,7 +1198,7 @@ textarea:focus {
     letter-spacing: 3px;
     background: #faf8f0;
     color: #2d3d2d;
-    font-family: 'Kalam', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-weight: 700;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
 }
@@ -1221,7 +1221,7 @@ textarea:focus {
     color: #c97064;
     margin-top: 15px;
     font-weight: 700;
-    font-family: 'Kalam', cursive;
+    font-family: 'Reenie Beanie', cursive;
     animation: shake 0.3s ease;
     background: rgba(201, 112, 100, 0.1);
     padding: 8px 12px;
